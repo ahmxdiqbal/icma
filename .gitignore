@@ -1,0 +1,22 @@
+# data (large, third-party); web/data holds the small packages the app serves
+/data/
+# third-party article PDFs: keep local, cite by URL and sha256 in the gold JSON
+eval/gold/sources/
+# python packaging
+*.egg-info/
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# node
+node_modules/
+.next/
+.vercel/
+# env
+.env
+.env.*
+!.env.example
+.DS_Store

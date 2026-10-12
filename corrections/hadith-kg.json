@@ -1,0 +1,759 @@
+{
+  "source": "hadith-kg",
+  "note": "Fixes to hadith-kg chains, keyed by sanads.id. Each entry cites the evidence in the source text. Entries authored by a model stay marked 'unreviewed' until a human confirms them.",
+  "corrections": [
+    {
+      "chain_id": 32757,
+      "op": "replace",
+      "from_narrator_id": 3495,
+      "to_narrator_id": 2415,
+      "reason": "Hushaym's chain from Mansur is given 'bi-isnad Yahya', i.e. al-Hasan from Hittan b. Abd Allah from Ubada. The dataset put Salama b. al-Muhabbiq (who belongs to the next chain, al-Fadl b. Dalham's) in Hittan's place.",
+      "evidence": "Sunan Abi Dawud, hadith-kg hadiths.id 20158: 'حدثنا وهب بن بقية ومحمد بن الصباح بن سفيان قالا حدثنا هشيم عن منصور عن الحسن بإسناد يحيى ومعناه'. Yahya's isnad in the same entry: 'عن الحسن عن حطان بن عبد الله الرقاشي عن عبادة بن الصامت'. The sibling chain 32758 (Wahb b. Baqiyya) already has Hittan.",
+      "author": "claude-opus-5-5 (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 75751,
+      "op": "replace",
+      "from_narrator_id": 488,
+      "to_narrator_id": 4657,
+      "reason": "Zawa'id report of 'Abd Allah b. Ahmad: the speaker who heard Shayban b. Abi Shayba (Shayban b. Farrukh) is 'Abd Allah, not his father. The dataset made Ahmad the collector and so created a false Ahmad < Shayban link.",
+      "evidence": "Musnad Ahmad 22186, hadith-kg hadiths.id 58360: 'حَدَّثَنَا عَبْد اللَّهِ ، حَدَّثَنَا شَيْبَانُ بْنُ أَبِي شَيْبَةَ ، حَدَّثَنَا جَرِيرُ بْنُ حَازِمٍ'. No 'حدثني أبي' follows, so this is not Ahmad's own isnad.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 91342,
+      "op": "replace",
+      "from_narrator_id": 29727,
+      "to_narrator_id": 29676,
+      "reason": "Ibn Hibban's informant is his Busti shaykh Muhammad b. 'Abd Allah b. al-Junayd (d. 303, record 29676, which the text mention already uses). Record 29727 is Muhammad b. 'Abd Allah b. Ja'far b. al-Junayd al-Razi (t14, d. 347, Damascus/Rayy), who could not have heard Qutayba (d. 240).",
+      "evidence": "Sahih Ibn Hibban 4517, hadith-kg hadiths.id 70555: 'أَخْبَرَنَا مُحَمَّدُ بْنُ عَبْدِ اللَّهِ بْنِ الْجُنَيْدِ بِبُسْتَ ، قَالَ : حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدٍ'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 415225,
+      "op": "replace",
+      "from_narrator_id": 46153,
+      "to_narrator_id": 9658,
+      "reason": "Tahwil misassignment. Muhammad b. al-Jahm's route belongs to the first isnad (Ahmad b. Qasim < Qasim b. Asbagh), not to the second one through 'Abd al-Warith b. Sufyan, which carries Ahmad b. Zuhayr and Bakr b. Hammad only.",
+      "evidence": "al-Tamhid 1432, hadith-kg hadiths.id 418334: 'حَدَّثَنِي أَحْمَدُ بْنُ قَاسِمٍ ... حَدَّثَنَا قَاسِمُ بْنُ أَصْبَغَ ... حَدَّثَنَا الْحَارِثُ بْنُ أبي أُسَامَةَ ، وَمُحَمَّدُ بْنُ الْجَهْمِ ، قَالا : حَدَّثَنَا عَبْدُ الْوَهَّابِ بْنُ عَطَاءٍ' then 'ح وَحَدَّثَنَا عَبْدُ الْوَارِثِ بْنُ سُفْيَانَ ... أَحْمَدُ بْنُ زُهَيْرٍ ، وَبَكْرُ بْنُ حَمَّادٍ'. Sibling chain 415224 (al-Harith) already runs through Ahmad b. Qasim.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 247747,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 8616
+        },
+        {
+          "narrator_id": 5280
+        },
+        {
+          "narrator_id": 6805
+        }
+      ],
+      "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Add al-Shafi'i as collector (Sanjar only rearranged the Musnad; book 33's copy of this report, chain 198333, ends at al-Shafi'i) and the inqita between al-Hasan and 'Ubada. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "Musnad al-Shafi'i (tartib Sanjar) 956, hadith-kg hadiths.id 203777: 'أَخْبَرَنَا الشَّافِعِيُّ ... أَخْبَرَنَا عَبْدُ الْوَهَّابِ ، عَنْ يُونُسَ ، عَنِ الْحَسَنِ ، عَنْ عُبَادَةَ'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 339290,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 3462
+        },
+        {
+          "narrator_id": 26626
+        },
+        {
+          "narrator_id": 34419
+        },
+        {
+          "narrator_id": 10361
+        },
+        {
+          "narrator_id": 43982
+        }
+      ],
+      "reason": "Add Ibn Bishran ('Abd al-Malik b. Muhammad, d. 430, record 43982) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "Amali Ibn Bishran (majalis ukhra) 836, hadith-kg hadiths.id 327236: 'أَخْبَرَنَا أَبُو سَهْلٍ أَحْمَدُ بْنُ مُحَمَّدِ بْنِ عَبْدِ اللَّهِ بْنِ زِيَادٍ'. The identical text in Amali Ibn Bishran 872 (hadiths.id 324055, chain 335876) ends at 43982.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 350750,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 8616
+        },
+        {
+          "gap": "mubham"
+        },
+        {
+          "narrator_id": 6805
+        },
+        {
+          "narrator_id": 1410
+        },
+        {
+          "narrator_id": 31063
+        },
+        {
+          "narrator_id": 9598
+        },
+        {
+          "narrator_id": 46105
+        },
+        {
+          "narrator_id": 46098
+        },
+        {
+          "narrator_id": 68171
+        }
+      ],
+      "reason": "Add al-Hazimi (Muhammad b. Musa, d. 584, record 68171) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "al-I'tibar li-l-Hazimi 375, hadith-kg hadiths.id 344019: 'أَخْبَرَنَا أَبُو زُرْعَةَ طَاهِرُ بْنُ مُحَمَّدِ بْنِ طَاهِرٍ' (the speaker is al-Hazimi).",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 350751,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 7676
+        },
+        {
+          "narrator_id": 8062
+        },
+        {
+          "narrator_id": 3401
+        },
+        {
+          "narrator_id": 30120
+        },
+        {
+          "narrator_id": 18570
+        },
+        {
+          "narrator_id": 46623
+        },
+        {
+          "narrator_id": 13746
+        },
+        {
+          "narrator_id": 46516
+        },
+        {
+          "narrator_id": 68171
+        }
+      ],
+      "reason": "Add al-Hazimi (Muhammad b. Musa, d. 584, record 68171) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "al-I'tibar li-l-Hazimi 376, hadith-kg hadiths.id 344020: 'وَأَخْبَرَنَا أَبُو الْعَلَاءِ الْحَافِظُ' (the speaker is al-Hazimi).",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 421701,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 6458
+        },
+        {
+          "narrator_id": 3281
+        },
+        {
+          "narrator_id": 6904
+        },
+        {
+          "narrator_id": 488
+        },
+        {
+          "narrator_id": 4657
+        },
+        {
+          "narrator_id": 8994
+        },
+        {
+          "narrator_id": 14991
+        },
+        {
+          "narrator_id": 46125
+        },
+        {
+          "narrator_id": 44890
+        }
+      ],
+      "reason": "Add Ibn al-Jawzi (Abu al-Faraj, d. 597, record 44890) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "al-Tahqiq li-Ibn al-Jawzi 1903, hadith-kg hadiths.id 423603: 'أَخْبَرَنَا هِبَةُ اللَّهِ بْنُ مُحَمَّدٍ ، أَنْبَأَنَا الْحَسَنُ بْنُ عَلِيٍّ'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 421702,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 3495
+        },
+        {
+          "narrator_id": 6452
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 1549
+        },
+        {
+          "narrator_id": 8160
+        },
+        {
+          "narrator_id": 488
+        },
+        {
+          "narrator_id": 4657
+        },
+        {
+          "narrator_id": 8994
+        },
+        {
+          "narrator_id": 14991
+        },
+        {
+          "narrator_id": 46125
+        },
+        {
+          "narrator_id": 44890
+        }
+      ],
+      "reason": "Add Ibn al-Jawzi (Abu al-Faraj, d. 597, record 44890) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "al-Tahqiq li-Ibn al-Jawzi 1904, hadith-kg hadiths.id 423604: 'قَالَ أَحْمَدُ وَحَدَّثَنَا وَكِيعٌ (isnad carried from no. 1903: هبة الله بن محمد ... عبد الله بن أحمد)'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 423855,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "narrator_id": 6458
+        },
+        {
+          "narrator_id": 3281
+        },
+        {
+          "narrator_id": 8271
+        },
+        {
+          "narrator_id": 7426
+        },
+        {
+          "narrator_id": 46158
+        },
+        {
+          "narrator_id": 26604
+        },
+        {
+          "narrator_id": 46153
+        },
+        {
+          "narrator_id": 34368
+        }
+      ],
+      "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Restore al-Hasan between Qatada and Hittan (the text's 'عن الحسن عن حطان' became 'الحسن بن حطان', and the dataset dropped al-Hasan) and add Ibn 'Abd al-Barr (record 34368) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "al-Istidhkar 879, hadith-kg hadiths.id 425692: 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ بْنِ حِطَّانَ بْنِ عَبْدِ اللَّهِ الرَّقَاشِيُّ' (one mention span covers both names). Ibn 'Abd al-Barr's identical isnad in al-Tamhid 1432 (hadiths.id 418334): 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ ، عَنْ حِطَّانَ بْنِ عَبْدِ اللَّهِ'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 423856,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "narrator_id": 6458
+        },
+        {
+          "narrator_id": 3281
+        },
+        {
+          "narrator_id": 8271
+        },
+        {
+          "narrator_id": 3036
+        },
+        {
+          "narrator_id": 9844
+        },
+        {
+          "narrator_id": 26604
+        },
+        {
+          "narrator_id": 46153
+        },
+        {
+          "narrator_id": 34368
+        }
+      ],
+      "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Restore al-Hasan between Qatada and Hittan (the text's 'عن الحسن عن حطان' became 'الحسن بن حطان', and the dataset dropped al-Hasan) and add Ibn 'Abd al-Barr (record 34368) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "al-Istidhkar 879, hadith-kg hadiths.id 425692: 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ بْنِ حِطَّانَ بْنِ عَبْدِ اللَّهِ الرَّقَاشِيُّ' (one mention span covers both names). Ibn 'Abd al-Barr's identical isnad in al-Tamhid 1432 (hadiths.id 418334): 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ ، عَنْ حِطَّانَ بْنِ عَبْدِ اللَّهِ'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 433469,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 6458
+        },
+        {
+          "narrator_id": 3795
+        },
+        {
+          "narrator_id": 5730
+        },
+        {
+          "narrator_id": 23051
+        },
+        {
+          "narrator_id": 17165
+        },
+        {
+          "narrator_id": 18142
+        },
+        {
+          "narrator_id": 75250
+        }
+      ],
+      "reason": "Add al-Wahidi ('Ali b. Ahmad, d. 468, record 75250) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "al-Wasit li-l-Wahidi 202, hadith-kg hadiths.id 490450: 'أَخْبَرَنَا سَعِيدُ بْنُ مُحَمَّدٍ الزَّاهِدُ ، أَخْبَرَنَا أَبُو عَلِيِّ بْنُ أَحْمَدَ الْفَقِيهُ'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 433470,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 8616
+        },
+        {
+          "narrator_id": 5280
+        },
+        {
+          "narrator_id": 6805
+        },
+        {
+          "narrator_id": 1410
+        },
+        {
+          "narrator_id": 31063
+        },
+        {
+          "narrator_id": 9598
+        },
+        {
+          "narrator_id": 75250
+        }
+      ],
+      "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Add al-Wahidi (record 75250) as collector and the inqita between al-Hasan and 'Ubada. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+      "evidence": "al-Wasit li-l-Wahidi 203, hadith-kg hadiths.id 490451: 'أَخْبَرَنَا أَحْمَدُ بْنُ الْحَسَنِ الْحِيرِيُّ ... عَنْ يُونُسَ ، عَنْ الْحَسَنِ ، عَنْ عُبَادَةَ'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 450327,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 6458
+        },
+        {
+          "narrator_id": 3281
+        },
+        {
+          "narrator_id": 4207
+        },
+        {
+          "narrator_id": 6861
+        },
+        {
+          "narrator_id": 7457
+        },
+        {
+          "narrator_id": 11784
+        },
+        {
+          "narrator_id": 30377
+        },
+        {
+          "narrator_id": 46120
+        },
+        {
+          "narrator_id": 46703
+        },
+        {
+          "narrator_id": 75058
+        }
+      ],
+      "reason": "Add al-Baghawi (al-Husayn b. Mas'ud, d. 516, record 75058) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "al-Anwar fi Shama'il al-Nabi 23, hadith-kg hadiths.id 517964: 'أَخْبَرَنَا إِسْمَاعِيلُ بْنُ عَبْدِ الْقَاهِرِ ، أَنْبَا عَبْدُ الْغَافِرِ بْنُ مُحَمَّدٍ'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 519675,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 3495
+        },
+        {
+          "narrator_id": 6452
+        },
+        {
+          "narrator_id": 1549
+        },
+        {
+          "narrator_id": 8160
+        },
+        {
+          "narrator_id": 488
+        },
+        {
+          "narrator_id": 4657
+        },
+        {
+          "narrator_id": 8994
+        },
+        {
+          "narrator_id": 14991
+        },
+        {
+          "narrator_id": 46125
+        },
+        {
+          "narrator_id": 46607
+        }
+      ],
+      "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Add Ibn 'Asakir (record 46607) as collector, and restore al-Hasan between al-Fadl b. Dalham and Qabisa: al-Fadl (t7) cannot have heard Qabisa (t3, d. 67), and every other copy of this Waki' < al-Fadl isnad has al-Hasan, including Ibn al-Jawzi's quotation through the same Hibat Allah < Ibn al-Mudhhib < al-Qati'i < 'Abd Allah route (chain 421702) and Musnad Ahmad 15592 itself. The al-Hasan insertion rests on these parallels; the Tarikh Dimashq text as stored omits him. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "Tarikh Dimashq 52057, hadith-kg hadiths.id 627864: 'قَالَ : وَحَدَّثَنِي أَبِي ، حَدَّثَنَا وَكِيعٌ ، حَدَّثَنَا الْفَضْلُ بْنُ دَلْهَمٍ ، عَنْ قَبِيصَةَ بْنِ حُرَيْثٍ'. Musnad Ahmad 15592 (hadiths.id 51766): 'حَدَّثَنَا الْفَضْلُ بْنُ دَلْهَمٍ ، عَنِ الْحَسَنِ ، عَنْ قَبِيصَةَ بْنِ حُرَيْثٍ'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 519676,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 3495
+        },
+        {
+          "narrator_id": 6452
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 1549
+        },
+        {
+          "gap": "taliq"
+        },
+        {
+          "narrator_id": 6817
+        },
+        {
+          "narrator_id": 29310
+        },
+        {
+          "narrator_id": 9978
+        },
+        {
+          "narrator_id": 46428
+        },
+        {
+          "narrator_id": 9601
+        },
+        {
+          "narrator_id": 42144
+        },
+        {
+          "narrator_id": 46607
+        }
+      ],
+      "reason": "al-Bukhari (b. 194) quotes al-Fadl b. Dalham's isnad in his Tarikh without an informant; he never met al-Fadl, whose student Waki' died in 196. Mark the suspension with taliq and add Ibn 'Asakir (record 46607) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "Tarikh Dimashq 52063, hadith-kg hadiths.id 627870: 'أَنْبَأَنَا مُحَمَّدُ بْنُ إِسْمَاعِيلَ ، قَالَ : الْفَضْلُ بْنُ دَلْهَمٍ الْبَصْرِيُّ ، سَمِعَ الْحَسَنَ ، عَنْ قَبِيصَةَ' (al-Bukhari's biographical entry, ending 'وَرَوَى عَنْهُ وَكِيعٌ').",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 519677,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 3495
+        },
+        {
+          "narrator_id": 6452
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 1549
+        },
+        {
+          "gap": "taliq"
+        },
+        {
+          "narrator_id": 6817
+        },
+        {
+          "narrator_id": 29310
+        },
+        {
+          "narrator_id": 9978
+        },
+        {
+          "narrator_id": 27593
+        },
+        {
+          "narrator_id": 9601
+        },
+        {
+          "narrator_id": 42144
+        },
+        {
+          "narrator_id": 46607
+        }
+      ],
+      "reason": "al-Bukhari (b. 194) quotes al-Fadl b. Dalham's isnad in his Tarikh without an informant; he never met al-Fadl, whose student Waki' died in 196. Mark the suspension with taliq and add Ibn 'Asakir (record 46607) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "Tarikh Dimashq 52063, hadith-kg hadiths.id 627870: 'أَنْبَأَنَا مُحَمَّدُ بْنُ إِسْمَاعِيلَ ، قَالَ : الْفَضْلُ بْنُ دَلْهَمٍ الْبَصْرِيُّ ، سَمِعَ الْحَسَنَ ، عَنْ قَبِيصَةَ' (al-Bukhari's biographical entry, ending 'وَرَوَى عَنْهُ وَكِيعٌ').",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 519678,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 3495
+        },
+        {
+          "narrator_id": 6452
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 1549
+        },
+        {
+          "gap": "taliq"
+        },
+        {
+          "narrator_id": 6817
+        },
+        {
+          "narrator_id": 29310
+        },
+        {
+          "narrator_id": 9978
+        },
+        {
+          "narrator_id": 46428
+        },
+        {
+          "narrator_id": 30198
+        },
+        {
+          "narrator_id": 42144
+        },
+        {
+          "narrator_id": 46607
+        }
+      ],
+      "reason": "al-Bukhari (b. 194) quotes al-Fadl b. Dalham's isnad in his Tarikh without an informant; he never met al-Fadl, whose student Waki' died in 196. Mark the suspension with taliq and add Ibn 'Asakir (record 46607) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "Tarikh Dimashq 52063, hadith-kg hadiths.id 627870: 'أَنْبَأَنَا مُحَمَّدُ بْنُ إِسْمَاعِيلَ ، قَالَ : الْفَضْلُ بْنُ دَلْهَمٍ الْبَصْرِيُّ ، سَمِعَ الْحَسَنَ ، عَنْ قَبِيصَةَ' (al-Bukhari's biographical entry, ending 'وَرَوَى عَنْهُ وَكِيعٌ').",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 519679,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 3495
+        },
+        {
+          "narrator_id": 6452
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 1549
+        },
+        {
+          "gap": "taliq"
+        },
+        {
+          "narrator_id": 6817
+        },
+        {
+          "narrator_id": 29310
+        },
+        {
+          "narrator_id": 9978
+        },
+        {
+          "narrator_id": 46428
+        },
+        {
+          "narrator_id": 27317
+        },
+        {
+          "narrator_id": 42144
+        },
+        {
+          "narrator_id": 46607
+        }
+      ],
+      "reason": "al-Bukhari (b. 194) quotes al-Fadl b. Dalham's isnad in his Tarikh without an informant; he never met al-Fadl, whose student Waki' died in 196. Mark the suspension with taliq and add Ibn 'Asakir (record 46607) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "Tarikh Dimashq 52063, hadith-kg hadiths.id 627870: 'أَنْبَأَنَا مُحَمَّدُ بْنُ إِسْمَاعِيلَ ، قَالَ : الْفَضْلُ بْنُ دَلْهَمٍ الْبَصْرِيُّ ، سَمِعَ الْحَسَنَ ، عَنْ قَبِيصَةَ' (al-Bukhari's biographical entry, ending 'وَرَوَى عَنْهُ وَكِيعٌ').",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    },
+    {
+      "chain_id": 519680,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 3495
+        },
+        {
+          "narrator_id": 6452
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 1549
+        },
+        {
+          "gap": "taliq"
+        },
+        {
+          "narrator_id": 6817
+        },
+        {
+          "narrator_id": 29310
+        },
+        {
+          "narrator_id": 9978
+        },
+        {
+          "narrator_id": 46428
+        },
+        {
+          "narrator_id": 30198
+        },
+        {
+          "narrator_id": 46607
+        }
+      ],
+      "reason": "al-Bukhari (b. 194) quotes al-Fadl b. Dalham's isnad in his Tarikh without an informant; he never met al-Fadl, whose student Waki' died in 196. Mark the suspension with taliq and add Ibn 'Asakir (record 46607) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "Tarikh Dimashq 52063, hadith-kg hadiths.id 627870: 'أَنْبَأَنَا مُحَمَّدُ بْنُ إِسْمَاعِيلَ ، قَالَ : الْفَضْلُ بْنُ دَلْهَمٍ الْبَصْرِيُّ ، سَمِعَ الْحَسَنَ ، عَنْ قَبِيصَةَ' (al-Bukhari's biographical entry, ending 'وَرَوَى عَنْهُ وَكِيعٌ').",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11"
+    }
+  ]
+}

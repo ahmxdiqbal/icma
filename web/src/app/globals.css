@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+/*
+ * Palette: cool polished paper, iron-gall ink, lapis for the common link and selection,
+ * madder rubric reserved for dives, ochre for spiders and narrator caveats.
+ */
+:root {
+  --paper: #f2f4f1;
+  --paper-raised: #fbfcfa;
+  --paper-sunk: #e8ece7;
+  --ink: #1c2333;
+  --ink-muted: #556074;
+  --ink-faint: #8a93a3;
+  --rule: #d2d8d1;
+  --lapis: #2b4c8c;
+  --lapis-ink: #ffffff;
+  --lapis-soft: #dce4f2;
+  --rubric: #a8322d;
+  --ochre: #8c6119;
+  --ochre-soft: #f1e6cf;
+  --edge: rgb(28 35 51 / 0.42);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121722;
+    --paper-raised: #1a2130;
+    --paper-sunk: #0d121b;
+    --ink: #e3e6ec;
+    --ink-muted: #a3abba;
+    --ink-faint: #6e7788;
+    --rule: #2c3445;
+    --lapis: #8fb0ea;
+    --lapis-ink: #0d1424;
+    --lapis-soft: #22324f;
+    --rubric: #e58a7e;
+    --ochre: #d8ae62;
+    --ochre-soft: #3a2f1a;
+    --edge: rgb(227 230 236 / 0.36);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-paper-sunk: var(--paper-sunk);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-lapis: var(--lapis);
+  --color-lapis-ink: var(--lapis-ink);
+  --color-lapis-soft: var(--lapis-soft);
+  --color-rubric: var(--rubric);
+  --color-ochre: var(--ochre);
+  --color-ochre-soft: var(--ochre-soft);
+  --font-sans: var(--font-alegreya-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: var(--font-amiri), "Geeza Pro", "Noto Naskh Arabic", serif;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-feature-settings: "lnum" 1;
+}
+
+:focus-visible {
+  outline: 2px solid var(--lapis);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+}
+
+/* ------------------------------------------------------------------ bundle graph */
+
+.bundle-flow {
+  --xy-background-color: var(--paper-sunk);
+  --xy-background-pattern-color: var(--rule);
+  --xy-controls-button-background-color: var(--paper-raised);
+  --xy-controls-button-background-color-hover: var(--lapis-soft);
+  --xy-controls-button-color: var(--ink);
+  --xy-controls-button-color-hover: var(--ink);
+  --xy-controls-button-border-color: var(--rule);
+  --xy-controls-box-shadow: none;
+}
+
+.bundle-flow .react-flow__controls {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bundle-flow .react-flow__attribution {
+  background: transparent;
+  color: var(--ink-faint);
+}
+
+.bundle-flow .react-flow__attribution a {
+  color: inherit;
+}
+
+.bundle-handle {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bundle-edge {
+  fill: none;
+  stroke: var(--edge);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: opacity 160ms ease, stroke 160ms ease;
+}
+
+.bundle-edge.is-dive {
+  stroke: var(--rubric);
+  stroke-dasharray: 7 5;
+}
+
+.react-flow__edge.is-lit .bundle-edge {
+  stroke: var(--lapis);
+}
+
+.react-flow__edge.is-lit .bundle-edge.is-dive {
+  stroke: var(--rubric);
+}
+
+.react-flow__edge.is-dim .bundle-edge {
+  opacity: 0.14;
+}
+
+.react-flow__node.is-dim {
+  opacity: 0.3;
+}
+
+.react-flow__node {
+  transition: opacity 160ms ease;
+}
