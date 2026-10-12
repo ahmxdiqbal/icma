@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import os
 from dataclasses import replace
 from pathlib import Path
 
@@ -42,6 +43,12 @@ def _parser() -> argparse.ArgumentParser:
     analyze.add_argument(
         "--effort", choices=["low", "medium", "high", "xhigh", "max"], default="high"
     )
+    db_help = "Postgres URL; defaults to $DATABASE_URL_UNPOOLED, then $DATABASE_URL"
+    migrate = sub.add_parser("migrate", help="apply database migrations")
+    migrate.add_argument("--database-url", help=db_help)
+    publish = sub.add_parser("publish", help="store an analysis and its judgements for review")
+    publish.add_argument("--analysis", type=Path, required=True, help="analysis JSON from analyze")
+    publish.add_argument("--database-url", help=db_help)
     score = sub.add_parser("score", help="score an analysis against a gold scoring key")
     score.add_argument("--analysis", type=Path, required=True, help="analysis JSON from analyze")
     score.add_argument("--key", type=Path, required=True, help="scoring key JSON")
@@ -119,6 +126,34 @@ def score(args: argparse.Namespace) -> None:
     print(json.dumps(asdict(score_analysis(synthesis, key)), indent=1))
 
 
+def _database_url(explicit: str | None) -> str:
+    url = explicit or os.environ.get("DATABASE_URL_UNPOOLED") or os.environ.get("DATABASE_URL")
+    if not url:
+        raise SystemExit("no database URL: pass --database-url or set DATABASE_URL_UNPOOLED")
+    return url
+
+
+def migrate(args: argparse.Namespace) -> None:
+    import psycopg
+
+    from icma.db import migrate as run_migrations
+
+    with psycopg.connect(_database_url(args.database_url)) as conn:
+        ran = run_migrations(conn)
+    print(f"applied {len(ran)} migration(s): {', '.join(ran) or 'none pending'}")
+
+
+def publish(args: argparse.Namespace) -> None:
+    import psycopg
+
+    from icma.db import publish as publish_analysis
+
+    payload = json.loads(args.analysis.read_text(encoding="utf-8"))
+    with psycopg.connect(_database_url(args.database_url)) as conn:
+        analysis_id, created = publish_analysis(conn, payload)
+    print(f"analysis {analysis_id} {'published' if created else 'already published'}")
+
+
 def main() -> None:
     args = _parser().parse_args()
     if args.command == "export":
@@ -127,6 +162,10 @@ def main() -> None:
         analyze(args)
     elif args.command == "score":
         score(args)
+    elif args.command == "migrate":
+        migrate(args)
+    elif args.command == "publish":
+        publish(args)
 
 
 if __name__ == "__main__":

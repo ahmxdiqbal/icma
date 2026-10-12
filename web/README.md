@@ -41,6 +41,18 @@ changes, update the schema first.
 The source dataset is Emad Jumaah's Hadith Knowledge Graph (hadith-kg, CC BY 4.0). Every page
 shows the package's attribution in its footer; keep it there.
 
+## Database and deployment
+
+- Vercel project `icma` (team ahmxdiqbals-projects), root directory `web`, linked at the repo root
+  (`.vercel/`). Vercel Authentication protects every deployment, so only team members can open it.
+- Postgres is Neon, provisioned through the Vercel Marketplace, which sets `DATABASE_URL`
+  (pooled, used by the app) and `DATABASE_URL_UNPOOLED` (used for migrations) on the project.
+- Locally, put `DATABASE_URL` in `web/.env.local` (git-ignored), e.g. the Docker database from
+  `../pipeline/README.md`, or run `vercel env pull web/.env.local` from the repo root.
+- `src/lib/db.ts` holds one `pg` pool per function instance, registered with
+  `attachDatabasePool`. `GET /api/health` reports database reachability and applied migrations.
+- Schema changes go in `../db/migrations/` and are applied with `icma.cli migrate`.
+
 ## How it fits together
 
 - `src/lib/load.ts` reads and validates packages (server only, synchronous reads).

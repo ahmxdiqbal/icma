@@ -3,7 +3,7 @@ name = "icma"
 version = "0.1.0"
 description = "Hadith corpus ingestion, isnad bundle construction, and ICMA pipeline"
 requires-python = ">=3.13"
-dependencies = ["anthropic>=1.13", "pydantic>=2.14"]
+dependencies = ["anthropic>=1.13", "pydantic>=2.14", "psycopg[binary]>=3.3.6"]
 
 [build-system]
 requires = ["setuptools>=75"]

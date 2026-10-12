@@ -1,0 +1,9 @@
+# Only web/ is built; keep large and local-only files out of CLI uploads.
+/data
+/pipeline
+/eval/gold/sources
+/corrections/proposed
+.venv
+node_modules
+.next
+.claude

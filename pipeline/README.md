@@ -44,6 +44,27 @@ Every model call is cached in `--work-dir` under a hash of its exact prompt and 
 with the model, usage, and prompt version, so reruns are free and every output is reproducible
 training data. Model references to unknown chains, nodes, or variants are reported as warnings.
 
+## Publish for review
+
+Review data lives in Postgres (Neon in production). Migrations are in `../db/migrations/`.
+
+```bash
+.venv/bin/python -m icma.cli migrate --database-url "$DATABASE_URL_UNPOOLED"
+.venv/bin/python -m icma.cli publish --analysis ../data/derived/ubada-khudhu-anni.analysis.json --database-url "$DATABASE_URL_UNPOOLED"
+```
+
+`publish` stores the analysis and splits it into reviewable judgements (CL and PCL verdicts,
+dives, clusters, reconstructions, dating, per-chain matn extractions, matn elements, variant
+readings). Publishing the same file twice is a no-op. Reviews are append-only rows, so the full
+review history is kept as training signal.
+
+Database tests run against a throwaway database when `ICMA_TEST_DATABASE_URL` is set:
+
+```bash
+docker run -d --name icma-pg -e POSTGRES_USER=icma -e POSTGRES_PASSWORD=icma -e POSTGRES_DB=icma -p 54329:5432 postgres:17
+ICMA_TEST_DATABASE_URL=postgresql://icma:icma@localhost:54329/icma .venv/bin/pytest -q
+```
+
 ## Score against a published study
 
 ```bash
@@ -65,6 +86,8 @@ care: a frontier model may have read the study, so a high score can reflect memo
   dives, paths above the CL).
 - `export.py`, `cli.py`: package serialization and command line.
 - `analysis/`: the model ICMA stages, their schemas, prompts, and deterministic correlation.
+- `db.py`: migrations and publishing analyses as reviewable judgements.
+- `evaluate.py`: scoring a synthesis against a key built from a published study.
 
 ## Checks
 
