@@ -1,7 +1,9 @@
 """Postgres access for review data: schema migrations and publishing analyses as judgements."""
 
+import base64
 import hashlib
 import json
+import secrets
 from collections import Counter
 from collections.abc import Iterator
 from dataclasses import dataclass
@@ -116,3 +118,63 @@ def publish(conn: psycopg.Connection, payload: dict[str, object]) -> tuple[int, 
                 ],
             )
     return analysis_id, True
+
+
+REVIEWER_ROLES = ("admin", "reviewer")
+
+
+def set_reviewer(conn: psycopg.Connection, email: str, role: str, added_by: str) -> None:
+    """Grant or change access for one email address."""
+    if role not in REVIEWER_ROLES:
+        raise ValueError(f"role must be one of {REVIEWER_ROLES}")
+    with conn.transaction():
+        conn.execute(
+            "INSERT INTO reviewers (email, role, added_by) VALUES (%s, %s, %s) "
+            "ON CONFLICT (email) DO UPDATE SET role = EXCLUDED.role",
+            (email.strip().lower(), role, added_by),
+        )
+
+
+def remove_reviewer(conn: psycopg.Connection, email: str) -> bool:
+    with conn.transaction():
+        cur = conn.execute("DELETE FROM reviewers WHERE email = %s", (email.strip().lower(),))
+    return cur.rowcount == 1
+
+
+def list_reviewers(conn: psycopg.Connection) -> list[tuple[str, str]]:
+    return [
+        (str(e), str(r)) for e, r in conn.execute("SELECT email, role FROM reviewers ORDER BY 1")
+    ]
+
+
+# scrypt parameters; the web app verifies hashes in this exact format.
+SCRYPT_N, SCRYPT_R, SCRYPT_P, SCRYPT_LEN = 16384, 8, 1, 32
+
+
+def hash_passcode(passcode: str, salt: bytes | None = None) -> str:
+    """Format: scrypt$N$r$p$<salt b64>$<hash b64>."""
+    salt = salt or secrets.token_bytes(16)
+    digest = hashlib.scrypt(
+        passcode.encode("utf-8"), salt=salt, n=SCRYPT_N, r=SCRYPT_R, p=SCRYPT_P, dklen=SCRYPT_LEN
+    )
+    b64 = base64.b64encode
+    return f"scrypt${SCRYPT_N}${SCRYPT_R}${SCRYPT_P}${b64(salt).decode()}${b64(digest).decode()}"
+
+
+def new_passcode() -> str:
+    """Five groups of four characters from an unambiguous alphabet: about 100 bits of entropy."""
+    alphabet = "abcdefghjkmnpqrstuvwxyz23456789"
+    return "-".join("".join(secrets.choice(alphabet) for _ in range(4)) for _ in range(5))
+
+
+def issue_passcode(conn: psycopg.Connection, email: str) -> str:
+    """Replace a reviewer's passcode and return the new one; it is shown once and never stored."""
+    passcode = new_passcode()
+    with conn.transaction():
+        cur = conn.execute(
+            "UPDATE reviewers SET passcode_hash = %s WHERE email = %s",
+            (hash_passcode(passcode), email.strip().lower()),
+        )
+    if cur.rowcount != 1:
+        raise ValueError(f"{email} is not a reviewer")
+    return passcode

@@ -25,8 +25,9 @@ narrators, because meaning groups cluster by legal content and mix unrelated tra
 
 ## Run the model ICMA pass
 
-Needs Anthropic credentials (`ANTHROPIC_API_KEY`). Uses `claude-opus-5-5` with adaptive thinking,
-server-side refusal fallback, and structured outputs.
+Uses OpenRouter by default (`OPENROUTER_API_KEY`, model `anthropic/claude-opus-5.5`, strict JSON
+schema output, high reasoning effort). `--provider anthropic` uses the Anthropic API directly
+(`ANTHROPIC_API_KEY`); `--model` picks another model, e.g. an open-weight baseline on OpenRouter.
 
 ```bash
 .venv/bin/python -m icma.cli analyze --db ../data/raw/hadith-kg/hadith-kg.db --group 730 --anchors 4153,3495,1239 --corrections ../corrections/hadith-kg.json --id ubada-khudhu-anni --title "'Ubada b. al-Samit: khudhu 'anni" --work-dir ../data/analyses/ubada-khudhu-anni --out ../data/derived/ubada-khudhu-anni.analysis.json
@@ -57,6 +58,14 @@ Review data lives in Postgres (Neon in production). Migrations are in `../db/mig
 dives, clusters, reconstructions, dating, per-chain matn extractions, matn elements, variant
 readings). Publishing the same file twice is a no-op. Reviews are append-only rows, so the full
 review history is kept as training signal.
+
+Give someone access (prints a passcode once; only its hash is stored):
+
+```bash
+.venv/bin/python -m icma.cli reviewer add --email someone@example.org --database-url "$DATABASE_URL_UNPOOLED"
+.venv/bin/python -m icma.cli reviewer passcode --email someone@example.org   # issue a new passcode
+.venv/bin/python -m icma.cli reviewer remove --email someone@example.org    # revoke
+```
 
 Database tests run against a throwaway database when `ICMA_TEST_DATABASE_URL` is set:
 
@@ -102,5 +111,5 @@ care: a frontier model may have read the study, so a high score can reflect memo
 - Chain gaps are stored as pseudo-narrators graded "fabricator" (code 12); the reader converts them
   to gap links.
 - Chains are not audited upstream. The 'Ubada audit found 27 of 141 chains needing fixes (see
-  `../corrections/proposed/ubada-audit-report.md`); 21 text-faithful fixes are applied and 11
-  judgement calls wait in `../corrections/pending/`.
+  `../corrections/proposed/ubada-audit-report.md`). Fixes are in `../corrections/hadith-kg.json`;
+  how the 11 judgement calls were settled is in `../corrections/review/decision.md`.

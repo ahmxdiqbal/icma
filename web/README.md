@@ -41,17 +41,23 @@ changes, update the schema first.
 The source dataset is Emad Jumaah's Hadith Knowledge Graph (hadith-kg, CC BY 4.0). Every page
 shows the package's attribution in its footer; keep it there.
 
-## Database and deployment
+## Sign-in, database, and deployment
 
+- Sign-in is an email plus a per-reviewer passcode. A signed `icma_session` cookie then keeps the
+  reviewer signed in on that device for about 13 months (`src/lib/auth/session.ts`).
+- Access: `src/proxy.ts` sends anyone without a valid cookie to `/sign-in`; every page and Server
+  Action also checks the `reviewers` table, so removing a reviewer revokes access immediately.
+  Rotating `SESSION_SECRET` signs everyone out.
+- Reviewers and passcodes are managed from `../pipeline` with `icma.cli reviewer add|passcode|remove|list`.
 - Vercel project `icma` (team ahmxdiqbals-projects), root directory `web`, linked at the repo root
-  (`.vercel/`). Vercel Authentication protects every deployment, so only team members can open it.
-- Postgres is Neon, provisioned through the Vercel Marketplace, which sets `DATABASE_URL`
-  (pooled, used by the app) and `DATABASE_URL_UNPOOLED` (used for migrations) on the project.
-- Locally, put `DATABASE_URL` in `web/.env.local` (git-ignored), e.g. the Docker database from
-  `../pipeline/README.md`, or run `vercel env pull web/.env.local` from the repo root.
-- `src/lib/db.ts` holds one `pg` pool per function instance, registered with
-  `attachDatabasePool`. `GET /api/health` reports database reachability and applied migrations.
-- Schema changes go in `../db/migrations/` and are applied with `icma.cli migrate`.
+  (`.vercel/`); pushes to `main` deploy to production.
+- Postgres is Neon via the Vercel Marketplace, which sets `DATABASE_URL` (pooled, used by the app)
+  and `DATABASE_URL_UNPOOLED` (migrations). `SESSION_SECRET` is set per environment.
+- Locally, `web/.env.local` (git-ignored) needs `DATABASE_URL` and `SESSION_SECRET` (32+ chars).
+- `GET /api/health` reports database reachability and applied migrations.
+- Review pages: `/review` lists published analyses; `/review/<id>` shows each model judgement with
+  accept, reject (needs a note), or revise (edit the JSON; the judged item's key cannot change).
+  Every decision is appended to `reviews`, never overwritten.
 
 ## How it fits together
 

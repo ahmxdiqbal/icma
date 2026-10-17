@@ -1,9 +1,14 @@
+import { loadEnvConfig } from "@next/env";
 import { defineConfig, devices } from "@playwright/test";
+
+// The tests sign cookies and seed a reviewer, so they need the same DATABASE_URL and SESSION_SECRET.
+loadEnvConfig(process.cwd());
 
 const PORT = 3200;
 
 export default defineConfig({
   testDir: "e2e",
+  globalSetup: "./e2e/global-setup.ts",
   fullyParallel: true,
   forbidOnly: Boolean(process.env.CI),
   retries: 0,

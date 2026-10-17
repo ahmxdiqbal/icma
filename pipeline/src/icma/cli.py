@@ -49,6 +49,11 @@ def _parser() -> argparse.ArgumentParser:
     publish = sub.add_parser("publish", help="store an analysis and its judgements for review")
     publish.add_argument("--analysis", type=Path, required=True, help="analysis JSON from analyze")
     publish.add_argument("--database-url", help=db_help)
+    reviewer = sub.add_parser("reviewer", help="grant, change, revoke, or list app access")
+    reviewer.add_argument("action", choices=["add", "remove", "list", "passcode"])
+    reviewer.add_argument("--email")
+    reviewer.add_argument("--role", choices=["admin", "reviewer"], default="reviewer")
+    reviewer.add_argument("--database-url", help=db_help)
     score = sub.add_parser("score", help="score an analysis against a gold scoring key")
     score.add_argument("--analysis", type=Path, required=True, help="analysis JSON from analyze")
     score.add_argument("--key", type=Path, required=True, help="scoring key JSON")
@@ -97,13 +102,22 @@ def export(args: argparse.Namespace) -> None:
 
 def analyze(args: argparse.Namespace) -> None:
     # Imported here so `export` works without the model SDK configured.
-    from icma.analysis.llm import AnthropicCaller
+    from icma.analysis.llm import AnthropicCaller, StructuredCaller
+    from icma.analysis.openrouter import OpenRouterCaller
     from icma.analysis.runner import analysis_json
     from icma.analysis.runner import analyze as run_analysis
 
     tradition, _ = load_corrected(args.db, args.group, args.anchors, args.corrections)
     bundle = bundle_of(tradition)
-    caller = AnthropicCaller(effort=args.effort)
+    caller: StructuredCaller
+    if args.provider == "openrouter":
+        caller = OpenRouterCaller(
+            effort=args.effort, **({"model": args.model} if args.model else {})
+        )
+    else:
+        caller = AnthropicCaller(
+            effort=args.effort, **({"model": args.model} if args.model else {})
+        )
     result = run_analysis(args.title, tradition, bundle, caller, args.work_dir)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     payload = analysis_json(args.id, result)
@@ -154,6 +168,26 @@ def publish(args: argparse.Namespace) -> None:
     print(f"analysis {analysis_id} {'published' if created else 'already published'}")
 
 
+def reviewer(args: argparse.Namespace) -> None:
+    import getpass
+
+    import psycopg
+
+    from icma.db import issue_passcode, list_reviewers, remove_reviewer, set_reviewer
+
+    if args.action != "list" and not args.email:
+        raise SystemExit("--email is required")
+    with psycopg.connect(_database_url(args.database_url)) as conn:
+        if args.action in ("add", "passcode"):
+            if args.action == "add":
+                set_reviewer(conn, args.email, args.role, f"cli:{getpass.getuser()}")
+            print(f"passcode for {args.email.strip().lower()}: {issue_passcode(conn, args.email)}")
+        elif args.action == "remove" and not remove_reviewer(conn, args.email):
+            raise SystemExit(f"{args.email} was not a reviewer")
+        for email, role in list_reviewers(conn):
+            print(f"{role:9} {email}")
+
+
 def main() -> None:
     args = _parser().parse_args()
     if args.command == "export":
@@ -166,6 +200,8 @@ def main() -> None:
         migrate(args)
     elif args.command == "publish":
         publish(args)
+    elif args.command == "reviewer":
+        reviewer(args)
 
 
 if __name__ == "__main__":

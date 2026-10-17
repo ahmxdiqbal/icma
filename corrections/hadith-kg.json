@@ -43,31 +43,6 @@
       "date": "2026-10-11"
     },
     {
-      "chain_id": 247747,
-      "op": "set_links",
-      "links": [
-        {
-          "narrator_id": 4153
-        },
-        {
-          "narrator_id": 1239
-        },
-        {
-          "narrator_id": 8616
-        },
-        {
-          "narrator_id": 5280
-        },
-        {
-          "narrator_id": 6805
-        }
-      ],
-      "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Add al-Shafi'i as collector (Sanjar only rearranged the Musnad; book 33's copy of this report, chain 198333, ends at al-Shafi'i) and the inqita between al-Hasan and 'Ubada. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
-      "evidence": "Musnad al-Shafi'i (tartib Sanjar) 956, hadith-kg hadiths.id 203777: 'أَخْبَرَنَا الشَّافِعِيُّ ... أَخْبَرَنَا عَبْدُ الْوَهَّابِ ، عَنْ يُونُسَ ، عَنِ الْحَسَنِ ، عَنْ عُبَادَةَ'.",
-      "author": "claude audit agent (unreviewed)",
-      "date": "2026-10-11"
-    },
-    {
       "chain_id": 339290,
       "op": "set_links",
       "links": [
@@ -283,86 +258,6 @@
       "date": "2026-10-11"
     },
     {
-      "chain_id": 423855,
-      "op": "set_links",
-      "links": [
-        {
-          "narrator_id": 4153
-        },
-        {
-          "narrator_id": 2415
-        },
-        {
-          "narrator_id": 6458
-        },
-        {
-          "narrator_id": 3281
-        },
-        {
-          "narrator_id": 8271
-        },
-        {
-          "narrator_id": 7426
-        },
-        {
-          "narrator_id": 46158
-        },
-        {
-          "narrator_id": 26604
-        },
-        {
-          "narrator_id": 46153
-        },
-        {
-          "narrator_id": 34368
-        }
-      ],
-      "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Restore al-Hasan between Qatada and Hittan (the text's 'عن الحسن عن حطان' became 'الحسن بن حطان', and the dataset dropped al-Hasan) and add Ibn 'Abd al-Barr (record 34368) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
-      "evidence": "al-Istidhkar 879, hadith-kg hadiths.id 425692: 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ بْنِ حِطَّانَ بْنِ عَبْدِ اللَّهِ الرَّقَاشِيُّ' (one mention span covers both names). Ibn 'Abd al-Barr's identical isnad in al-Tamhid 1432 (hadiths.id 418334): 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ ، عَنْ حِطَّانَ بْنِ عَبْدِ اللَّهِ'.",
-      "author": "claude audit agent (unreviewed)",
-      "date": "2026-10-11"
-    },
-    {
-      "chain_id": 423856,
-      "op": "set_links",
-      "links": [
-        {
-          "narrator_id": 4153
-        },
-        {
-          "narrator_id": 2415
-        },
-        {
-          "narrator_id": 6458
-        },
-        {
-          "narrator_id": 3281
-        },
-        {
-          "narrator_id": 8271
-        },
-        {
-          "narrator_id": 3036
-        },
-        {
-          "narrator_id": 9844
-        },
-        {
-          "narrator_id": 26604
-        },
-        {
-          "narrator_id": 46153
-        },
-        {
-          "narrator_id": 34368
-        }
-      ],
-      "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Restore al-Hasan between Qatada and Hittan (the text's 'عن الحسن عن حطان' became 'الحسن بن حطان', and the dataset dropped al-Hasan) and add Ibn 'Abd al-Barr (record 34368) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
-      "evidence": "al-Istidhkar 879, hadith-kg hadiths.id 425692: 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ بْنِ حِطَّانَ بْنِ عَبْدِ اللَّهِ الرَّقَاشِيُّ' (one mention span covers both names). Ibn 'Abd al-Barr's identical isnad in al-Tamhid 1432 (hadiths.id 418334): 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ ، عَنْ حِطَّانَ بْنِ عَبْدِ اللَّهِ'.",
-      "author": "claude audit agent (unreviewed)",
-      "date": "2026-10-11"
-    },
-    {
       "chain_id": 433469,
       "op": "set_links",
       "links": [
@@ -399,43 +294,6 @@
       ],
       "reason": "Add al-Wahidi ('Ali b. Ahmad, d. 468, record 75250) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
       "evidence": "al-Wasit li-l-Wahidi 202, hadith-kg hadiths.id 490450: 'أَخْبَرَنَا سَعِيدُ بْنُ مُحَمَّدٍ الزَّاهِدُ ، أَخْبَرَنَا أَبُو عَلِيِّ بْنُ أَحْمَدَ الْفَقِيهُ'.",
-      "author": "claude audit agent (unreviewed)",
-      "date": "2026-10-11"
-    },
-    {
-      "chain_id": 433470,
-      "op": "set_links",
-      "links": [
-        {
-          "narrator_id": 4153
-        },
-        {
-          "narrator_id": 1239
-        },
-        {
-          "narrator_id": 8616
-        },
-        {
-          "narrator_id": 5280
-        },
-        {
-          "narrator_id": 6805
-        },
-        {
-          "narrator_id": 1410
-        },
-        {
-          "narrator_id": 31063
-        },
-        {
-          "narrator_id": 9598
-        },
-        {
-          "narrator_id": 75250
-        }
-      ],
-      "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Add al-Wahidi (record 75250) as collector and the inqita between al-Hasan and 'Ubada. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
-      "evidence": "al-Wasit li-l-Wahidi 203, hadith-kg hadiths.id 490451: 'أَخْبَرَنَا أَحْمَدُ بْنُ الْحَسَنِ الْحِيرِيُّ ... عَنْ يُونُسَ ، عَنْ الْحَسَنِ ، عَنْ عُبَادَةَ'.",
       "author": "claude audit agent (unreviewed)",
       "date": "2026-10-11"
     },
@@ -485,46 +343,6 @@
       ],
       "reason": "Add al-Baghawi (al-Husayn b. Mas'ud, d. 516, record 75058) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
       "evidence": "al-Anwar fi Shama'il al-Nabi 23, hadith-kg hadiths.id 517964: 'أَخْبَرَنَا إِسْمَاعِيلُ بْنُ عَبْدِ الْقَاهِرِ ، أَنْبَا عَبْدُ الْغَافِرِ بْنُ مُحَمَّدٍ'.",
-      "author": "claude audit agent (unreviewed)",
-      "date": "2026-10-11"
-    },
-    {
-      "chain_id": 519675,
-      "op": "set_links",
-      "links": [
-        {
-          "narrator_id": 3495
-        },
-        {
-          "narrator_id": 6452
-        },
-        {
-          "narrator_id": 1549
-        },
-        {
-          "narrator_id": 8160
-        },
-        {
-          "narrator_id": 488
-        },
-        {
-          "narrator_id": 4657
-        },
-        {
-          "narrator_id": 8994
-        },
-        {
-          "narrator_id": 14991
-        },
-        {
-          "narrator_id": 46125
-        },
-        {
-          "narrator_id": 46607
-        }
-      ],
-      "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Add Ibn 'Asakir (record 46607) as collector, and restore al-Hasan between al-Fadl b. Dalham and Qabisa: al-Fadl (t7) cannot have heard Qabisa (t3, d. 67), and every other copy of this Waki' < al-Fadl isnad has al-Hasan, including Ibn al-Jawzi's quotation through the same Hibat Allah < Ibn al-Mudhhib < al-Qati'i < 'Abd Allah route (chain 421702) and Musnad Ahmad 15592 itself. The al-Hasan insertion rests on these parallels; the Tarikh Dimashq text as stored omits him. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
-      "evidence": "Tarikh Dimashq 52057, hadith-kg hadiths.id 627864: 'قَالَ : وَحَدَّثَنِي أَبِي ، حَدَّثَنَا وَكِيعٌ ، حَدَّثَنَا الْفَضْلُ بْنُ دَلْهَمٍ ، عَنْ قَبِيصَةَ بْنِ حُرَيْثٍ'. Musnad Ahmad 15592 (hadiths.id 51766): 'حَدَّثَنَا الْفَضْلُ بْنُ دَلْهَمٍ ، عَنِ الْحَسَنِ ، عَنْ قَبِيصَةَ بْنِ حُرَيْثٍ'.",
       "author": "claude audit agent (unreviewed)",
       "date": "2026-10-11"
     },
@@ -754,6 +572,400 @@
       "evidence": "Tarikh Dimashq 52063, hadith-kg hadiths.id 627870: 'أَنْبَأَنَا مُحَمَّدُ بْنُ إِسْمَاعِيلَ ، قَالَ : الْفَضْلُ بْنُ دَلْهَمٍ الْبَصْرِيُّ ، سَمِعَ الْحَسَنَ ، عَنْ قَبِيصَةَ' (al-Bukhari's biographical entry, ending 'وَرَوَى عَنْهُ وَكِيعٌ').",
       "author": "claude audit agent (unreviewed)",
       "date": "2026-10-11"
+    },
+    {
+      "chain_id": 185630,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "gap": "inqita"
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 8616
+        },
+        {
+          "narrator_id": 5280
+        },
+        {
+          "narrator_id": 6805
+        },
+        {
+          "narrator_id": 1410
+        },
+        {
+          "narrator_id": 31063
+        },
+        {
+          "narrator_id": 33635
+        },
+        {
+          "narrator_id": 9624
+        }
+      ],
+      "reason": "Add the inqita between al-Hasan and 'Ubada. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+      "evidence": "Ma'rifat al-Sunan (hadith 145632): the entry gives al-Shafi'i's second route 'عن الحسن، عن حطان الرقاشي، عن عبادة', his doubt 'ولا أدري أدخله عبد الوهاب بينهما', and al-Bayhaqi's note that Qatada and Mansur transmitted it 'موصولا'. The same al-Shafi'i < 'Abd al-Wahhab < Yunus route already carries inqita in chains 198333, 340125, 383381 and 431847.",
+      "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+      "date": "2026-10-17"
+    },
+    {
+      "chain_id": 185631,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "gap": "inqita"
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 8616
+        },
+        {
+          "narrator_id": 5280
+        },
+        {
+          "narrator_id": 6805
+        },
+        {
+          "narrator_id": 1410
+        },
+        {
+          "narrator_id": 31063
+        },
+        {
+          "narrator_id": 29795
+        },
+        {
+          "narrator_id": 9624
+        }
+      ],
+      "reason": "Add the inqita between al-Hasan and 'Ubada. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+      "evidence": "Ma'rifat al-Sunan (hadith 145632): the entry gives al-Shafi'i's second route 'عن الحسن، عن حطان الرقاشي، عن عبادة', his doubt 'ولا أدري أدخله عبد الوهاب بينهما', and al-Bayhaqi's note that Qatada and Mansur transmitted it 'موصولا'. The same al-Shafi'i < 'Abd al-Wahhab < Yunus route already carries inqita in chains 198333, 340125, 383381 and 431847.",
+      "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+      "date": "2026-10-17"
+    },
+    {
+      "chain_id": 185632,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "gap": "inqita"
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 8616
+        },
+        {
+          "narrator_id": 5280
+        },
+        {
+          "narrator_id": 6805
+        },
+        {
+          "narrator_id": 1410
+        },
+        {
+          "narrator_id": 31063
+        },
+        {
+          "narrator_id": 9598
+        },
+        {
+          "narrator_id": 9624
+        }
+      ],
+      "reason": "Add the inqita between al-Hasan and 'Ubada. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+      "evidence": "Ma'rifat al-Sunan (hadith 145632): the entry gives al-Shafi'i's second route 'عن الحسن، عن حطان الرقاشي، عن عبادة', his doubt 'ولا أدري أدخله عبد الوهاب بينهما', and al-Bayhaqi's note that Qatada and Mansur transmitted it 'موصولا'. The same al-Shafi'i < 'Abd al-Wahhab < Yunus route already carries inqita in chains 198333, 340125, 383381 and 431847.",
+      "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+      "date": "2026-10-17"
+    },
+    {
+      "chain_id": 392492,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "gap": "inqita"
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 8616
+        },
+        {
+          "narrator_id": 5280
+        },
+        {
+          "narrator_id": 6805
+        },
+        {
+          "narrator_id": 1410
+        },
+        {
+          "narrator_id": 31063
+        },
+        {
+          "narrator_id": 46749
+        },
+        {
+          "narrator_id": 46709
+        },
+        {
+          "narrator_id": 75058
+        }
+      ],
+      "reason": "Add the inqita between al-Hasan and 'Ubada. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+      "evidence": "Sharh al-Sunna 2584, hadith-kg hadiths.id 398184: 'أنا عَبْدُ الْوَهَّابِ ، عَنْ يُونُسَ ، عَنِ الْحَسَنِ ، عَنْ عُبَادَةَ يَعْنِي ابْنَ الصَّامِتِ'; same entry: 'كَانَ يُدْخِلُ بَيْنَهُ وَبَيْنَ عُبَادَةَ' / 'الْحَسَنَ كَانَ يُدْخِلُ'.",
+      "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+      "date": "2026-10-17"
+    },
+    {
+      "chain_id": 325756,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "gap": "inqita"
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 8616
+        },
+        {
+          "narrator_id": 6958
+        },
+        {
+          "narrator_id": 7150
+        },
+        {
+          "narrator_id": 32343
+        },
+        {
+          "narrator_id": 28286
+        }
+      ],
+      "reason": "Mark the break between al-Hasan and 'Ubada, as hadith-kg does for the same pair elsewhere in this tradition.",
+      "evidence": "Juz' Abi al-Tahir (hadith 315707): 'عن يونس بن عبيد، عن الحسن، عن عبادة بن الصامت'. Basis is consistency: hadith-kg marks the al-Hasan < 'Ubada link as inqita in 9 other chains of this tradition, including another Yunus route (355175).",
+      "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+      "date": "2026-10-17"
+    },
+    {
+      "chain_id": 247747,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "gap": "inqita"
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 8616
+        },
+        {
+          "narrator_id": 5280
+        },
+        {
+          "narrator_id": 6805
+        }
+      ],
+      "reason": "Add al-Shafi'i as collector (Sanjar only rearranged the Musnad; book 33's copy of this report, chain 198333, ends at al-Shafi'i) and the inqita between al-Hasan and 'Ubada. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "Musnad al-Shafi'i (tartib Sanjar) 956, hadith-kg hadiths.id 203777: 'أَخْبَرَنَا الشَّافِعِيُّ ... أَخْبَرَنَا عَبْدُ الْوَهَّابِ ، عَنْ يُونُسَ ، عَنِ الْحَسَنِ ، عَنْ عُبَادَةَ'.",
+      "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+      "date": "2026-10-17"
+    },
+    {
+      "chain_id": 423855,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 6458
+        },
+        {
+          "narrator_id": 3281
+        },
+        {
+          "narrator_id": 8271
+        },
+        {
+          "narrator_id": 7426
+        },
+        {
+          "narrator_id": 46158
+        },
+        {
+          "narrator_id": 26604
+        },
+        {
+          "narrator_id": 46153
+        },
+        {
+          "narrator_id": 34368
+        }
+      ],
+      "reason": "Restore al-Hasan between Qatada and Hittan (the text's 'عن الحسن عن حطان' became 'الحسن بن حطان', and the dataset dropped al-Hasan) and add Ibn 'Abd al-Barr (record 34368) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "al-Istidhkar 879, hadith-kg hadiths.id 425692: 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ بْنِ حِطَّانَ بْنِ عَبْدِ اللَّهِ الرَّقَاشِيُّ' (one mention span covers both names). Ibn 'Abd al-Barr's identical isnad in al-Tamhid 1432 (hadiths.id 418334): 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ ، عَنْ حِطَّانَ بْنِ عَبْدِ اللَّهِ'.",
+      "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+      "date": "2026-10-17"
+    },
+    {
+      "chain_id": 423856,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 6458
+        },
+        {
+          "narrator_id": 3281
+        },
+        {
+          "narrator_id": 8271
+        },
+        {
+          "narrator_id": 3036
+        },
+        {
+          "narrator_id": 9844
+        },
+        {
+          "narrator_id": 26604
+        },
+        {
+          "narrator_id": 46153
+        },
+        {
+          "narrator_id": 34368
+        }
+      ],
+      "reason": "Restore al-Hasan between Qatada and Hittan (the text's 'عن الحسن عن حطان' became 'الحسن بن حطان', and the dataset dropped al-Hasan) and add Ibn 'Abd al-Barr (record 34368) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+      "evidence": "al-Istidhkar 879, hadith-kg hadiths.id 425692: 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ بْنِ حِطَّانَ بْنِ عَبْدِ اللَّهِ الرَّقَاشِيُّ' (one mention span covers both names). Ibn 'Abd al-Barr's identical isnad in al-Tamhid 1432 (hadiths.id 418334): 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ ، عَنْ حِطَّانَ بْنِ عَبْدِ اللَّهِ'.",
+      "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+      "date": "2026-10-17"
+    },
+    {
+      "chain_id": 433470,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "gap": "inqita"
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 8616
+        },
+        {
+          "narrator_id": 5280
+        },
+        {
+          "narrator_id": 6805
+        },
+        {
+          "narrator_id": 1410
+        },
+        {
+          "narrator_id": 31063
+        },
+        {
+          "narrator_id": 9598
+        },
+        {
+          "narrator_id": 75250
+        }
+      ],
+      "reason": "Add al-Wahidi (record 75250) as collector and the inqita between al-Hasan and 'Ubada. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+      "evidence": "al-Wasit li-l-Wahidi 203, hadith-kg hadiths.id 490451: 'أَخْبَرَنَا أَحْمَدُ بْنُ الْحَسَنِ الْحِيرِيُّ ... عَنْ يُونُسَ ، عَنْ الْحَسَنِ ، عَنْ عُبَادَةَ'.",
+      "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+      "date": "2026-10-17"
+    },
+    {
+      "chain_id": 519675,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 3495
+        },
+        {
+          "narrator_id": 6452
+        },
+        {
+          "narrator_id": 1239
+        },
+        {
+          "narrator_id": 1549
+        },
+        {
+          "narrator_id": 8160
+        },
+        {
+          "narrator_id": 488
+        },
+        {
+          "narrator_id": 4657
+        },
+        {
+          "narrator_id": 8994
+        },
+        {
+          "narrator_id": 14991
+        },
+        {
+          "narrator_id": 46125
+        },
+        {
+          "narrator_id": 46607
+        }
+      ],
+      "reason": "Add Ibn 'Asakir (record 46607) as collector, and restore al-Hasan between al-Fadl b. Dalham and Qabisa: al-Fadl (t7) cannot have heard Qabisa (t3, d. 67), and every other copy of this Waki' < al-Fadl isnad has al-Hasan, including Ibn al-Jawzi's quotation through the same Hibat Allah < Ibn al-Mudhhib < al-Qati'i < 'Abd Allah route (chain 421702) and Musnad Ahmad 15592 itself. The al-Hasan insertion rests on these parallels; the Tarikh Dimashq text as stored omits him. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector. Basis: parallel transmissions through the same people (Ibn 'Asakir's own entries 52058 and 52063; Musnad Ahmad), not this entry's text; exclude from text-extraction training.",
+      "evidence": "Tarikh Dimashq 52057, hadith-kg hadiths.id 627864: 'قَالَ : وَحَدَّثَنِي أَبِي ، حَدَّثَنَا وَكِيعٌ ، حَدَّثَنَا الْفَضْلُ بْنُ دَلْهَمٍ ، عَنْ قَبِيصَةَ بْنِ حُرَيْثٍ'. Musnad Ahmad 15592 (hadiths.id 51766): 'حَدَّثَنَا الْفَضْلُ بْنُ دَلْهَمٍ ، عَنِ الْحَسَنِ ، عَنْ قَبِيصَةَ بْنِ حُرَيْثٍ'.",
+      "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+      "date": "2026-10-17"
     }
   ]
 }

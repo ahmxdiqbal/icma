@@ -1,7 +1,8 @@
 import Link from "next/link";
-import type { ReactElement } from "react";
+import { Suspense, type ReactElement } from "react";
 import { Ar } from "@/components/arabic";
 import { AttributionFooter } from "@/components/attribution-footer";
+import { requireReviewer } from "@/lib/auth/reviewer";
 import { countsSentence } from "@/lib/format";
 import { listTraditionSummaries, type TraditionSummary } from "@/lib/view";
 
@@ -26,7 +27,8 @@ function TraditionRow({ t }: { t: TraditionSummary }): ReactElement {
   );
 }
 
-export default function Home(): ReactElement {
+async function HomeContent(): Promise<ReactElement> {
+  await requireReviewer();
   const traditions = listTraditionSummaries();
   return (
     <>
@@ -48,5 +50,13 @@ export default function Home(): ReactElement {
       </main>
       <AttributionFooter sources={traditions.map((t) => t.source)} />
     </>
+  );
+}
+
+export default function Home(): ReactElement {
+  return (
+    <Suspense fallback={<main className="mx-auto w-full max-w-[1100px] px-4 py-10 text-ink-muted sm:px-6">Checking access…</main>}>
+      <HomeContent />
+    </Suspense>
   );
 }

@@ -1,0 +1,72 @@
+{
+  "reviewer": "a",
+  "principles": "A chain keeps every name its entry's text gives, in the text's order. A gap marker adds no name and removes none, so it never contradicts the text: in hadith-kg the inqita marker is the source editors' judgement, recorded in sanads.hukum as 'موضع انقطاع', and never a word in the nass. The 9 marked and 7 unmarked al-Hasan to 'Ubada chains of this tradition have the same wording, 'عن الحسن عن عبادة', so they get one representation; otherwise the bundle shows two upper paths for one textual fact. A gap is also justified when reliable biographical data in the dataset rules out a direct link, and its kind stays inqita when the text names nobody. A narrator missing from a stored text is restored only when the text keeps a trace of him or when several copies of the same transmission name him, and when leaving him out would create a dive that no witness supports.",
+  "decisions": [
+    {
+      "chain_id": 185630,
+      "decision": "ACCEPT",
+      "confidence": "high",
+      "reasoning": "Ma'rifat al-Sunan 4442 (hadith 145632) reads 'أخبرنا عبد الوهاب بن عبد المجيد الثقفي، عن يونس بن عبيد، عن الحسن، عن عبادة بن الصامت'. The same entry then gives al-Shafi'i's second route 'أخبرنا الثقة من أهل العلم، عن يونس بن عبيد، عن الحسن، عن حطان الرقاشي، عن عبادة', his doubt 'ولا أدري أدخله عبد الوهاب بينهما', and al-Bayhaqi's remark that Qatada and Mansur transmitted it 'موصولا ... عن الحسن، عن حطان'. The entry itself therefore flags this link as broken. An unnamed inqita matches al-Shafi'i's own uncertainty better than inserting Hittan would. The identical al-Shafi'i < 'Abd al-Wahhab < Yunus route carries inqita in 198333, 340125, 383381 and 431847. Evidence fix: the pending evidence quotes 'كان يدخل بينه وبين عبادة' for this entry, but that phrase is not in hadith 145632 (it is in 159984, 327982 and 398184). The evidence field should quote the fragments above. The links differ from the current chain only by the inserted gap."
+    },
+    {
+      "chain_id": 185631,
+      "decision": "ACCEPT",
+      "confidence": "high",
+      "reasoning": "Same entry (hadith 145632) as 185630; the only difference is al-Bayhaqi's informant (al-Hakim 29795 in place of Abu Zakariyya 33635, from 'أخبرنا أبو عبد الله، وأبو بكر، وأبو زكريا'). The entry's own text marks the break: 'ولا أدري أدخله عبد الوهاب بينهما', with the Hittan route given alongside, and al-Bayhaqi calls the Hittan version 'موصولا'. Its evidence field has the same misquotation as 185630."
+    },
+    {
+      "chain_id": 185632,
+      "decision": "ACCEPT",
+      "confidence": "high",
+      "reasoning": "Same entry (hadith 145632) as 185630, with Abu Bakr al-Hiri (9598) as informant. Same reasoning and the same evidence-field fix."
+    },
+    {
+      "chain_id": 392492,
+      "decision": "ACCEPT",
+      "confidence": "high",
+      "reasoning": "Sharh al-Sunna 2584 (hadith 398184): 'أنا عبد الوهاب، عن يونس، عن الحسن، عن عبادة يعني ابن الصامت', followed in the same entry by 'قال الشافعي: وقد حدثني الثقة أن الحسن كان يدخل بينه وبين عبادة حطان الرقاشي'. The text itself names the break. al-Baghawi's identical isnad (al-Kisa'i < al-Khallal < al-Asamm < al-Rabi' < al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) in Ma'alim al-Tanzil 324 (chain 431847) already carries inqita, so leaving this one unmarked would give one author's one isnad two representations."
+    },
+    {
+      "chain_id": 325756,
+      "decision": "ACCEPT",
+      "confidence": "medium",
+      "reasoning": "Juz' Abi al-Tahir 32 (hadith 315707): 'حدثنا محمد بن دينار الطاحي، عن يونس بن عبيد، عن الحسن، عن عبادة بن الصامت'. Unlike the al-Shafi'i entries, this text has no remark about the break, so the case rests on consistency and not on this entry's wording. The dataset marks the al-Hasan to 'Ubada link with inqita on routes that do not involve al-Shafi'i: Khalid < Yunus (al-Marwazi 302, chain 355175), Jarir b. Hazim (Ahmad 22186, Tayalisi 581, Ibn al-A'rabi 2243, whose text even reads 'سمعت الحسن يحدث عن عبادة'), and Isma'il b. Muslim (Tabari 8099). The convention therefore applies to the link, not to a route. The marker sits above al-Hasan, so his branch counts and CL status are unchanged; the chain only moves from the 'n:4153' upper path to the 'g:inqita' one."
+    },
+    {
+      "chain_id": 247747,
+      "decision": "ACCEPT",
+      "confidence": "high",
+      "reasoning": "Musnad al-Shafi'i (tartib Sanjar) 956 (hadith 203777): 'أخبرنا عبد الوهاب، عن يونس، عن الحسن، عن عبادة، يعني: ابن الصامت'. Sanjar's text is a rearrangement of the same Musnad whose own copy (Musnad al-Shafi'i 742, hadith 159984, chain 198333) has the same isnad with inqita and al-Shafi'i's note 'أن الحسن كان يدخل بينه وبين عبادة حطان الرقاشي'. One report in two arrangements of one book should not differ in whether the link is broken. The links are the applied collector fix plus the gap."
+    },
+    {
+      "chain_id": 433470,
+      "decision": "ACCEPT",
+      "confidence": "high",
+      "reasoning": "al-Wasit 203 (hadith 490451): 'أخبرنا أحمد بن الحسن الحيري، حدثنا محمد بن يعقوب، أخبرنا الربيع، أخبرنا الشافعي، أخبرنا عبد الوهاب، عن يونس، عن الحسن، عن عبادة'. This is al-Asamm's riwaya of al-Shafi'i, the same transmission al-Baghawi quotes in Ma'alim al-Tanzil 324 (chain 431847, inqita) and al-Bayhaqi in Ma'rifat al-Sunan 4442 (whose text flags the break). The text lacks the remark, but the transmission is the same. The links are the applied collector fix plus the gap."
+    },
+    {
+      "chain_id": 423855,
+      "decision": "ACCEPT",
+      "confidence": "high",
+      "reasoning": "al-Istidhkar 879 (hadith 425692): 'عن ابن أبي عروبة، عن قتادة، عن الحسن بن حطان بن عبد الله الرقاشي، عن عبادة'. One mention span (326 to 383) covers 'الحسن بن حطان ...' and is mapped to Hittan, so the current chain drops a word the text contains. No 'al-Hasan b. Hittan' exists. Reading 'عن الحسن، عن حطان' accounts for every word with a one-word emendation. Two texts confirm it. Ibn 'Abd al-Barr's identical isnad in al-Tamhid 1432 (hadith 418334: 'عبد الوارث بن سفيان ... قاسم بن أصبغ ... أحمد بن زهير، وبكر بن حماد ... مسدد ... يحيى القطان، عن ابن أبي عروبة، عن قتادة، عن الحسن، عن حطان بن عبد الله') is chain 415223, which equals the proposed links exactly. Abu Dawud 3836 (hadith 20158) has 'حدثنا مسدد، حدثنا يحيى، عن سعيد بن أبي عروبة، عن قتادة، عن الحسن، عن حطان'. Without the fix the bundle shows a false dive (departs n:2415, rejoins n:6458), with Qatada hearing Hittan directly, at the same Yahya < Sa'id < Qatada juncture where Ibn Majah has a real variant through Yunus b. Jubayr (chain 43727). A spurious dive there would distort the judgement of al-Hasan's role."
+    },
+    {
+      "chain_id": 423856,
+      "decision": "ACCEPT",
+      "confidence": "high",
+      "reasoning": "Same entry (hadith 425692) as 423855, through Ahmad b. Zuhayr < Zuhayr b. Harb ('قال أحمد: حدثني أبي'). The proposed links equal al-Tamhid's chain 415222 (same author, same 'Abd al-Warith < Qasim < Ahmad b. Zuhayr < Zuhayr < Yahya < Sa'id < Qatada < al-Hasan < Hittan route). The trace 'الحسن' is in the stored text, and the fix removes a second false dive."
+    },
+    {
+      "chain_id": 519675,
+      "decision": "ACCEPT",
+      "confidence": "high",
+      "reasoning": "Tarikh Dimashq 52057 (hadith 627864) reads 'حدثنا وكيع، حدثنا الفضل بن دلهم، عن قبيصة بن حريث، عن سلمة بن المحبق' and omits al-Hasan, so this restoration goes beyond the stored text. The evidence is still textual and strong. The entry is Ibn 'Asakir quoting the Musnad through its standard riwaya (Ibn al-Husayn < Ibn al-Mudhhib < al-Qati'i < 'Abd Allah < Ahmad, carried from 52056), and Musnad Ahmad 15592 (hadith 51766) has 'حدثنا الفضل بن دلهم، عن الحسن، عن قبيصة بن حريث'. Ibn al-Jawzi's al-Tahqiq 1904 (hadith 423604, 'قال أحمد وحدثنا وكيع ... عن الحسن، عن قبيصة') agrees. Ibn 'Asakir's own biography of al-Fadl also names this hadith with al-Hasan in the next two report entries: 52058 (hadith 627865) has Ahmad mentioning 'حديث الفضل بن دلهم، عن الحسن، عن قبيصة بن حريث، عن سلمة بن المحبق ... خذوا عني', and 52063 (hadith 627870) has al-Bukhari's 'الفضل بن دلهم البصري، سمع الحسن، عن قبيصة ... وروى عنه وكيع'. Chronology also rules out the stored link: al-Fadl is t7 and Qabisa t3, d. 67, and Ibn Abi Hatim (52064) lists al-Fadl's teachers as al-Hasan, Ibn Sirin and Qatada. Left as stored, the chain is the bundle's dive departing n:6452 and rejoining n:1549. That dive bypasses al-Hasan only because a late copy slipped, and it would skew the analysis of his role. An inqita in place of al-Hasan would keep that false dive, so the named restoration is better."
+    },
+    {
+      "chain_id": 257833,
+      "decision": "ACCEPT",
+      "confidence": "medium",
+      "reasoning": "Musannaf 'Abd al-Razzaq 12990 (hadith 222430): 'عن عبد الله بن محرر، عن حطان بن عبد الله الرقاشي، عن عبادة بن الصامت', followed by 'عن معمر، عن قتادة، عن الحسن، عن حطان ... مثله'. Ibn Muharrar is t7 and Hittan t2, d. 71. In hadith-kg his other 15 teachers are t3 to t6, and among those with a recorded death year the earliest to die is Yazid b. al-Asamm (d. 101). His most frequent teacher is Qatada, with 27 chains. His aqwal name his teachers as Qatada, Yazid b. al-Asamm, Nafi' and al-Zuhri, and Ibn Hibban says he 'يقلب الأخبار'. A direct link is therefore not credible, and the text names no one, so inqita is the right kind. Restoring Qatada and al-Hasan would be a guess. Medium confidence because the dataset gives no death year for Ibn Muharrar, and because the bundle still counts the gap as an independent branch of Hittan (branch count 2 either way). The marker changes how the break is labelled, not Hittan's key-figure status; it makes the break visible instead of showing Ibn Muharrar as a real second student of Hittan."
+    }
+  ]
+}

@@ -2,7 +2,7 @@
  "schema_version": 1,
  "id": "ubada-khudhu-anni",
  "title_en": "'Ubada b. al-Samit: khudhu 'anni",
- "generated_at": "2026-10-12T00:11:09+00:00",
+ "generated_at": "2026-10-17T08:58:52+00:00",
  "source": {
   "dataset": "hadith-kg",
   "url": "https://huggingface.co/datasets/emadjumaah/hadith-kg",
@@ -52,6 +52,162 @@
    "date": "2026-10-11"
   },
   {
+   "chain_id": 185630,
+   "op": "set_links",
+   "from_narrator_id": null,
+   "to_narrator_id": null,
+   "links": [
+    {
+     "kind": "narrator",
+     "narrator_id": 4153
+    },
+    {
+     "kind": "gap",
+     "gap": "inqita"
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1239
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 8616
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 5280
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 6805
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1410
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 31063
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 33635
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 9624
+    }
+   ],
+   "reason": "Add the inqita between al-Hasan and 'Ubada. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+   "evidence": "Ma'rifat al-Sunan (hadith 145632): the entry gives al-Shafi'i's second route 'عن الحسن، عن حطان الرقاشي، عن عبادة', his doubt 'ولا أدري أدخله عبد الوهاب بينهما', and al-Bayhaqi's note that Qatada and Mansur transmitted it 'موصولا'. The same al-Shafi'i < 'Abd al-Wahhab < Yunus route already carries inqita in chains 198333, 340125, 383381 and 431847.",
+   "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+   "date": "2026-10-17"
+  },
+  {
+   "chain_id": 185631,
+   "op": "set_links",
+   "from_narrator_id": null,
+   "to_narrator_id": null,
+   "links": [
+    {
+     "kind": "narrator",
+     "narrator_id": 4153
+    },
+    {
+     "kind": "gap",
+     "gap": "inqita"
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1239
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 8616
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 5280
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 6805
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1410
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 31063
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 29795
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 9624
+    }
+   ],
+   "reason": "Add the inqita between al-Hasan and 'Ubada. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+   "evidence": "Ma'rifat al-Sunan (hadith 145632): the entry gives al-Shafi'i's second route 'عن الحسن، عن حطان الرقاشي، عن عبادة', his doubt 'ولا أدري أدخله عبد الوهاب بينهما', and al-Bayhaqi's note that Qatada and Mansur transmitted it 'موصولا'. The same al-Shafi'i < 'Abd al-Wahhab < Yunus route already carries inqita in chains 198333, 340125, 383381 and 431847.",
+   "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+   "date": "2026-10-17"
+  },
+  {
+   "chain_id": 185632,
+   "op": "set_links",
+   "from_narrator_id": null,
+   "to_narrator_id": null,
+   "links": [
+    {
+     "kind": "narrator",
+     "narrator_id": 4153
+    },
+    {
+     "kind": "gap",
+     "gap": "inqita"
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1239
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 8616
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 5280
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 6805
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1410
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 31063
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 9598
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 9624
+    }
+   ],
+   "reason": "Add the inqita between al-Hasan and 'Ubada. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+   "evidence": "Ma'rifat al-Sunan (hadith 145632): the entry gives al-Shafi'i's second route 'عن الحسن، عن حطان الرقاشي، عن عبادة', his doubt 'ولا أدري أدخله عبد الوهاب بينهما', and al-Bayhaqi's note that Qatada and Mansur transmitted it 'موصولا'. The same al-Shafi'i < 'Abd al-Wahhab < Yunus route already carries inqita in chains 198333, 340125, 383381 and 431847.",
+   "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+   "date": "2026-10-17"
+  },
+  {
    "chain_id": 247747,
    "op": "set_links",
    "from_narrator_id": null,
@@ -60,6 +216,10 @@
     {
      "kind": "narrator",
      "narrator_id": 4153
+    },
+    {
+     "kind": "gap",
+     "gap": "inqita"
     },
     {
      "kind": "narrator",
@@ -78,10 +238,54 @@
      "narrator_id": 6805
     }
    ],
-   "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Add al-Shafi'i as collector (Sanjar only rearranged the Musnad; book 33's copy of this report, chain 198333, ends at al-Shafi'i) and the inqita between al-Hasan and 'Ubada. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+   "reason": "Add al-Shafi'i as collector (Sanjar only rearranged the Musnad; book 33's copy of this report, chain 198333, ends at al-Shafi'i) and the inqita between al-Hasan and 'Ubada. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
    "evidence": "Musnad al-Shafi'i (tartib Sanjar) 956, hadith-kg hadiths.id 203777: 'أَخْبَرَنَا الشَّافِعِيُّ ... أَخْبَرَنَا عَبْدُ الْوَهَّابِ ، عَنْ يُونُسَ ، عَنِ الْحَسَنِ ، عَنْ عُبَادَةَ'.",
-   "author": "claude audit agent (unreviewed)",
-   "date": "2026-10-11"
+   "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+   "date": "2026-10-17"
+  },
+  {
+   "chain_id": 325756,
+   "op": "set_links",
+   "from_narrator_id": null,
+   "to_narrator_id": null,
+   "links": [
+    {
+     "kind": "narrator",
+     "narrator_id": 4153
+    },
+    {
+     "kind": "gap",
+     "gap": "inqita"
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1239
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 8616
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 6958
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 7150
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 32343
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 28286
+    }
+   ],
+   "reason": "Mark the break between al-Hasan and 'Ubada, as hadith-kg does for the same pair elsewhere in this tradition.",
+   "evidence": "Juz' Abi al-Tahir (hadith 315707): 'عن يونس بن عبيد، عن الحسن، عن عبادة بن الصامت'. Basis is consistency: hadith-kg marks the al-Hasan < 'Ubada link as inqita in 9 other chains of this tradition, including another Yunus route (355175).",
+   "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+   "date": "2026-10-17"
   },
   {
    "chain_id": 339290,
@@ -248,6 +452,62 @@
    "date": "2026-10-11"
   },
   {
+   "chain_id": 392492,
+   "op": "set_links",
+   "from_narrator_id": null,
+   "to_narrator_id": null,
+   "links": [
+    {
+     "kind": "narrator",
+     "narrator_id": 4153
+    },
+    {
+     "kind": "gap",
+     "gap": "inqita"
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1239
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 8616
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 5280
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 6805
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1410
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 31063
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 46749
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 46709
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 75058
+    }
+   ],
+   "reason": "Add the inqita between al-Hasan and 'Ubada. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+   "evidence": "Sharh al-Sunna 2584, hadith-kg hadiths.id 398184: 'أنا عَبْدُ الْوَهَّابِ ، عَنْ يُونُسَ ، عَنِ الْحَسَنِ ، عَنْ عُبَادَةَ يَعْنِي ابْنَ الصَّامِتِ'; same entry: 'كَانَ يُدْخِلُ بَيْنَهُ وَبَيْنَ عُبَادَةَ' / 'الْحَسَنَ كَانَ يُدْخِلُ'.",
+   "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+   "date": "2026-10-17"
+  },
+  {
    "chain_id": 415225,
    "op": "replace",
    "from_narrator_id": 46153,
@@ -390,6 +650,10 @@
     },
     {
      "kind": "narrator",
+     "narrator_id": 1239
+    },
+    {
+     "kind": "narrator",
      "narrator_id": 6458
     },
     {
@@ -421,10 +685,10 @@
      "narrator_id": 34368
     }
    ],
-   "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Restore al-Hasan between Qatada and Hittan (the text's 'عن الحسن عن حطان' became 'الحسن بن حطان', and the dataset dropped al-Hasan) and add Ibn 'Abd al-Barr (record 34368) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+   "reason": "Restore al-Hasan between Qatada and Hittan (the text's 'عن الحسن عن حطان' became 'الحسن بن حطان', and the dataset dropped al-Hasan) and add Ibn 'Abd al-Barr (record 34368) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
    "evidence": "al-Istidhkar 879, hadith-kg hadiths.id 425692: 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ بْنِ حِطَّانَ بْنِ عَبْدِ اللَّهِ الرَّقَاشِيُّ' (one mention span covers both names). Ibn 'Abd al-Barr's identical isnad in al-Tamhid 1432 (hadiths.id 418334): 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ ، عَنْ حِطَّانَ بْنِ عَبْدِ اللَّهِ'.",
-   "author": "claude audit agent (unreviewed)",
-   "date": "2026-10-11"
+   "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+   "date": "2026-10-17"
   },
   {
    "chain_id": 423856,
@@ -439,6 +703,10 @@
     {
      "kind": "narrator",
      "narrator_id": 2415
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1239
     },
     {
      "kind": "narrator",
@@ -473,10 +741,10 @@
      "narrator_id": 34368
     }
    ],
-   "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Restore al-Hasan between Qatada and Hittan (the text's 'عن الحسن عن حطان' became 'الحسن بن حطان', and the dataset dropped al-Hasan) and add Ibn 'Abd al-Barr (record 34368) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+   "reason": "Restore al-Hasan between Qatada and Hittan (the text's 'عن الحسن عن حطان' became 'الحسن بن حطان', and the dataset dropped al-Hasan) and add Ibn 'Abd al-Barr (record 34368) as collector. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
    "evidence": "al-Istidhkar 879, hadith-kg hadiths.id 425692: 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ بْنِ حِطَّانَ بْنِ عَبْدِ اللَّهِ الرَّقَاشِيُّ' (one mention span covers both names). Ibn 'Abd al-Barr's identical isnad in al-Tamhid 1432 (hadiths.id 418334): 'عَنْ قَتَادَةَ ، عَنِ الْحَسَنِ ، عَنْ حِطَّانَ بْنِ عَبْدِ اللَّهِ'.",
-   "author": "claude audit agent (unreviewed)",
-   "date": "2026-10-11"
+   "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+   "date": "2026-10-17"
   },
   {
    "chain_id": 433469,
@@ -541,6 +809,10 @@
      "narrator_id": 4153
     },
     {
+     "kind": "gap",
+     "gap": "inqita"
+    },
+    {
      "kind": "narrator",
      "narrator_id": 1239
     },
@@ -573,10 +845,10 @@
      "narrator_id": 75250
     }
    ],
-   "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Add al-Wahidi (record 75250) as collector and the inqita between al-Hasan and 'Ubada. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
+   "reason": "Add al-Wahidi (record 75250) as collector and the inqita between al-Hasan and 'Ubada. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector. al-Hasan did not hear 'Ubada: al-Shafi'i himself says al-Hasan used to put Hittan al-Raqashi between them, and the dataset already marks this exact route (al-Shafi'i < 'Abd al-Wahhab < Yunus < al-Hasan < 'Ubada) with inqita in chains 198333, 340125, 383381 and 431847.",
    "evidence": "al-Wasit li-l-Wahidi 203, hadith-kg hadiths.id 490451: 'أَخْبَرَنَا أَحْمَدُ بْنُ الْحَسَنِ الْحِيرِيُّ ... عَنْ يُونُسَ ، عَنْ الْحَسَنِ ، عَنْ عُبَادَةَ'.",
-   "author": "claude audit agent (unreviewed)",
-   "date": "2026-10-11"
+   "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+   "date": "2026-10-17"
   },
   {
    "chain_id": 450327,
@@ -658,6 +930,10 @@
     },
     {
      "kind": "narrator",
+     "narrator_id": 1239
+    },
+    {
+     "kind": "narrator",
      "narrator_id": 1549
     },
     {
@@ -689,10 +965,10 @@
      "narrator_id": 46607
     }
    ],
-   "reason": "Collector added at the end of the chain, following the stored text. The audit's further change (break marker or restored narrator) is held in corrections/pending for review. Audit reason: Add Ibn 'Asakir (record 46607) as collector, and restore al-Hasan between al-Fadl b. Dalham and Qabisa: al-Fadl (t7) cannot have heard Qabisa (t3, d. 67), and every other copy of this Waki' < al-Fadl isnad has al-Hasan, including Ibn al-Jawzi's quotation through the same Hibat Allah < Ibn al-Mudhhib < al-Qati'i < 'Abd Allah route (chain 421702) and Musnad Ahmad 15592 itself. The al-Hasan insertion rests on these parallels; the Tarikh Dimashq text as stored omits him. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector.",
+   "reason": "Add Ibn 'Asakir (record 46607) as collector, and restore al-Hasan between al-Fadl b. Dalham and Qabisa: al-Fadl (t7) cannot have heard Qabisa (t3, d. 67), and every other copy of this Waki' < al-Fadl isnad has al-Hasan, including Ibn al-Jawzi's quotation through the same Hibat Allah < Ibn al-Mudhhib < al-Qati'i < 'Abd Allah route (chain 421702) and Musnad Ahmad 15592 itself. The al-Hasan insertion rests on these parallels; the Tarikh Dimashq text as stored omits him. hadith-kg stores no author at pos 0 for this book (pos 0 is always the author's informant), so the chain ends one link short and the informant is treated as the collector. Basis: parallel transmissions through the same people (Ibn 'Asakir's own entries 52058 and 52063; Musnad Ahmad), not this entry's text; exclude from text-extraction training.",
    "evidence": "Tarikh Dimashq 52057, hadith-kg hadiths.id 627864: 'قَالَ : وَحَدَّثَنِي أَبِي ، حَدَّثَنَا وَكِيعٌ ، حَدَّثَنَا الْفَضْلُ بْنُ دَلْهَمٍ ، عَنْ قَبِيصَةَ بْنِ حُرَيْثٍ'. Musnad Ahmad 15592 (hadiths.id 51766): 'حَدَّثَنَا الْفَضْلُ بْنُ دَلْهَمٍ ، عَنِ الْحَسَنِ ، عَنْ قَبِيصَةَ بْنِ حُرَيْثٍ'.",
-   "author": "claude audit agent (unreviewed)",
-   "date": "2026-10-11"
+   "author": "claude audit agent; accepted by two independent reviewers and adjudicated by Claude (unreviewed by a human)",
+   "date": "2026-10-17"
   },
   {
    "chain_id": 519676,
@@ -12834,6 +13110,10 @@
      "narrator_id": 4153
     },
     {
+     "kind": "gap",
+     "gap": "inqita"
+    },
+    {
      "kind": "narrator",
      "narrator_id": 1239
     },
@@ -12878,6 +13158,10 @@
      "narrator_id": 4153
     },
     {
+     "kind": "gap",
+     "gap": "inqita"
+    },
+    {
      "kind": "narrator",
      "narrator_id": 1239
     },
@@ -12920,6 +13204,10 @@
     {
      "kind": "narrator",
      "narrator_id": 4153
+    },
+    {
+     "kind": "gap",
+     "gap": "inqita"
     },
     {
      "kind": "narrator",
@@ -13450,6 +13738,10 @@
      "narrator_id": 4153
     },
     {
+     "kind": "gap",
+     "gap": "inqita"
+    },
+    {
      "kind": "narrator",
      "narrator_id": 1239
     },
@@ -13816,6 +14108,10 @@
     {
      "kind": "narrator",
      "narrator_id": 4153
+    },
+    {
+     "kind": "gap",
+     "gap": "inqita"
     },
     {
      "kind": "narrator",
@@ -14320,6 +14616,10 @@
     {
      "kind": "narrator",
      "narrator_id": 4153
+    },
+    {
+     "kind": "gap",
+     "gap": "inqita"
     },
     {
      "kind": "narrator",
@@ -15151,6 +15451,10 @@
     },
     {
      "kind": "narrator",
+     "narrator_id": 1239
+    },
+    {
+     "kind": "narrator",
      "narrator_id": 6458
     },
     {
@@ -15196,6 +15500,10 @@
     {
      "kind": "narrator",
      "narrator_id": 2415
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1239
     },
     {
      "kind": "narrator",
@@ -15818,6 +16126,10 @@
      "narrator_id": 4153
     },
     {
+     "kind": "gap",
+     "gap": "inqita"
+    },
+    {
      "kind": "narrator",
      "narrator_id": 1239
     },
@@ -16076,6 +16388,10 @@
     {
      "kind": "narrator",
      "narrator_id": 6452
+    },
+    {
+     "kind": "narrator",
+     "narrator_id": 1239
     },
     {
      "kind": "narrator",
@@ -16834,16 +17150,22 @@
     ],
     "min_depth": 1,
     "student_keys": [
+     "g:inqita:185630:1",
+     "g:inqita:185631:1",
+     "g:inqita:185632:1",
      "g:inqita:189810:1",
      "g:inqita:198333:1",
+     "g:inqita:247747:1",
      "g:inqita:307876:1",
+     "g:inqita:325756:1",
      "g:inqita:340125:1",
      "g:inqita:355175:1",
      "g:inqita:383381:1",
+     "g:inqita:392492:1",
      "g:inqita:426856:1",
      "g:inqita:431847:1",
+     "g:inqita:433470:1",
      "g:inqita:75751:1",
-     "n:1239",
      "n:2415",
      "n:3495"
     ],
@@ -17060,6 +17382,8 @@
      415225,
      421701,
      421702,
+     423855,
+     423856,
      424600,
      425694,
      426852,
@@ -17080,6 +17404,7 @@
      436768,
      450327,
      479366,
+     519675,
      519676,
      519677,
      519678,
@@ -17274,7 +17599,6 @@
     "student_keys": [
      "n:1239",
      "n:5041",
-     "n:6458",
      "n:8607"
     ],
     "collector_keys": [
@@ -17340,8 +17664,7 @@
     ],
     "min_depth": 2,
     "student_keys": [
-     "n:1239",
-     "n:1549"
+     "n:1239"
     ],
     "collector_keys": [
      "n:10306",
@@ -17353,6 +17676,60 @@
     "independent_branch_count": 1,
     "corroborated_branch_count": 1,
     "single_strand_branch_count": 0
+   },
+   {
+    "key": "g:inqita:185630:1",
+    "kind": "gap",
+    "gap": "inqita",
+    "chain_ids": [
+     185630
+    ],
+    "min_depth": 2,
+    "student_keys": [
+     "n:1239"
+    ],
+    "collector_keys": [
+     "n:9624"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 1
+   },
+   {
+    "key": "g:inqita:185631:1",
+    "kind": "gap",
+    "gap": "inqita",
+    "chain_ids": [
+     185631
+    ],
+    "min_depth": 2,
+    "student_keys": [
+     "n:1239"
+    ],
+    "collector_keys": [
+     "n:9624"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 1
+   },
+   {
+    "key": "g:inqita:185632:1",
+    "kind": "gap",
+    "gap": "inqita",
+    "chain_ids": [
+     185632
+    ],
+    "min_depth": 2,
+    "student_keys": [
+     "n:1239"
+    ],
+    "collector_keys": [
+     "n:9624"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 1
    },
    {
     "key": "g:inqita:189810:1",
@@ -17391,6 +17768,24 @@
     "single_strand_branch_count": 1
    },
    {
+    "key": "g:inqita:247747:1",
+    "kind": "gap",
+    "gap": "inqita",
+    "chain_ids": [
+     247747
+    ],
+    "min_depth": 2,
+    "student_keys": [
+     "n:1239"
+    ],
+    "collector_keys": [
+     "n:6805"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 1
+   },
+   {
     "key": "g:inqita:307876:1",
     "kind": "gap",
     "gap": "inqita",
@@ -17403,6 +17798,24 @@
     ],
     "collector_keys": [
      "n:10289"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 1
+   },
+   {
+    "key": "g:inqita:325756:1",
+    "kind": "gap",
+    "gap": "inqita",
+    "chain_ids": [
+     325756
+    ],
+    "min_depth": 2,
+    "student_keys": [
+     "n:1239"
+    ],
+    "collector_keys": [
+     "n:28286"
     ],
     "independent_branch_count": 1,
     "corroborated_branch_count": 0,
@@ -17463,6 +17876,24 @@
     "single_strand_branch_count": 1
    },
    {
+    "key": "g:inqita:392492:1",
+    "kind": "gap",
+    "gap": "inqita",
+    "chain_ids": [
+     392492
+    ],
+    "min_depth": 2,
+    "student_keys": [
+     "n:1239"
+    ],
+    "collector_keys": [
+     "n:75058"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 1
+   },
+   {
     "key": "g:inqita:426856:1",
     "kind": "gap",
     "gap": "inqita",
@@ -17493,6 +17924,24 @@
     ],
     "collector_keys": [
      "n:75058"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 1
+   },
+   {
+    "key": "g:inqita:433470:1",
+    "kind": "gap",
+    "gap": "inqita",
+    "chain_ids": [
+     433470
+    ],
+    "min_depth": 2,
+    "student_keys": [
+     "n:1239"
+    ],
+    "collector_keys": [
+     "n:75250"
     ],
     "independent_branch_count": 1,
     "corroborated_branch_count": 0,
@@ -17641,86 +18090,6 @@
     "single_strand_branch_count": 2
    },
    {
-    "key": "n:8616",
-    "kind": "narrator",
-    "narrator_id": 8616,
-    "chain_ids": [
-     141859,
-     185630,
-     185631,
-     185632,
-     198333,
-     247747,
-     325756,
-     340125,
-     350750,
-     355175,
-     383381,
-     392492,
-     431847,
-     433470
-    ],
-    "min_depth": 3,
-    "student_keys": [
-     "g:mubham:350750:4",
-     "n:2663",
-     "n:3436",
-     "n:5280",
-     "n:6958"
-    ],
-    "collector_keys": [
-     "n:28286",
-     "n:30844",
-     "n:6805",
-     "n:68171",
-     "n:75058",
-     "n:75250",
-     "n:9624",
-     "n:9880"
-    ],
-    "independent_branch_count": 4,
-    "corroborated_branch_count": 1,
-    "single_strand_branch_count": 3
-   },
-   {
-    "key": "n:1549",
-    "kind": "narrator",
-    "narrator_id": 1549,
-    "chain_ids": [
-     32755,
-     32759,
-     67545,
-     400655,
-     421702,
-     519675,
-     519676,
-     519677,
-     519678,
-     519679,
-     519680
-    ],
-    "min_depth": 3,
-    "student_keys": [
-     "g:taliq:519676:4",
-     "g:taliq:519677:4",
-     "g:taliq:519678:4",
-     "g:taliq:519679:4",
-     "g:taliq:519680:4",
-     "n:6947",
-     "n:8160"
-    ],
-    "collector_keys": [
-     "n:10306",
-     "n:3567",
-     "n:44890",
-     "n:46607",
-     "n:488"
-    ],
-    "independent_branch_count": 3,
-    "corroborated_branch_count": 2,
-    "single_strand_branch_count": 1
-   },
-   {
     "key": "n:5041",
     "kind": "narrator",
     "narrator_id": 5041,
@@ -17755,79 +18124,6 @@
     "independent_branch_count": 1,
     "corroborated_branch_count": 0,
     "single_strand_branch_count": 1
-   },
-   {
-    "key": "n:3281",
-    "kind": "narrator",
-    "narrator_id": 3281,
-    "chain_ids": [
-     16409,
-     16410,
-     32756,
-     43727,
-     75660,
-     75684,
-     91359,
-     113233,
-     113234,
-     113235,
-     141860,
-     146009,
-     156019,
-     156020,
-     175146,
-     219427,
-     219429,
-     219431,
-     219433,
-     334595,
-     412086,
-     412117,
-     415222,
-     415223,
-     415224,
-     415225,
-     421701,
-     423855,
-     423856,
-     426853,
-     426854,
-     450327,
-     479366,
-     570710
-    ],
-    "min_depth": 4,
-    "student_keys": [
-     "n:3803",
-     "n:4207",
-     "n:4746",
-     "n:5281",
-     "n:6904",
-     "n:7103",
-     "n:8271",
-     "n:8418"
-    ],
-    "collector_keys": [
-     "n:15253",
-     "n:23937",
-     "n:28842",
-     "n:28916",
-     "n:31013",
-     "n:33342",
-     "n:34193",
-     "n:34368",
-     "n:3567",
-     "n:44890",
-     "n:488",
-     "n:7457",
-     "n:75058",
-     "n:9624",
-     "n:9880",
-     "n:9927"
-    ],
-    "independent_branch_count": 6,
-    "corroborated_branch_count": 4,
-    "single_strand_branch_count": 2
    },
    {
     "key": "n:7676",
@@ -17885,16 +18181,20 @@
     "single_strand_branch_count": 0
    },
    {
-    "key": "n:5280",
+    "key": "n:8616",
     "kind": "narrator",
-    "narrator_id": 5280,
+    "narrator_id": 8616,
     "chain_ids": [
+     141859,
      185630,
      185631,
      185632,
      198333,
      247747,
+     325756,
      340125,
+     350750,
+     355175,
      383381,
      392492,
      431847,
@@ -17902,17 +18202,63 @@
     ],
     "min_depth": 4,
     "student_keys": [
-     "n:6805"
+     "g:mubham:350750:4",
+     "n:2663",
+     "n:3436",
+     "n:5280",
+     "n:6958"
     ],
     "collector_keys": [
+     "n:28286",
+     "n:30844",
      "n:6805",
+     "n:68171",
      "n:75058",
      "n:75250",
-     "n:9624"
+     "n:9624",
+     "n:9880"
     ],
-    "independent_branch_count": 1,
+    "independent_branch_count": 4,
     "corroborated_branch_count": 1,
-    "single_strand_branch_count": 0
+    "single_strand_branch_count": 3
+   },
+   {
+    "key": "n:1549",
+    "kind": "narrator",
+    "narrator_id": 1549,
+    "chain_ids": [
+     32755,
+     32759,
+     67545,
+     400655,
+     421702,
+     519675,
+     519676,
+     519677,
+     519678,
+     519679,
+     519680
+    ],
+    "min_depth": 4,
+    "student_keys": [
+     "g:taliq:519676:4",
+     "g:taliq:519677:4",
+     "g:taliq:519678:4",
+     "g:taliq:519679:4",
+     "g:taliq:519680:4",
+     "n:6947",
+     "n:8160"
+    ],
+    "collector_keys": [
+     "n:10306",
+     "n:3567",
+     "n:44890",
+     "n:46607",
+     "n:488"
+    ],
+    "independent_branch_count": 3,
+    "corroborated_branch_count": 2,
+    "single_strand_branch_count": 1
    },
    {
     "key": "n:7823",
@@ -17938,34 +18284,6 @@
      "n:34193"
     ],
     "independent_branch_count": 2,
-    "corroborated_branch_count": 1,
-    "single_strand_branch_count": 1
-   },
-   {
-    "key": "n:8160",
-    "kind": "narrator",
-    "narrator_id": 8160,
-    "chain_ids": [
-     32755,
-     67545,
-     400655,
-     421702,
-     519675
-    ],
-    "min_depth": 4,
-    "student_keys": [
-     "g:taliq:32755:5",
-     "n:488",
-     "n:8287"
-    ],
-    "collector_keys": [
-     "n:10306",
-     "n:3567",
-     "n:44890",
-     "n:46607",
-     "n:488"
-    ],
-    "independent_branch_count": 3,
     "corroborated_branch_count": 1,
     "single_strand_branch_count": 1
    },
@@ -18155,22 +18473,77 @@
     "single_strand_branch_count": 1
    },
    {
-    "key": "n:6958",
+    "key": "n:3281",
     "kind": "narrator",
-    "narrator_id": 6958,
+    "narrator_id": 3281,
     "chain_ids": [
-     325756
+     16409,
+     16410,
+     32756,
+     43727,
+     75660,
+     75684,
+     91359,
+     113233,
+     113234,
+     113235,
+     141860,
+     146009,
+     156019,
+     156020,
+     175146,
+     219427,
+     219429,
+     219431,
+     219433,
+     334595,
+     412086,
+     412117,
+     415222,
+     415223,
+     415224,
+     415225,
+     421701,
+     423855,
+     423856,
+     426853,
+     426854,
+     450327,
+     479366,
+     570710
     ],
-    "min_depth": 4,
+    "min_depth": 5,
     "student_keys": [
-     "n:7150"
+     "n:3803",
+     "n:4207",
+     "n:4746",
+     "n:5281",
+     "n:6904",
+     "n:7103",
+     "n:8271",
+     "n:8418"
     ],
     "collector_keys": [
-     "n:28286"
+     "n:15253",
+     "n:23937",
+     "n:28842",
+     "n:28916",
+     "n:31013",
+     "n:33342",
+     "n:34193",
+     "n:34368",
+     "n:3567",
+     "n:44890",
+     "n:488",
+     "n:7457",
+     "n:75058",
+     "n:9624",
+     "n:9880",
+     "n:9927"
     ],
-    "independent_branch_count": 1,
-    "corroborated_branch_count": 0,
-    "single_strand_branch_count": 1
+    "independent_branch_count": 6,
+    "corroborated_branch_count": 4,
+    "single_strand_branch_count": 2
    },
    {
     "key": "n:3795",
@@ -18302,9 +18675,9 @@
     "single_strand_branch_count": 3
    },
    {
-    "key": "n:6805",
+    "key": "n:5280",
     "kind": "narrator",
-    "narrator_id": 6805,
+    "narrator_id": 5280,
     "chain_ids": [
      185630,
      185631,
@@ -18312,8 +18685,6 @@
      198333,
      247747,
      340125,
-     350750,
-     383380,
      383381,
      392492,
      431847,
@@ -18321,84 +18692,15 @@
     ],
     "min_depth": 5,
     "student_keys": [
-     "n:1410"
+     "n:6805"
     ],
     "collector_keys": [
      "n:6805",
-     "n:68171",
      "n:75058",
      "n:75250",
      "n:9624"
     ],
     "independent_branch_count": 1,
-    "corroborated_branch_count": 1,
-    "single_strand_branch_count": 0
-   },
-   {
-    "key": "n:488",
-    "kind": "narrator",
-    "narrator_id": 488,
-    "chain_ids": [
-     67545,
-     75605,
-     75645,
-     75646,
-     75660,
-     75680,
-     75681,
-     75684,
-     421701,
-     421702,
-     519675
-    ],
-    "min_depth": 5,
-    "student_keys": [
-     "n:4657"
-    ],
-    "collector_keys": [
-     "n:44890",
-     "n:46607",
-     "n:488"
-    ],
-    "independent_branch_count": 1,
-    "corroborated_branch_count": 1,
-    "single_strand_branch_count": 0
-   },
-   {
-    "key": "n:8271",
-    "kind": "narrator",
-    "narrator_id": 8271,
-    "chain_ids": [
-     32756,
-     43727,
-     146009,
-     219433,
-     334595,
-     412117,
-     415222,
-     415223,
-     423855,
-     423856,
-     570710
-    ],
-    "min_depth": 5,
-    "student_keys": [
-     "n:1926",
-     "n:3036",
-     "n:3817",
-     "n:7426",
-     "n:8514"
-    ],
-    "collector_keys": [
-     "n:15253",
-     "n:23937",
-     "n:31013",
-     "n:33342",
-     "n:34368",
-     "n:3567",
-     "n:9880"
-    ],
-    "independent_branch_count": 4,
     "corroborated_branch_count": 1,
     "single_strand_branch_count": 0
    },
@@ -18477,6 +18779,34 @@
     "independent_branch_count": 1,
     "corroborated_branch_count": 1,
     "single_strand_branch_count": 0
+   },
+   {
+    "key": "n:8160",
+    "kind": "narrator",
+    "narrator_id": 8160,
+    "chain_ids": [
+     32755,
+     67545,
+     400655,
+     421702,
+     519675
+    ],
+    "min_depth": 5,
+    "student_keys": [
+     "g:taliq:32755:5",
+     "n:488",
+     "n:8287"
+    ],
+    "collector_keys": [
+     "n:10306",
+     "n:3567",
+     "n:44890",
+     "n:46607",
+     "n:488"
+    ],
+    "independent_branch_count": 3,
+    "corroborated_branch_count": 1,
+    "single_strand_branch_count": 1
    },
    {
     "key": "n:8488",
@@ -18820,47 +19150,121 @@
     "single_strand_branch_count": 1
    },
    {
-    "key": "n:7150",
+    "key": "n:6958",
     "kind": "narrator",
-    "narrator_id": 7150,
+    "narrator_id": 6958,
     "chain_ids": [
      325756
     ],
     "min_depth": 5,
     "student_keys": [
-     "n:32343"
+     "n:7150"
     ],
     "collector_keys": [
      "n:28286"
     ],
     "independent_branch_count": 1,
     "corroborated_branch_count": 0,
-    "single_strand_branch_count": 0
+    "single_strand_branch_count": 1
    },
    {
-    "key": "n:1410",
+    "key": "n:6805",
     "kind": "narrator",
-    "narrator_id": 1410,
+    "narrator_id": 6805,
     "chain_ids": [
      185630,
      185631,
      185632,
+     198333,
+     247747,
+     340125,
      350750,
+     383380,
+     383381,
      392492,
      431847,
      433470
     ],
     "min_depth": 6,
     "student_keys": [
-     "n:31063"
+     "n:1410"
     ],
     "collector_keys": [
+     "n:6805",
      "n:68171",
      "n:75058",
      "n:75250",
      "n:9624"
     ],
     "independent_branch_count": 1,
+    "corroborated_branch_count": 1,
+    "single_strand_branch_count": 0
+   },
+   {
+    "key": "n:488",
+    "kind": "narrator",
+    "narrator_id": 488,
+    "chain_ids": [
+     67545,
+     75605,
+     75645,
+     75646,
+     75660,
+     75680,
+     75681,
+     75684,
+     421701,
+     421702,
+     519675
+    ],
+    "min_depth": 6,
+    "student_keys": [
+     "n:4657"
+    ],
+    "collector_keys": [
+     "n:44890",
+     "n:46607",
+     "n:488"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 1,
+    "single_strand_branch_count": 0
+   },
+   {
+    "key": "n:8271",
+    "kind": "narrator",
+    "narrator_id": 8271,
+    "chain_ids": [
+     32756,
+     43727,
+     146009,
+     219433,
+     334595,
+     412117,
+     415222,
+     415223,
+     423855,
+     423856,
+     570710
+    ],
+    "min_depth": 6,
+    "student_keys": [
+     "n:1926",
+     "n:3036",
+     "n:3817",
+     "n:7426",
+     "n:8514"
+    ],
+    "collector_keys": [
+     "n:15253",
+     "n:23937",
+     "n:31013",
+     "n:33342",
+     "n:34368",
+     "n:3567",
+     "n:9880"
+    ],
+    "independent_branch_count": 4,
     "corroborated_branch_count": 1,
     "single_strand_branch_count": 0
    },
@@ -19028,31 +19432,6 @@
     "independent_branch_count": 1,
     "corroborated_branch_count": 1,
     "single_strand_branch_count": 0
-   },
-   {
-    "key": "n:7426",
-    "kind": "narrator",
-    "narrator_id": 7426,
-    "chain_ids": [
-     32756,
-     412117,
-     415223,
-     423855,
-     570710
-    ],
-    "min_depth": 6,
-    "student_keys": [
-     "n:3567",
-     "n:46158"
-    ],
-    "collector_keys": [
-     "n:23937",
-     "n:34368",
-     "n:3567"
-    ],
-    "independent_branch_count": 2,
-    "corroborated_branch_count": 1,
-    "single_strand_branch_count": 1
    },
    {
     "key": "n:1525",
@@ -19644,24 +20023,6 @@
     "single_strand_branch_count": 0
    },
    {
-    "key": "n:32343",
-    "kind": "narrator",
-    "narrator_id": 32343,
-    "chain_ids": [
-     325756
-    ],
-    "min_depth": 6,
-    "student_keys": [
-     "n:28286"
-    ],
-    "collector_keys": [
-     "n:28286"
-    ],
-    "independent_branch_count": 1,
-    "corroborated_branch_count": 0,
-    "single_strand_branch_count": 0
-   },
-   {
     "key": "n:3803",
     "kind": "narrator",
     "narrator_id": 3803,
@@ -19824,6 +20185,24 @@
     "single_strand_branch_count": 0
    },
    {
+    "key": "n:7150",
+    "kind": "narrator",
+    "narrator_id": 7150,
+    "chain_ids": [
+     325756
+    ],
+    "min_depth": 6,
+    "student_keys": [
+     "n:32343"
+    ],
+    "collector_keys": [
+     "n:28286"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 0
+   },
+   {
     "key": "n:7163",
     "kind": "narrator",
     "narrator_id": 7163,
@@ -19933,9 +20312,9 @@
     "single_strand_branch_count": 1
    },
    {
-    "key": "n:31063",
+    "key": "n:1410",
     "kind": "narrator",
-    "narrator_id": 31063,
+    "narrator_id": 1410,
     "chain_ids": [
      185630,
      185631,
@@ -19947,10 +20326,7 @@
     ],
     "min_depth": 7,
     "student_keys": [
-     "n:29795",
-     "n:33635",
-     "n:46749",
-     "n:9598"
+     "n:31063"
     ],
     "collector_keys": [
      "n:68171",
@@ -19958,9 +20334,9 @@
      "n:75250",
      "n:9624"
     ],
-    "independent_branch_count": 4,
+    "independent_branch_count": 1,
     "corroborated_branch_count": 1,
-    "single_strand_branch_count": 1
+    "single_strand_branch_count": 0
    },
    {
     "key": "n:33342",
@@ -20117,6 +20493,31 @@
     "single_strand_branch_count": 0
    },
    {
+    "key": "n:7426",
+    "kind": "narrator",
+    "narrator_id": 7426,
+    "chain_ids": [
+     32756,
+     412117,
+     415223,
+     423855,
+     570710
+    ],
+    "min_depth": 7,
+    "student_keys": [
+     "n:3567",
+     "n:46158"
+    ],
+    "collector_keys": [
+     "n:23937",
+     "n:34368",
+     "n:3567"
+    ],
+    "independent_branch_count": 2,
+    "corroborated_branch_count": 1,
+    "single_strand_branch_count": 1
+   },
+   {
     "key": "n:9880",
     "kind": "narrator",
     "narrator_id": 9880,
@@ -20245,27 +20646,6 @@
     "single_strand_branch_count": 0
    },
    {
-    "key": "n:8994",
-    "kind": "narrator",
-    "narrator_id": 8994,
-    "chain_ids": [
-     421701,
-     421702,
-     519675
-    ],
-    "min_depth": 7,
-    "student_keys": [
-     "n:14991"
-    ],
-    "collector_keys": [
-     "n:44890",
-     "n:46607"
-    ],
-    "independent_branch_count": 1,
-    "corroborated_branch_count": 1,
-    "single_strand_branch_count": 0
-   },
-   {
     "key": "n:10361",
     "kind": "narrator",
     "narrator_id": 10361,
@@ -20352,25 +20732,6 @@
     "collector_keys": [
      "n:23051",
      "n:75250"
-    ],
-    "independent_branch_count": 1,
-    "corroborated_branch_count": 0,
-    "single_strand_branch_count": 1
-   },
-   {
-    "key": "n:46158",
-    "kind": "narrator",
-    "narrator_id": 46158,
-    "chain_ids": [
-     415223,
-     423855
-    ],
-    "min_depth": 7,
-    "student_keys": [
-     "n:26604"
-    ],
-    "collector_keys": [
-     "n:34368"
     ],
     "independent_branch_count": 1,
     "corroborated_branch_count": 0,
@@ -20645,22 +21006,6 @@
     "single_strand_branch_count": 1
    },
    {
-    "key": "n:28286",
-    "kind": "narrator",
-    "narrator_id": 28286,
-    "chain_ids": [
-     325756
-    ],
-    "min_depth": 7,
-    "student_keys": [],
-    "collector_keys": [
-     "n:28286"
-    ],
-    "independent_branch_count": 0,
-    "corroborated_branch_count": 0,
-    "single_strand_branch_count": 0
-   },
-   {
     "key": "n:29448",
     "kind": "narrator",
     "narrator_id": 29448,
@@ -20727,6 +21072,24 @@
      "n:30371"
     ],
     "independent_branch_count": 0,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 0
+   },
+   {
+    "key": "n:32343",
+    "kind": "narrator",
+    "narrator_id": 32343,
+    "chain_ids": [
+     325756
+    ],
+    "min_depth": 7,
+    "student_keys": [
+     "n:28286"
+    ],
+    "collector_keys": [
+     "n:28286"
+    ],
+    "independent_branch_count": 1,
     "corroborated_branch_count": 0,
     "single_strand_branch_count": 0
    },
@@ -20989,6 +21352,36 @@
     "single_strand_branch_count": 0
    },
    {
+    "key": "n:31063",
+    "kind": "narrator",
+    "narrator_id": 31063,
+    "chain_ids": [
+     185630,
+     185631,
+     185632,
+     350750,
+     392492,
+     431847,
+     433470
+    ],
+    "min_depth": 8,
+    "student_keys": [
+     "n:29795",
+     "n:33635",
+     "n:46749",
+     "n:9598"
+    ],
+    "collector_keys": [
+     "n:68171",
+     "n:75058",
+     "n:75250",
+     "n:9624"
+    ],
+    "independent_branch_count": 4,
+    "corroborated_branch_count": 1,
+    "single_strand_branch_count": 1
+   },
+   {
     "key": "n:26604",
     "kind": "narrator",
     "narrator_id": 26604,
@@ -21075,27 +21468,6 @@
     "single_strand_branch_count": 0
    },
    {
-    "key": "n:14991",
-    "kind": "narrator",
-    "narrator_id": 14991,
-    "chain_ids": [
-     421701,
-     421702,
-     519675
-    ],
-    "min_depth": 8,
-    "student_keys": [
-     "n:46125"
-    ],
-    "collector_keys": [
-     "n:44890",
-     "n:46607"
-    ],
-    "independent_branch_count": 1,
-    "corroborated_branch_count": 1,
-    "single_strand_branch_count": 0
-   },
-   {
     "key": "n:28540",
     "kind": "narrator",
     "narrator_id": 28540,
@@ -21114,48 +21486,25 @@
     "single_strand_branch_count": 0
    },
    {
-    "key": "n:29795",
+    "key": "n:8994",
     "kind": "narrator",
-    "narrator_id": 29795,
+    "narrator_id": 8994,
     "chain_ids": [
-     156019,
-     175239,
-     185631
+     421701,
+     421702,
+     519675
     ],
     "min_depth": 8,
     "student_keys": [
-     "n:9624"
+     "n:14991"
     ],
     "collector_keys": [
-     "n:9624"
+     "n:44890",
+     "n:46607"
     ],
     "independent_branch_count": 1,
-    "corroborated_branch_count": 0,
+    "corroborated_branch_count": 1,
     "single_strand_branch_count": 0
-   },
-   {
-    "key": "n:9598",
-    "kind": "narrator",
-    "narrator_id": 9598,
-    "chain_ids": [
-     185632,
-     350750,
-     433470
-    ],
-    "min_depth": 8,
-    "student_keys": [
-     "n:46105",
-     "n:75250",
-     "n:9624"
-    ],
-    "collector_keys": [
-     "n:68171",
-     "n:75250",
-     "n:9624"
-    ],
-    "independent_branch_count": 3,
-    "corroborated_branch_count": 0,
-    "single_strand_branch_count": 1
    },
    {
     "key": "n:24273",
@@ -21195,23 +21544,23 @@
     "single_strand_branch_count": 0
    },
    {
-    "key": "n:46749",
+    "key": "n:46158",
     "kind": "narrator",
-    "narrator_id": 46749,
+    "narrator_id": 46158,
     "chain_ids": [
-     392492,
-     431847
+     415223,
+     423855
     ],
     "min_depth": 8,
     "student_keys": [
-     "n:46709"
+     "n:26604"
     ],
     "collector_keys": [
-     "n:75058"
+     "n:34368"
     ],
     "independent_branch_count": 1,
     "corroborated_branch_count": 0,
-    "single_strand_branch_count": 0
+    "single_strand_branch_count": 1
    },
    {
     "key": "n:9982",
@@ -21353,6 +21702,22 @@
     "single_strand_branch_count": 1
    },
    {
+    "key": "n:28286",
+    "kind": "narrator",
+    "narrator_id": 28286,
+    "chain_ids": [
+     325756
+    ],
+    "min_depth": 8,
+    "student_keys": [],
+    "collector_keys": [
+     "n:28286"
+    ],
+    "independent_branch_count": 0,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 0
+   },
+   {
     "key": "n:30607",
     "kind": "narrator",
     "narrator_id": 30607,
@@ -21383,24 +21748,6 @@
      "n:31013"
     ],
     "independent_branch_count": 0,
-    "corroborated_branch_count": 0,
-    "single_strand_branch_count": 0
-   },
-   {
-    "key": "n:33635",
-    "kind": "narrator",
-    "narrator_id": 33635,
-    "chain_ids": [
-     185630
-    ],
-    "min_depth": 8,
-    "student_keys": [
-     "n:9624"
-    ],
-    "collector_keys": [
-     "n:9624"
-    ],
-    "independent_branch_count": 1,
     "corroborated_branch_count": 0,
     "single_strand_branch_count": 0
    },
@@ -21441,50 +21788,6 @@
     "single_strand_branch_count": 0
    },
    {
-    "key": "n:9624",
-    "kind": "narrator",
-    "narrator_id": 9624,
-    "chain_ids": [
-     156019,
-     156020,
-     175146,
-     175239,
-     175240,
-     185630,
-     185631,
-     185632
-    ],
-    "min_depth": 9,
-    "student_keys": [],
-    "collector_keys": [
-     "n:9624"
-    ],
-    "independent_branch_count": 0,
-    "corroborated_branch_count": 0,
-    "single_strand_branch_count": 0
-   },
-   {
-    "key": "n:46153",
-    "kind": "narrator",
-    "narrator_id": 46153,
-    "chain_ids": [
-     415222,
-     415223,
-     423855,
-     423856
-    ],
-    "min_depth": 9,
-    "student_keys": [
-     "n:34368"
-    ],
-    "collector_keys": [
-     "n:34368"
-    ],
-    "independent_branch_count": 1,
-    "corroborated_branch_count": 0,
-    "single_strand_branch_count": 0
-   },
-   {
     "key": "n:46428",
     "kind": "narrator",
     "narrator_id": 46428,
@@ -21508,9 +21811,9 @@
     "single_strand_branch_count": 0
    },
    {
-    "key": "n:46125",
+    "key": "n:14991",
     "kind": "narrator",
-    "narrator_id": 46125,
+    "narrator_id": 14991,
     "chain_ids": [
      421701,
      421702,
@@ -21518,16 +21821,59 @@
     ],
     "min_depth": 9,
     "student_keys": [
-     "n:44890",
-     "n:46607"
+     "n:46125"
     ],
     "collector_keys": [
      "n:44890",
      "n:46607"
     ],
-    "independent_branch_count": 2,
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 1,
+    "single_strand_branch_count": 0
+   },
+   {
+    "key": "n:29795",
+    "kind": "narrator",
+    "narrator_id": 29795,
+    "chain_ids": [
+     156019,
+     175239,
+     185631
+    ],
+    "min_depth": 9,
+    "student_keys": [
+     "n:9624"
+    ],
+    "collector_keys": [
+     "n:9624"
+    ],
+    "independent_branch_count": 1,
     "corroborated_branch_count": 0,
     "single_strand_branch_count": 0
+   },
+   {
+    "key": "n:9598",
+    "kind": "narrator",
+    "narrator_id": 9598,
+    "chain_ids": [
+     185632,
+     350750,
+     433470
+    ],
+    "min_depth": 9,
+    "student_keys": [
+     "n:46105",
+     "n:75250",
+     "n:9624"
+    ],
+    "collector_keys": [
+     "n:68171",
+     "n:75250",
+     "n:9624"
+    ],
+    "independent_branch_count": 3,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 1
    },
    {
     "key": "n:23955",
@@ -21570,38 +21916,21 @@
     "single_strand_branch_count": 1
    },
    {
-    "key": "n:46709",
+    "key": "n:46749",
     "kind": "narrator",
-    "narrator_id": 46709,
+    "narrator_id": 46749,
     "chain_ids": [
      392492,
      431847
     ],
     "min_depth": 9,
     "student_keys": [
-     "n:75058"
+     "n:46709"
     ],
     "collector_keys": [
      "n:75058"
     ],
     "independent_branch_count": 1,
-    "corroborated_branch_count": 0,
-    "single_strand_branch_count": 0
-   },
-   {
-    "key": "n:75250",
-    "kind": "narrator",
-    "narrator_id": 75250,
-    "chain_ids": [
-     433469,
-     433470
-    ],
-    "min_depth": 9,
-    "student_keys": [],
-    "collector_keys": [
-     "n:75250"
-    ],
-    "independent_branch_count": 0,
     "corroborated_branch_count": 0,
     "single_strand_branch_count": 0
    },
@@ -21767,6 +22096,24 @@
     "single_strand_branch_count": 0
    },
    {
+    "key": "n:33635",
+    "kind": "narrator",
+    "narrator_id": 33635,
+    "chain_ids": [
+     185630
+    ],
+    "min_depth": 9,
+    "student_keys": [
+     "n:9624"
+    ],
+    "collector_keys": [
+     "n:9624"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 0
+   },
+   {
     "key": "n:46623",
     "kind": "narrator",
     "narrator_id": 46623,
@@ -21801,6 +22148,29 @@
     "single_strand_branch_count": 0
    },
    {
+    "key": "n:9624",
+    "kind": "narrator",
+    "narrator_id": 9624,
+    "chain_ids": [
+     156019,
+     156020,
+     175146,
+     175239,
+     175240,
+     185630,
+     185631,
+     185632
+    ],
+    "min_depth": 10,
+    "student_keys": [],
+    "collector_keys": [
+     "n:9624"
+    ],
+    "independent_branch_count": 0,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 0
+   },
+   {
     "key": "n:34368",
     "kind": "narrator",
     "narrator_id": 34368,
@@ -21823,41 +22193,45 @@
     "single_strand_branch_count": 0
    },
    {
-    "key": "n:46607",
+    "key": "n:46153",
     "kind": "narrator",
-    "narrator_id": 46607,
+    "narrator_id": 46153,
     "chain_ids": [
-     519675,
-     519676,
-     519677,
-     519678,
-     519679,
-     519680
+     415222,
+     415223,
+     423855,
+     423856
     ],
     "min_depth": 10,
-    "student_keys": [],
-    "collector_keys": [
-     "n:46607"
+    "student_keys": [
+     "n:34368"
     ],
-    "independent_branch_count": 0,
+    "collector_keys": [
+     "n:34368"
+    ],
+    "independent_branch_count": 1,
     "corroborated_branch_count": 0,
     "single_strand_branch_count": 0
    },
    {
-    "key": "n:75058",
+    "key": "n:46125",
     "kind": "narrator",
-    "narrator_id": 75058,
+    "narrator_id": 46125,
     "chain_ids": [
-     392492,
-     431847,
-     450327
+     421701,
+     421702,
+     519675
     ],
     "min_depth": 10,
-    "student_keys": [],
-    "collector_keys": [
-     "n:75058"
+    "student_keys": [
+     "n:44890",
+     "n:46607"
     ],
-    "independent_branch_count": 0,
+    "collector_keys": [
+     "n:44890",
+     "n:46607"
+    ],
+    "independent_branch_count": 2,
     "corroborated_branch_count": 0,
     "single_strand_branch_count": 0
    },
@@ -21897,6 +22271,42 @@
      "n:23937"
     ],
     "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 0
+   },
+   {
+    "key": "n:46709",
+    "kind": "narrator",
+    "narrator_id": 46709,
+    "chain_ids": [
+     392492,
+     431847
+    ],
+    "min_depth": 10,
+    "student_keys": [
+     "n:75058"
+    ],
+    "collector_keys": [
+     "n:75058"
+    ],
+    "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 0
+   },
+   {
+    "key": "n:75250",
+    "kind": "narrator",
+    "narrator_id": 75250,
+    "chain_ids": [
+     433469,
+     433470
+    ],
+    "min_depth": 10,
+    "student_keys": [],
+    "collector_keys": [
+     "n:75250"
+    ],
+    "independent_branch_count": 0,
     "corroborated_branch_count": 0,
     "single_strand_branch_count": 0
    },
@@ -22046,6 +22456,27 @@
     "single_strand_branch_count": 0
    },
    {
+    "key": "n:46607",
+    "kind": "narrator",
+    "narrator_id": 46607,
+    "chain_ids": [
+     519675,
+     519676,
+     519677,
+     519678,
+     519679,
+     519680
+    ],
+    "min_depth": 11,
+    "student_keys": [],
+    "collector_keys": [
+     "n:46607"
+    ],
+    "independent_branch_count": 0,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 0
+   },
+   {
     "key": "n:42144",
     "kind": "narrator",
     "narrator_id": 42144,
@@ -22063,6 +22494,24 @@
      "n:46607"
     ],
     "independent_branch_count": 1,
+    "corroborated_branch_count": 0,
+    "single_strand_branch_count": 0
+   },
+   {
+    "key": "n:75058",
+    "kind": "narrator",
+    "narrator_id": 75058,
+    "chain_ids": [
+     392492,
+     431847,
+     450327
+    ],
+    "min_depth": 11,
+    "student_keys": [],
+    "collector_keys": [
+     "n:75058"
+    ],
+    "independent_branch_count": 0,
     "corroborated_branch_count": 0,
     "single_strand_branch_count": 0
    },
@@ -22208,6 +22657,27 @@
   ],
   "edges": [
    {
+    "source": "g:inqita:185630:1",
+    "target": "n:1239",
+    "chain_ids": [
+     185630
+    ]
+   },
+   {
+    "source": "g:inqita:185631:1",
+    "target": "n:1239",
+    "chain_ids": [
+     185631
+    ]
+   },
+   {
+    "source": "g:inqita:185632:1",
+    "target": "n:1239",
+    "chain_ids": [
+     185632
+    ]
+   },
+   {
     "source": "g:inqita:189810:1",
     "target": "n:1239",
     "chain_ids": [
@@ -22222,10 +22692,24 @@
     ]
    },
    {
+    "source": "g:inqita:247747:1",
+    "target": "n:1239",
+    "chain_ids": [
+     247747
+    ]
+   },
+   {
     "source": "g:inqita:307876:1",
     "target": "n:1239",
     "chain_ids": [
      307876
+    ]
+   },
+   {
+    "source": "g:inqita:325756:1",
+    "target": "n:1239",
+    "chain_ids": [
+     325756
     ]
    },
    {
@@ -22250,6 +22734,13 @@
     ]
    },
    {
+    "source": "g:inqita:392492:1",
+    "target": "n:1239",
+    "chain_ids": [
+     392492
+    ]
+   },
+   {
     "source": "g:inqita:426856:1",
     "target": "n:1239",
     "chain_ids": [
@@ -22261,6 +22752,13 @@
     "target": "n:1239",
     "chain_ids": [
      431847
+    ]
+   },
+   {
+    "source": "g:inqita:433470:1",
+    "target": "n:1239",
+    "chain_ids": [
+     433470
     ]
    },
    {
@@ -22450,6 +22948,7 @@
      67545,
      400655,
      421702,
+     519675,
      519676,
      519677,
      519678,
@@ -22543,6 +23042,8 @@
      415224,
      415225,
      421701,
+     423855,
+     423856,
      424600,
      426852,
      426853,
@@ -23021,6 +23522,8 @@
      415224,
      415225,
      421701,
+     423855,
+     423856,
      424600,
      425694,
      426852,
@@ -23047,14 +23550,6 @@
     "target": "n:5041",
     "chain_ids": [
      257833
-    ]
-   },
-   {
-    "source": "n:2415",
-    "target": "n:6458",
-    "chain_ids": [
-     423855,
-     423856
     ]
    },
    {
@@ -23681,6 +24176,27 @@
    },
    {
     "source": "n:4153",
+    "target": "g:inqita:185630:1",
+    "chain_ids": [
+     185630
+    ]
+   },
+   {
+    "source": "n:4153",
+    "target": "g:inqita:185631:1",
+    "chain_ids": [
+     185631
+    ]
+   },
+   {
+    "source": "n:4153",
+    "target": "g:inqita:185632:1",
+    "chain_ids": [
+     185632
+    ]
+   },
+   {
+    "source": "n:4153",
     "target": "g:inqita:189810:1",
     "chain_ids": [
      189810
@@ -23695,9 +24211,23 @@
    },
    {
     "source": "n:4153",
+    "target": "g:inqita:247747:1",
+    "chain_ids": [
+     247747
+    ]
+   },
+   {
+    "source": "n:4153",
     "target": "g:inqita:307876:1",
     "chain_ids": [
      307876
+    ]
+   },
+   {
+    "source": "n:4153",
+    "target": "g:inqita:325756:1",
+    "chain_ids": [
+     325756
     ]
    },
    {
@@ -23723,6 +24253,13 @@
    },
    {
     "source": "n:4153",
+    "target": "g:inqita:392492:1",
+    "chain_ids": [
+     392492
+    ]
+   },
+   {
+    "source": "n:4153",
     "target": "g:inqita:426856:1",
     "chain_ids": [
      426856
@@ -23737,22 +24274,16 @@
    },
    {
     "source": "n:4153",
-    "target": "g:inqita:75751:1",
+    "target": "g:inqita:433470:1",
     "chain_ids": [
-     75751
+     433470
     ]
    },
    {
     "source": "n:4153",
-    "target": "n:1239",
+    "target": "g:inqita:75751:1",
     "chain_ids": [
-     185630,
-     185631,
-     185632,
-     247747,
-     325756,
-     392492,
-     433470
+     75751
     ]
    },
    {
@@ -24306,18 +24837,12 @@
      67545,
      400655,
      421702,
+     519675,
      519676,
      519677,
      519678,
      519679,
      519680
-    ]
-   },
-   {
-    "source": "n:6452",
-    "target": "n:1549",
-    "chain_ids": [
-     519675
     ]
    },
    {
@@ -25416,21 +25941,6 @@
     "chain_id": 257833,
     "departs_from": "n:2415",
     "rejoins_at": null
-   },
-   {
-    "chain_id": 423855,
-    "departs_from": "n:2415",
-    "rejoins_at": "n:6458"
-   },
-   {
-    "chain_id": 423856,
-    "departs_from": "n:2415",
-    "rejoins_at": "n:6458"
-   },
-   {
-    "chain_id": 519675,
-    "departs_from": "n:6452",
-    "rejoins_at": "n:1549"
    }
   ],
   "upper_paths": [
@@ -25531,6 +26041,8 @@
      415224,
      415225,
      421701,
+     423855,
+     423856,
      424600,
      425694,
      426852,
@@ -25555,6 +26067,31 @@
    {
     "labels": [
      "prophet",
+     "n:4153",
+     "g:inqita"
+    ],
+    "chain_ids": [
+     75751,
+     185630,
+     185631,
+     185632,
+     189810,
+     198333,
+     247747,
+     307876,
+     325756,
+     340125,
+     355175,
+     383381,
+     392492,
+     426856,
+     431847,
+     433470
+    ]
+   },
+   {
+    "labels": [
+     "prophet",
      "n:3495",
      "n:6452"
     ],
@@ -25563,44 +26100,12 @@
      67545,
      400655,
      421702,
+     519675,
      519676,
      519677,
      519678,
      519679,
      519680
-    ]
-   },
-   {
-    "labels": [
-     "prophet",
-     "n:4153",
-     "g:inqita"
-    ],
-    "chain_ids": [
-     75751,
-     189810,
-     198333,
-     307876,
-     340125,
-     355175,
-     383381,
-     426856,
-     431847
-    ]
-   },
-   {
-    "labels": [
-     "prophet",
-     "n:4153"
-    ],
-    "chain_ids": [
-     185630,
-     185631,
-     185632,
-     247747,
-     325756,
-     392492,
-     433470
     ]
    },
    {

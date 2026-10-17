@@ -9,7 +9,17 @@ import psycopg
 import pytest
 from test_analysis_runner import INVENTORY, SYNTHESIS
 
-from icma.db import judgements_of, migrate, publish
+from icma.db import (
+    hash_passcode,
+    issue_passcode,
+    judgements_of,
+    list_reviewers,
+    migrate,
+    new_passcode,
+    publish,
+    remove_reviewer,
+    set_reviewer,
+)
 
 ADMIN_URL = os.environ.get("ICMA_TEST_DATABASE_URL")
 pytestmark = pytest.mark.skipif(ADMIN_URL is None, reason="ICMA_TEST_DATABASE_URL not set")
@@ -50,7 +60,7 @@ def conn() -> Iterator[psycopg.Connection]:
 def test_migrate_is_idempotent(conn: psycopg.Connection) -> None:
     assert migrate(conn) == []
     names = [r[0] for r in conn.execute("SELECT name FROM schema_migrations")]
-    assert names == ["0001_review.sql"]
+    assert names == ["0001_review.sql", "0002_reviewers.sql", "0003_passcodes.sql"]
 
 
 def test_publish_stores_every_judgement_once(conn: psycopg.Connection) -> None:
@@ -114,3 +124,35 @@ def test_duplicate_judgements_are_rejected() -> None:
     synthesis["dives"] = [dive, dive]
     with pytest.raises(ValueError, match="repeats"):
         judgements_of({**PAYLOAD, "synthesis": synthesis})
+
+
+def test_reviewers_are_lowercased_upserted_and_removable(conn: psycopg.Connection) -> None:
+    set_reviewer(conn, " Scholar@Example.org ", "reviewer", "t")
+    set_reviewer(conn, "scholar@example.org", "admin", "t")
+    assert list_reviewers(conn) == [("scholar@example.org", "admin")]
+    assert remove_reviewer(conn, "SCHOLAR@example.org")
+    assert not remove_reviewer(conn, "scholar@example.org")
+
+
+def test_reviewer_rejects_unknown_role_and_bad_email(conn: psycopg.Connection) -> None:
+    with pytest.raises(ValueError):
+        set_reviewer(conn, "a@b.org", "owner", "t")
+    with pytest.raises(psycopg.errors.CheckViolation):
+        set_reviewer(conn, "not-an-email", "reviewer", "t")
+
+
+def test_issue_passcode_stores_only_a_hash(conn: psycopg.Connection) -> None:
+    set_reviewer(conn, "a@b.org", "reviewer", "t")
+    passcode = issue_passcode(conn, "A@B.org")
+    stored = conn.execute("SELECT passcode_hash FROM reviewers").fetchone()
+    assert stored is not None and passcode not in str(stored[0])
+    assert str(stored[0]).startswith("scrypt$16384$8$1$")
+    with pytest.raises(ValueError, match="not a reviewer"):
+        issue_passcode(conn, "nobody@b.org")
+
+
+def test_hash_passcode_is_deterministic_for_a_salt() -> None:
+    salt = bytes(range(16))
+    assert hash_passcode("abc", salt) == hash_passcode("abc", salt)
+    assert hash_passcode("abc", salt) != hash_passcode("abd", salt)
+    assert len(new_passcode()) == 24

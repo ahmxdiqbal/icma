@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Suspense, type ReactElement } from "react";
 import { AttributionFooter } from "@/components/attribution-footer";
 import { TraditionExplorer } from "@/components/tradition/tradition-explorer";
+import { getAccess, requireReviewer } from "@/lib/auth/reviewer";
 import { countsSentence } from "@/lib/format";
 import { listTraditionIds } from "@/lib/load";
 import { getTraditionView } from "@/lib/view";
@@ -15,6 +16,7 @@ export function generateStaticParams(): Array<{ id: string }> {
 }
 
 export async function generateMetadata({ params }: PageProps<"/t/[id]">): Promise<Metadata> {
+  if (!(await getAccess()).ok) return { title: "Tradition" };
   const { id } = await params;
   const view = await getTraditionView(id);
   return { title: view?.pkg.title_en ?? "Tradition not found" };
@@ -40,6 +42,7 @@ function LoadingTradition(): ReactElement {
 }
 
 async function TraditionContent({ params }: { params: Params }): Promise<ReactElement> {
+  await requireReviewer();
   const { id } = await params;
   const view = await getTraditionView(id);
   if (view === null) notFound();

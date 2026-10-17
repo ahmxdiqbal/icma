@@ -1,0 +1,36 @@
+{
+  "source": "hadith-kg",
+  "note": "Proposals reviewed and not applied.",
+  "corrections": [
+    {
+      "chain_id": 257833,
+      "op": "set_links",
+      "links": [
+        {
+          "narrator_id": 4153
+        },
+        {
+          "narrator_id": 2415
+        },
+        {
+          "gap": "inqita"
+        },
+        {
+          "narrator_id": 5041
+        },
+        {
+          "narrator_id": 4533
+        }
+      ],
+      "reason": "'Abd Allah b. Muharrar (t7, died under al-Mansur) cannot have heard Hittan b. 'Abd Allah (t2, d. 71); at least one link is missing. In hadith-kg his recorded teachers are t3 to t6, most often Qatada (27 chains). The missing person is not named, so mark inqita rather than guess.",
+      "evidence": "Musannaf 'Abd al-Razzaq 12990, hadith-kg hadiths.id 222430: 'عَنْ عَبْدِ اللَّهِ بْنِ مُحَرِّرٍ ، عَنْ حِطَّانَ بْنِ عَبْدِ اللَّهِ الرَّقَاشِيِّ ، عَنْ عُبَادَةَ'.",
+      "author": "claude audit agent (unreviewed)",
+      "date": "2026-10-11",
+      "review": {
+        "a": "ACCEPT",
+        "b": "REJECT",
+        "outcome": "rejected: a date-based gap the source does not mark for comparable pairs; the chain accurately records a weak claim"
+      }
+    }
+  ]
+}

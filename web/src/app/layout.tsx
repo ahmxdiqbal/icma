@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Alegreya_Sans, Amiri } from "next/font/google";
 import Link from "next/link";
+import { Suspense } from "react";
+import { AccountMenu } from "@/components/account/account-menu";
 import "./globals.css";
 
 const alegreyaSans = Alegreya_Sans({
@@ -31,6 +33,9 @@ export default function RootLayout({ children }: LayoutProps<"/">): React.ReactE
               Isnad bundles
             </Link>
             <span className="text-sm text-ink-muted">for isnad-cum-matn analysis</span>
+            <Suspense fallback={null}>
+              <AccountMenu />
+            </Suspense>
           </div>
         </header>
         <div className="flex flex-1 flex-col">{children}</div>

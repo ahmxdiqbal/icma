@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { expect, test } from "@playwright/test";
 import { parseTradition } from "../src/lib/load";
+import { signIn } from "./session";
 
 const FILE = path.join(__dirname, "..", "data", "traditions", "ubada-khudhu-anni.json");
 const pkg = parseTradition(JSON.parse(fs.readFileSync(FILE, "utf8")), FILE);
@@ -14,7 +15,14 @@ function convergenceName(): string {
   return narrator.display_name_ar;
 }
 
-test("tradition page renders the bundle and opens the convergence point", async ({ page }) => {
+test("visitors without a session are sent to sign in", async ({ page }) => {
+  await page.goto("/t/ubada-khudhu-anni");
+  await expect(page).toHaveURL(/\/sign-in$/);
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Sign in");
+});
+
+test("tradition page renders the bundle and opens the convergence point", async ({ page, context, baseURL }) => {
+  await signIn(context, baseURL ?? "");
   await page.goto("/t/ubada-khudhu-anni");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(pkg.title_en);
 
