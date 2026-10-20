@@ -1,5 +1,23 @@
 # ICMA project instructions
 
+## Project state: CurrentState.md
+
+@CurrentState.md
+
+`CurrentState.md` at the repo root is the project's long-running memory: the goal, every decision
+with its date and reason, what exists, results, open decisions and next steps. It is imported above,
+so every session starts with it, and a new session needs nothing else to pick up the work.
+
+- Treat it as the record of project state. If it disagrees with the code or git, trust them, tell
+  Ahmed, and fix the file.
+- Update it in the same change as any work that makes a decision, produces a result, adds a file,
+  service or command, opens or settles a question, or finishes a next step. Before ending a session
+  that changed any of these, check that the file is current.
+- Replace stale lines instead of appending a log; git history keeps the past. Use absolute dates.
+- Keep it short enough to read in full every session, under about 250 lines. Put detail in
+  `docs/`, `eval/` or `reports/` and link it.
+- Do not copy project state into Claude's auto-memory. Memory keeps only a pointer to this file.
+
 ## Shared vocabulary with Ahmed
 
 Ahmed is learning ICMA while building this app. Two files set the words we use:
