@@ -159,3 +159,8 @@ here instead of switching words.
   narrator in between. Treat them as different ideas until the spider-rule work settles it.
 - **Convergence point in the code.** The field is named `suggested_cl`. Call it the convergence
   point in prose and in the app.
+- **Madār in Arabic-language tools.** Classical critics and several hadith apps (Smart Hadith
+  Tree, Ilm, Al-Jāmiʿ) say madār for the narrator at whom a hadith's chains meet. Some apply it to
+  every such narrator, which is a key figure; others to the main one, which is closer to the
+  convergence point. It does not carry Pavlovitch's checks. Say key figure or convergence point,
+  whichever is meant.
