@@ -1,0 +1,83 @@
+{
+  "tradition": "round2-c",
+  "selection": {"hadith_ids": [577218, 131513, 293273, 49924, 84322, 7187, 92368, 664317, 372064, 99678, 412741, 564025, 143503, 407703, 186413, 78947, 6566, 418412, 18695, 512144, 57059, 417899, 178406, 62297, 397626, 401894, 88390]},
+  "labelled_by": "claude-opus-5-5 (blind), 2026-10-18",
+  "chains": [
+    {"chain": 491452, "basis": "shared", "from": "لا تجمعوا بين كنيتي واسمي", "to": "بين اسمه وكنيته", "note": "The wording runs on through 'فاختلف في ذلك فقيل ...', which is Ibn Asakir's own comment; it has no end marker, so it is kept per the Known limits (true matn ends at 'كنيتي واسمي'). Dataset error: the chain makes Isma'il b. Ahmad al-Samarqandi the teacher of Ali b. Abd al-Malik al-Harawi, but in the text they are co-teachers of Ibn Asakir joined by و (with a third, Abu al-Husayn al-Muqri, who has no chain); it also names Zaynab bint Ahmad al-Maqdisiyya where the text has Umm al-Fath Amat al-Salam bint Ahmad b. Kamil."},
+    {"chain": 491453, "basis": "shared", "from": "لا تجمعوا بين كنيتي واسمي", "to": "بين اسمه وكنيته", "note": "Waki' chain is followed by a new chain before any matn, so it shares the matn (joined by قالا). Same unmarked collector comment kept as for 491452."},
+    {"chain": 491454, "basis": "shared", "from": "لا تجمعوا بين كنيتي واسمي", "to": "بين اسمه وكنيته", "note": "Same unmarked collector comment kept as for 491452. Dataset error: names Zaynab bint Ahmad al-Maqdisiyya where the text has Umm al-Fath Amat al-Salam bint Ahmad b. Kamil."},
+
+    {"chain": 170782, "basis": "shared", "from": "مثل الذي يسترد ما وهب", "to": "ثم ليدفع اليه ما وهب"},
+    {"chain": 170783, "basis": "shared", "from": "مثل الذي يسترد ما وهب", "to": "ثم ليدفع اليه ما وهب"},
+
+    {"chain": 296503, "basis": "shared", "from": "خيار ائمتكم الذين تحبونهم", "to": "ولا ينزع يدا من طاعه"},
+    {"chain": 296504, "basis": "shared", "from": "خيار ائمتكم الذين تحبونهم", "to": "ولا ينزع يدا من طاعه"},
+
+    {"chain": 65363, "basis": "shared", "from": "حفت الجنه بالمكاره", "to": "وحفت النار بالشهوات"},
+    {"chain": 65364, "basis": "shared", "from": "حفت الجنه بالمكاره", "to": "وحفت النار بالشهوات"},
+
+    {"chain": 106834, "basis": "shared", "from": "كان رسول الله اذا قال سمع", "to": "العشاء الاخره قنت"},
+    {"chain": 106835, "basis": "shared", "from": "كان رسول الله اذا قال سمع", "to": "العشاء الاخره قنت"},
+
+    {"chain": 9178, "basis": "lafz", "from": "كنا جلوسا مع حذيفه", "to": "لا يدخل الجنه قتات"},
+    {"chain": 9176, "basis": "similar", "refers_to": 9178},
+    {"chain": 9177, "basis": "similar", "refers_to": 9178},
+
+    {"chain": 124902, "basis": "shared", "from": "رايت رسول الله دخل الكعبه", "to": "الكعبه بين العمودين", "note": "Uthman b. Talha and Bilal are joined by و and named inside Ibn Umar's story, so the matn starts where his story starts ('رايت رسول الله ...'), not at 'صلي في جوف الكعبه'. The text drops 'عن أبيه' after Salim, so Ibn Umar is named only later ('قال عبد الله بن عمر'); the dataset chain correctly includes him."},
+    {"chain": 124903, "basis": "shared", "from": "رايت رسول الله دخل الكعبه", "to": "الكعبه بين العمودين", "note": "As 124902: story-start rule applied; the narrower reading would be 'صلي في جوف الكعبه بين العمودين'."},
+
+    {"chain": 546775, "basis": "shared", "from": "لا تقطع اليد الا في المجن", "to": "المجن اربعه دراهم", "note": "Urwa's 'كانت عائشه ام المؤمنين تحدث عن نبي الله ... انه قال' is read as a link to the Prophet (like 'عن النبي انه'), not as a story naming Aisha; under the story rule the matn would start at 'كانت عائشه ام المؤمنين'. The narrator's comment 'قال وزعم ان عروه قال المجن اربعه دراهم' stays; the matn ends at 'رواه'."},
+    {"chain": 546776, "basis": "shared", "from": "لا تقطع اليد الا في المجن", "to": "المجن اربعه دراهم", "note": "As 546775 (start of matn unclear between 'لا تقطع اليد' and 'كانت عائشه')."},
+
+    {"chain": 373658, "basis": "shared", "from": "لا ينبغي لصديق ان يكون", "to": "لصديق ان يكون لعانا"},
+    {"chain": 373659, "basis": "shared", "from": "لا ينبغي لصديق ان يكون", "to": "لصديق ان يكون لعانا"},
+    {"chain": 373660, "basis": "shared", "from": "لا ينبغي لصديق ان يكون", "to": "لصديق ان يكون لعانا"},
+
+    {"chain": 134862, "basis": "shared", "from": "لما قبض رسول الله قالت الانصار", "to": "ان نتقدم ابا بكر"},
+    {"chain": 134863, "basis": "shared", "from": "لما قبض رسول الله قالت الانصار", "to": "ان نتقدم ابا بكر"},
+
+    {"chain": 408869, "basis": "own", "from": "رايت رسول الله واقفا بعرفات", "to": "خلفه رجلا فنادي بذلك"},
+    {"chain": 408868, "basis": "same", "refers_to": 408869, "note": "Formula is 'ثم ذكر مثله غير انه لم يذكر سؤال اهل نجد اياه ولا اردافه الرجل': مثله with stated omissions and no words quoted. The rules do not cover 'same except for omissions'; labelled same by the formula, but the referred wording overstates this chain's words."},
+
+    {"chain": 476817, "basis": "shared", "from": "قلت يا رسول الله ان ابي", "to": "حج عن ابيك", "note": "Dataset error: the chain gives Abu Nu'aym's teacher as Muhammad b. Abi Ja'far al-Nahwi, but in the text the al-Hasan b. Sufyan line comes through Abu Amr b. Hamdan; the first teachers of 476817 and 476818 appear swapped."},
+    {"chain": 476818, "basis": "shared", "from": "قلت يا رسول الله ان ابي", "to": "حج عن ابيك", "note": "Dataset error: the chain gives Abu Nu'aym's teacher as Muhammad b. Ahmad al-Muqri, but in the text the al-Hadrami line comes through Abu Ja'far Muhammad b. Muhammad; see 476817."},
+
+    {"chain": 183523, "basis": "shared", "from": "كان رسول الله اذا اراد ان يعتكف", "to": "العشر الاول من شوال"},
+    {"chain": 183524, "basis": "shared", "from": "كان رسول الله اذا اراد ان يعتكف", "to": "العشر الاول من شوال"},
+
+    {"chain": 401993, "basis": "own", "from": "نهي رسول الله عن اطام", "to": "المدينه ان تهدم"},
+    {"chain": 401994, "basis": "same", "refers_to": 401993},
+
+    {"chain": 227411, "basis": "shared", "from": "بعث الي معاويه ليكتب له", "to": "لا اشبع بطنه", "note": "Ends before 'قال محمد عبد الله بن جعفر معناه ...': he transmits the Musnad of al-Tayalisi and is not in the chain, so his gloss is treated as the collector's comment (closest marker: قال + scholar, like قال أبو داود)."},
+    {"chain": 227412, "basis": "shared", "from": "بعث الي معاويه ليكتب له", "to": "لا اشبع بطنه", "note": "As 227411: matn ends before Abd Allah b. Ja'far's gloss."},
+
+    {"chain": 100166, "basis": "shared", "from": "ان ابا بكر الصديق وجه خالد", "to": "وسيف من سيوف الله", "note": "Abu Bakr is named inside the grandfather's story, so the matn starts at 'ان ابا بكر الصديق'. Possible dataset error: the text says al-Saffar's line is 'في جزء انتقاه الامام احمد بن حنبل عن علي بن بحر', which may put Ahmad b. Hanbal between al-Saffar and Ali b. Bahr; the chain omits him."},
+    {"chain": 100167, "basis": "shared", "from": "ان ابا بكر الصديق وجه خالد", "to": "وسيف من سيوف الله"},
+
+    {"chain": 8190, "basis": "own", "from": "جلس عبد الله وابو موسي فتحدثا", "to": "فيها الهرج والهرج القتل"},
+    {"chain": 8191, "basis": "partial", "from": "اني لجالس مع عبد الله", "to": "فقال ابو موسي سمعت النبي", "refers_to": 8190, "note": "Story start followed by مثله. The trailing 'والهرج بلسان الحبشه القتل' after مثله has no غير أن/وزاد/قال, so it is treated as the collector's comment and left out."},
+
+    {"chain": 415317, "basis": "shared", "from": "ما من عبد قال لا اله الا الله", "to": "علي رغم انف ابي ذر", "note": "Matn ends before 'ولم يقل الحربي ...' (treated like the marker لم يذكر). That comment says al-Harbi said 'وان زني وان سرق' only once, so this chain's words differ slightly from the shared wording; no rule covers an omission note in a shared matn, so both chains stay shared."},
+    {"chain": 415318, "basis": "shared", "from": "ما من عبد قال لا اله الا الله", "to": "علي رغم انف ابي ذر"},
+
+    {"chain": 30836, "basis": "shared", "from": "كنت عبدا بمصر لامراه", "to": "والثلث في الرجعه", "note": "Habib b. Maslama is named in Ziyad's reply, which is itself inside Makhul's story, so the story rule is applied up to Makhul's story start. The teachers are joined as 'الدمشقيان المعنى' (agreeing in sense); no rule covers المعنى on joined teachers, so labelled shared."},
+    {"chain": 30837, "basis": "shared", "from": "كنت عبدا بمصر لامراه", "to": "والثلث في الرجعه", "note": "As 30836 (story start through Makhul; teachers joined with المعنى)."},
+
+    {"chain": 445070, "basis": "shared", "from": "انما العين وكاء السه", "to": "فمن نام فليتوضا"},
+    {"chain": 445071, "basis": "shared", "from": "انما العين وكاء السه", "to": "فمن نام فليتوضا"},
+
+    {"chain": 74137, "basis": "own", "from": "قال له انظر فانك", "to": "الا ان تفضله بتقوي", "note": "'ان النبي قال له : انظر' keeps 'قال له' as a closing قال with an addressee; the raw text has a colon after 'له' (not after قال), which the rule does not address directly."},
+
+    {"chain": 414607, "basis": "partial", "from": "لما افتتح النبي مكه", "to": "سوره البلد ايه 1 2", "note": "Start of the matn followed by the closing formula 'وذكر تمام الخبر' (read as a form of وذكر الحديث); no chain in the entry has the whole wording, so no refers_to. Editors' sura/verse insertions stay in the wording."},
+
+    {"chain": 219271, "basis": "own", "from": "بايعنا رسول الله صلي الله عليه", "to": "في الله لومه لائم"},
+
+    {"chain": 80320, "basis": "own", "from": "انها سالت رسول الله عن الذهب", "to": "بشيء من زعفران"},
+
+    {"chain": 391774, "basis": "own", "from": "خفف علي داود القران", "to": "الا من عمل يده"},
+
+    {"chain": 395567, "basis": "own", "from": "كان رسول الله يمسح مناكبنا", "to": "فتختلف قلوبكم"},
+
+    {"chain": 114838, "basis": "own", "from": "اتي رسول الله رجل مقنع", "to": "عمل هذا قليلا واجر كثيرا"}
+  ]
+}

@@ -8,6 +8,7 @@ export interface AnalysisSummary {
   id: number;
   packageId: string;
   promptVersion: string;
+  model: string;
   importedAt: string;
   total: number;
   reviewed: number;
@@ -38,7 +39,7 @@ export interface AnalysisDetail {
 }
 
 const SUMMARY_SELECT = `
-  SELECT a.id::int AS id, a.package_id, a.prompt_version, a.imported_at::text AS imported_at,
+  SELECT a.id::int AS id, a.package_id, a.prompt_version, a.model, a.imported_at::text AS imported_at,
          count(j.id)::int AS total, count(cr.judgement_id)::int AS reviewed
   FROM analyses a
   LEFT JOIN judgements j ON j.analysis_id = a.id
@@ -48,6 +49,7 @@ interface SummaryRow {
   id: number;
   package_id: string;
   prompt_version: string;
+  model: string;
   imported_at: string;
   total: number;
   reviewed: number;
@@ -58,6 +60,7 @@ function toSummary(row: SummaryRow): AnalysisSummary {
     id: row.id,
     packageId: row.package_id,
     promptVersion: row.prompt_version,
+    model: row.model,
     importedAt: row.imported_at,
     total: row.total,
     reviewed: row.reviewed,

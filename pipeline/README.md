@@ -25,8 +25,8 @@ narrators, because meaning groups cluster by legal content and mix unrelated tra
 
 ## Run the model ICMA pass
 
-Uses OpenRouter by default (`OPENROUTER_API_KEY`, model `anthropic/claude-opus-5.5`, strict JSON
-schema output, high reasoning effort). `--provider anthropic` uses the Anthropic API directly
+Uses OpenRouter by default (`OPENROUTER_API_KEY` in `pipeline/.env`, model `deepseek/deepseek-v4-pro`,
+strict JSON schema output, high reasoning effort; see `../eval/model-selection-2026-10-17.md`). `--provider anthropic` uses the Anthropic API directly
 (`ANTHROPIC_API_KEY`); `--model` picks another model, e.g. an open-weight baseline on OpenRouter.
 
 ```bash
@@ -73,6 +73,15 @@ Database tests run against a throwaway database when `ICMA_TEST_DATABASE_URL` is
 docker run -d --name icma-pg -e POSTGRES_USER=icma -e POSTGRES_PASSWORD=icma -e POSTGRES_DB=icma -p 54329:5432 postgres:17
 ICMA_TEST_DATABASE_URL=postgresql://icma:icma@localhost:54329/icma .venv/bin/pytest -q
 ```
+
+## Compare models
+
+```bash
+.venv/bin/python -m icma.cli compare-models <selection args> --models a,b,c --key ../eval/gold/ubada-pavlovitch-2011.key.json --work-dir ../data/model-eval/<run> --out ../eval/<report>.md
+```
+
+`--seed-from <a model's work dir>` reuses that model's extraction and inventory for every model,
+so they differ only in the final ICMA judgement.
 
 ## Score against a published study
 

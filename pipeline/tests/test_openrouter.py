@@ -3,7 +3,7 @@ import json
 import pytest
 
 from icma.analysis.llm import AnalysisError
-from icma.analysis.openrouter import JSON, OpenRouterCaller, strict_schema
+from icma.analysis.openrouter import JSON, OpenRouterCaller, strict_schema, strip_fences
 from icma.analysis.schemas import ChainMatnSet, IcmaAnalysis
 
 MATN = {
@@ -55,7 +55,7 @@ def test_request_asks_for_strict_json_and_reasoning() -> None:
         system="s", user="u", schema=ChainMatnSet
     )
     body = seen[0]
-    assert body["model"] == "anthropic/claude-opus-5.5"
+    assert body["model"] == "deepseek/deepseek-v4-pro"
     assert body["reasoning"] == {"effort": "high", "exclude": True}
     assert body["provider"] == {"require_parameters": True}
     assert at(body, "response_format", "json_schema", "strict") is True
@@ -88,3 +88,21 @@ def test_missing_key_is_an_error(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.delenv("OPENROUTER_API_KEY", raising=False)
     with pytest.raises(AnalysisError, match="OPENROUTER_API_KEY"):
         OpenRouterCaller()
+
+
+def test_strip_fences() -> None:
+    assert strip_fences('```json\n{"a": 1}\n```') == '{"a": 1}'
+    assert strip_fences('{"a": 1}') == '{"a": 1}'
+
+
+def test_retries_once_after_a_bad_reply() -> None:
+    replies = [reply("not json"), reply(json.dumps({"chains": [MATN]}))]
+
+    def transport(body: JSON, key: str) -> JSON:
+        return replies.pop(0)
+
+    result = OpenRouterCaller(api_key="k", transport=transport).call(
+        system="s", user="u", schema=ChainMatnSet
+    )
+    assert result.parsed.chains[0].chain_id == 1
+    assert replies == []

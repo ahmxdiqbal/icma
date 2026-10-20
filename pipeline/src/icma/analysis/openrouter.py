@@ -14,7 +14,8 @@ from icma.analysis.llm import AnalysisError, CallResult
 T = TypeVar("T", bound=BaseModel)
 
 ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
-DEFAULT_MODEL = "anthropic/claude-opus-5.5"
+# Chosen 2026-10-17 by eval/model-selection-2026-10-17.md: open-weight, about $0.08 per tradition.
+DEFAULT_MODEL = "deepseek/deepseek-v4-pro"
 Effort = Literal["low", "medium", "high", "xhigh", "max"]
 JSON = dict[str, object]
 Transport = Callable[[JSON, str], JSON]
@@ -39,6 +40,16 @@ def strict_schema(model: type[BaseModel]) -> JSON:
     if not isinstance(inlined, dict):
         raise TypeError("schema root must be an object")
     return inlined
+
+
+def strip_fences(content: str) -> str:
+    """Remove a Markdown code fence some providers wrap around JSON despite strict mode."""
+    text = content.strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1] if "\n" in text else ""
+        text = text.removesuffix("```").rstrip()
+        text = text.removesuffix("```").rstrip()
+    return text
 
 
 def _post(body: JSON, api_key: str) -> JSON:
@@ -82,14 +93,14 @@ class OpenRouterCaller:
         if not key:
             raise AnalysisError("OPENROUTER_API_KEY is not set")
         self._key = key
-        self._model = model
+        self.model = model
         self._effort: Effort = effort
         self._max_tokens = max_tokens
         self._transport = transport
 
     def _body(self, system: str, user: str, schema: type[BaseModel]) -> JSON:
         return {
-            "model": self._model,
+            "model": self.model,
             "max_tokens": self._max_tokens,
             "reasoning": {"effort": self._effort, "exclude": True},
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
@@ -105,21 +116,28 @@ class OpenRouterCaller:
             "usage": {"include": True},
         }
 
-    def call(self, *, system: str, user: str, schema: type[T]) -> CallResult[T]:
+    def _attempt(self, system: str, user: str, schema: type[T]) -> tuple[T, JSON, str]:
         payload = self._transport(self._body(system, user, schema), self._key)
         content, finish = _message(payload)
         if finish == "length":
             raise AnalysisError(f"{schema.__name__}: output hit max_tokens before finishing")
         try:
-            parsed = schema.model_validate_json(content)
+            return schema.model_validate_json(strip_fences(content)), payload, finish
         except ValidationError as error:
             raise AnalysisError(
                 f"{schema.__name__}: output does not match the schema: {error}"
             ) from error
+
+    def call(self, *, system: str, user: str, schema: type[T]) -> CallResult[T]:
+        """One retry: providers occasionally ignore strict mode or return malformed JSON."""
+        try:
+            parsed, payload, finish = self._attempt(system, user, schema)
+        except AnalysisError:
+            parsed, payload, finish = self._attempt(system, user, schema)
         usage = payload.get("usage")
         return CallResult(
             parsed=parsed,
-            model=str(payload.get("model", self._model)),
+            model=str(payload.get("model", self.model)),
             message_id=str(payload.get("id", "")),
             stop_reason=finish,
             usage=usage if isinstance(usage, dict) else {},

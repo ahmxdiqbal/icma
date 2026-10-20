@@ -40,12 +40,31 @@ def _span_text(tradition: Tradition) -> dict[int, str | None]:
     return texts
 
 
-def _extracted(matn: ChainMatn, by_chain: Mapping[int, ChainMatn]) -> tuple[str | None, TextSource]:
-    if matn.relation in ("full_text", "partial_text") and matn.matn_ar.strip():
+def _squash(normalized: str) -> str:
+    return normalized.replace(" ", "")
+
+
+def _verbatim(text: str, entry: str) -> bool:
+    """Word for word after normalization, ignoring spacing: the source has glitches like
+    "الثيببالثيب", and a quote that restores the space is still faithful. `entry` is normalized."""
+    return bool(text.strip()) and _squash(normalize(text)) in _squash(entry)
+
+
+def _extracted(
+    matn: ChainMatn,
+    by_chain: Mapping[int, ChainMatn],
+    entries: Mapping[int, str],
+    hadith_of: Mapping[int, int],
+) -> tuple[str | None, TextSource]:
+    """Quoted wording counts only if it occurs word for word in its entry; labels are advisory."""
+    entry = entries.get(hadith_of.get(matn.chain_id, -1), "")
+    if _verbatim(matn.matn_ar, entry):
         return matn.matn_ar.strip(), "extracted"
     source = by_chain.get(matn.same_as_chain_id) if matn.same_as_chain_id is not None else None
-    if source is not None and source.relation == "full_text" and source.matn_ar.strip():
-        return source.matn_ar.strip(), "inherited"
+    if source is not None:
+        source_entry = entries.get(hadith_of.get(source.chain_id, -1), "")
+        if _verbatim(source.matn_ar, source_entry):
+            return source.matn_ar.strip(), "inherited"
     return None, "missing"
 
 
@@ -54,16 +73,34 @@ def chain_texts(tradition: Tradition, extracted: Sequence[ChainMatn]) -> list[Ch
     spans = _span_text(tradition)
     multi = multi_chain_hadith_ids(tradition)
     by_chain = {m.chain_id: m for m in extracted}
+    entries = {h.id: normalize(h.text_ar) for h in tradition.hadiths}
+    hadith_of = {c.id: c.hadith_id for c in tradition.chains}
     result: list[ChainText] = []
     for chain in tradition.chains:
         matn = by_chain.get(chain.id)
         if chain.hadith_id in multi and matn is not None:
-            text, source = _extracted(matn, by_chain)
+            text, source = _extracted(matn, by_chain, entries, hadith_of)
         else:
             text = spans.get(chain.hadith_id)
             source = "span" if text else "missing"
         result.append(ChainText(chain.id, chain.hadith_id, text, source))
     return result
+
+
+def extraction_warnings(tradition: Tradition, extracted: Sequence[ChainMatn]) -> list[str]:
+    """Quotes that are not in their entry, and relation labels that contradict the quote."""
+    entries = {h.id: normalize(h.text_ar) for h in tradition.hadiths}
+    hadith_of = {c.id: c.hadith_id for c in tradition.chains}
+    warnings: list[str] = []
+    for m in extracted:
+        quoted = bool(m.matn_ar.strip())
+        if quoted and not _verbatim(m.matn_ar, entries.get(hadith_of.get(m.chain_id, -1), "")):
+            warnings.append(f"chain_matns: chain {m.chain_id} quote is not in its entry; ignored")
+        if quoted != (m.relation in ("full_text", "partial_text")):
+            warnings.append(
+                f"chain_matns: chain {m.chain_id} relation '{m.relation}' contradicts its quote"
+            )
+    return warnings
 
 
 def group_variants(texts: Sequence[ChainText]) -> list[Variant]:

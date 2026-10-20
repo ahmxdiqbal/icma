@@ -54,9 +54,22 @@ def _parser() -> argparse.ArgumentParser:
     reviewer.add_argument("--email")
     reviewer.add_argument("--role", choices=["admin", "reviewer"], default="reviewer")
     reviewer.add_argument("--database-url", help=db_help)
+    compare = sub.add_parser("compare-models", help="run the analysis with several models")
+    _add_selection(compare)
+    compare.add_argument("--models", required=True, help="comma-separated OpenRouter model ids")
+    compare.add_argument("--key", type=Path, required=True, help="scoring key JSON")
+    compare.add_argument("--work-dir", type=Path, required=True)
+    compare.add_argument("--out", type=Path, required=True, help="markdown report to write")
+    compare.add_argument(
+        "--seed-from", type=Path, help="reuse this run's extraction and inventory for every model"
+    )
     score = sub.add_parser("score", help="score an analysis against a gold scoring key")
     score.add_argument("--analysis", type=Path, required=True, help="analysis JSON from analyze")
     score.add_argument("--key", type=Path, required=True, help="scoring key JSON")
+    wording = sub.add_parser("score-wording", help="score the wording rules against gold labels")
+    wording.add_argument("--db", type=Path, required=True, help="path to hadith-kg.db")
+    wording.add_argument("gold", type=Path, nargs="+", help="gold files (eval/gold/chain-wording)")
+    wording.add_argument("--show", action="store_true", help="print every disagreement")
     return parser
 
 
@@ -120,7 +133,7 @@ def analyze(args: argparse.Namespace) -> None:
         )
     result = run_analysis(args.title, tradition, bundle, caller, args.work_dir)
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    payload = analysis_json(args.id, result)
+    payload = analysis_json(args.id, result, caller.model)
     args.out.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"wrote {args.out}: {len(result.variants)} variants, {len(result.warnings)} warnings")
     for warning in result.warnings:
@@ -188,6 +201,47 @@ def reviewer(args: argparse.Namespace) -> None:
             print(f"{role:9} {email}")
 
 
+def compare_models(args: argparse.Namespace) -> None:
+    from icma.compare import Job, compare, markdown, report_json
+    from icma.evaluate import load_key
+
+    tradition, _ = load_corrected(args.db, args.group, args.anchors, args.corrections)
+    key = load_key(json.loads(args.key.read_text(encoding="utf-8")))
+    job = Job(
+        args.id, args.title, tradition, bundle_of(tradition), key, args.work_dir, args.seed_from
+    )
+    models = [m.strip() for m in args.models.split(",") if m.strip()]
+    reports = compare(job, models)
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    args.out.write_text(markdown(reports), encoding="utf-8")
+    raw = args.out.with_suffix(".json")
+    raw.write_text(json.dumps(report_json(reports), ensure_ascii=False, indent=1), encoding="utf-8")
+    print(markdown(reports))
+
+
+def score_wording(args: argparse.Namespace) -> None:
+    from icma.wording_eval import load_gold, load_selection, score
+
+    chains = correct = entries = entries_correct = 0
+    for path in args.gold:
+        gold = load_gold(path)
+        result = score(gold, load_selection(gold, args.db, path.resolve().parents[3]))
+        chains, correct = chains + result.chains, correct + result.correct
+        entries, entries_correct = (
+            entries + result.entries,
+            entries_correct + result.entries_correct,
+        )
+        print(
+            f"{path.stem}: {result.correct}/{result.chains} chains, "
+            f"{result.entries_correct}/{result.entries} entries fully right"
+        )
+        for error in result.errors if args.show else []:
+            print(
+                f"  hadith {error.hadith_id} chain {error.chain_id}: " + "; ".join(error.problems)
+            )
+    print(f"total: {correct}/{chains} chains, {entries_correct}/{entries} entries fully right")
+
+
 def main() -> None:
     args = _parser().parse_args()
     if args.command == "export":
@@ -202,6 +256,10 @@ def main() -> None:
         publish(args)
     elif args.command == "reviewer":
         reviewer(args)
+    elif args.command == "compare-models":
+        compare_models(args)
+    elif args.command == "score-wording":
+        score_wording(args)
 
 
 if __name__ == "__main__":

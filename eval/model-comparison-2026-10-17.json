@@ -1,0 +1,540 @@
+[
+ {
+  "model": "deepseek/deepseek-v4-pro",
+  "completed": true,
+  "error": null,
+  "stages": [
+   {
+    "stage": "chain_matns",
+    "cost_usd": 0.01388493015,
+    "prompt_tokens": 21807,
+    "completion_tokens": 28220,
+    "seconds": 331.9
+   },
+   {
+    "stage": "icma_synthesis",
+    "cost_usd": 0.0198680118,
+    "prompt_tokens": 89434,
+    "completion_tokens": 11265,
+    "seconds": 172.9
+   },
+   {
+    "stage": "matn_inventory",
+    "cost_usd": 0.0211076775,
+    "prompt_tokens": 9640,
+    "completion_tokens": 54655,
+    "seconds": 621.8
+   }
+  ],
+  "warnings": [
+   "chain_matns: chain 16406 quote is not in its entry; ignored",
+   "chain_matns: chain 113244 quote is not in its entry; ignored",
+   "icma_synthesis: unknown variant V74,        "
+  ],
+  "extracted_verbatim": 46,
+  "extracted_total": 46,
+  "score": {
+   "cl_recall": 0.0,
+   "cl_precision": 0.0,
+   "false_common_links": [
+    "n:1239"
+   ],
+   "missed_common_links": [
+    "n:2119",
+    "n:3795",
+    "n:8062",
+    "n:8160",
+    "n:8271",
+    "n:8488"
+   ],
+   "pcl_recall": 0.0,
+   "false_partial_common_links": [],
+   "convergence_verdict_correct": false
+  },
+  "cost_usd": 0.0549,
+  "seconds": 1126.6
+ },
+ {
+  "model": "deepseek/deepseek-v4-pro-0813",
+  "completed": true,
+  "error": null,
+  "stages": [
+   {
+    "stage": "chain_matns",
+    "cost_usd": 0.02917596,
+    "prompt_tokens": 21350,
+    "completion_tokens": 251,
+    "seconds": 4.5
+   },
+   {
+    "stage": "icma_synthesis",
+    "cost_usd": 0.0674515,
+    "prompt_tokens": 70356,
+    "completion_tokens": 19945,
+    "seconds": 297.3
+   },
+   {
+    "stage": "matn_inventory",
+    "cost_usd": 0.131322,
+    "prompt_tokens": 8188,
+    "completion_tokens": 51710,
+    "seconds": 468.1
+   }
+  ],
+  "warnings": [
+   "chain_matns: no extraction for chain 16407",
+   "chain_matns: no extraction for chain 16408",
+   "chain_matns: no extraction for chain 16409",
+   "chain_matns: no extraction for chain 16410",
+   "chain_matns: no extraction for chain 16411",
+   "chain_matns: no extraction for chain 16412",
+   "chain_matns: no extraction for chain 32755",
+   "chain_matns: no extraction for chain 32756",
+   "chain_matns: no extraction for chain 32757",
+   "chain_matns: no extraction for chain 32758",
+   "chain_matns: no extraction for chain 32759",
+   "chain_matns: no extraction for chain 47642",
+   "chain_matns: no extraction for chain 47643",
+   "chain_matns: no extraction for chain 75645",
+   "chain_matns: no extraction for chain 75646",
+   "chain_matns: no extraction for chain 75680",
+   "chain_matns: no extraction for chain 75681",
+   "chain_matns: no extraction for chain 113231",
+   "chain_matns: no extraction for chain 113232",
+   "chain_matns: no extraction for chain 113233",
+   "chain_matns: no extraction for chain 113234",
+   "chain_matns: no extraction for chain 113235",
+   "chain_matns: no extraction for chain 113236",
+   "chain_matns: no extraction for chain 113237",
+   "chain_matns: no extraction for chain 113238",
+   "chain_matns: no extraction for chain 113239",
+   "chain_matns: no extraction for chain 113240",
+   "chain_matns: no extraction for chain 113241",
+   "chain_matns: no extraction for chain 113242",
+   "chain_matns: no extraction for chain 113243",
+   "chain_matns: no extraction for chain 113244",
+   "chain_matns: no extraction for chain 156019",
+   "chain_matns: no extraction for chain 156020",
+   "chain_matns: no extraction for chain 175239",
+   "chain_matns: no extraction for chain 175240",
+   "chain_matns: no extraction for chain 185630",
+   "chain_matns: no extraction for chain 185631",
+   "chain_matns: no extraction for chain 185632",
+   "chain_matns: no extraction for chain 189809",
+   "chain_matns: no extraction for chain 189810",
+   "chain_matns: no extraction for chain 219429",
+   "chain_matns: no extraction for chain 219430",
+   "chain_matns: no extraction for chain 219431",
+   "chain_matns: no extraction for chain 219432",
+   "chain_matns: no extraction for chain 219433",
+   "chain_matns: no extraction for chain 257833",
+   "chain_matns: no extraction for chain 257834",
+   "chain_matns: no extraction for chain 322659",
+   "chain_matns: no extraction for chain 322660",
+   "chain_matns: no extraction for chain 383380",
+   "chain_matns: no extraction for chain 383381",
+   "chain_matns: no extraction for chain 403389",
+   "chain_matns: no extraction for chain 403390",
+   "chain_matns: no extraction for chain 415222",
+   "chain_matns: no extraction for chain 415223",
+   "chain_matns: no extraction for chain 415224",
+   "chain_matns: no extraction for chain 415225",
+   "chain_matns: no extraction for chain 423855",
+   "chain_matns: no extraction for chain 423856",
+   "chain_matns: no extraction for chain 433140",
+   "chain_matns: no extraction for chain 433141",
+   "chain_matns: no extraction for chain 519676",
+   "chain_matns: no extraction for chain 519677",
+   "chain_matns: no extraction for chain 519678",
+   "chain_matns: no extraction for chain 519679",
+   "chain_matns: no extraction for chain 519680"
+  ],
+  "extracted_verbatim": 1,
+  "extracted_total": 1,
+  "score": {
+   "cl_recall": 0.0,
+   "cl_precision": 0.0,
+   "false_common_links": [],
+   "missed_common_links": [
+    "n:2119",
+    "n:3795",
+    "n:8062",
+    "n:8160",
+    "n:8271",
+    "n:8488"
+   ],
+   "pcl_recall": 0.0,
+   "false_partial_common_links": [],
+   "convergence_verdict_correct": true
+  },
+  "cost_usd": 0.2279,
+  "seconds": 769.9
+ },
+ {
+  "model": "deepseek/deepseek-v4.1-flash",
+  "completed": false,
+  "error": "MatnInventory: output hit max_tokens before finishing",
+  "stages": [
+   {
+    "stage": "chain_matns",
+    "cost_usd": 0.007070312,
+    "prompt_tokens": 21742,
+    "completion_tokens": 11432,
+    "seconds": 65.4
+   }
+  ],
+  "warnings": [],
+  "extracted_verbatim": 0,
+  "extracted_total": 0,
+  "score": null,
+  "cost_usd": 0.0071,
+  "seconds": 65.4
+ },
+ {
+  "model": "z-ai/glm-5.3",
+  "completed": false,
+  "error": "IcmaAnalysis: output hit max_tokens before finishing",
+  "stages": [
+   {
+    "stage": "chain_matns",
+    "cost_usd": 0.07345124,
+    "prompt_tokens": 26659,
+    "completion_tokens": 39948,
+    "seconds": 198.4
+   },
+   {
+    "stage": "matn_inventory",
+    "cost_usd": 0.3826611,
+    "prompt_tokens": 13423,
+    "completion_tokens": 53708,
+    "seconds": 121.1
+   }
+  ],
+  "warnings": [],
+  "extracted_verbatim": 0,
+  "extracted_total": 0,
+  "score": null,
+  "cost_usd": 0.4561,
+  "seconds": 319.5
+ },
+ {
+  "model": "moonshotai/kimi-k3",
+  "completed": true,
+  "error": null,
+  "stages": [
+   {
+    "stage": "chain_matns",
+    "cost_usd": 0.43579046,
+    "prompt_tokens": 26484,
+    "completion_tokens": 28359,
+    "seconds": 239.0
+   },
+   {
+    "stage": "icma_synthesis",
+    "cost_usd": 0.935382,
+    "prompt_tokens": 104338,
+    "completion_tokens": 37757,
+    "seconds": 400.3
+   },
+   {
+    "stage": "matn_inventory",
+    "cost_usd": 0.69955089,
+    "prompt_tokens": 13161,
+    "completion_tokens": 44452,
+    "seconds": 253.8
+   }
+  ],
+  "warnings": [
+   "chain_matns: chain 189809 quote is not in its entry; ignored"
+  ],
+  "extracted_verbatim": 50,
+  "extracted_total": 50,
+  "score": {
+   "cl_recall": 0.3333333333333333,
+   "cl_precision": 0.3333333333333333,
+   "false_common_links": [
+    "n:1239",
+    "n:8616"
+   ],
+   "missed_common_links": [
+    "n:2119",
+    "n:8160",
+    "n:8271",
+    "n:8488"
+   ],
+   "pcl_recall": 0.4,
+   "false_partial_common_links": [],
+   "convergence_verdict_correct": false
+  },
+  "cost_usd": 2.0707,
+  "seconds": 893.1
+ },
+ {
+  "model": "qwen/qwen3.8-2.4t-a95b",
+  "completed": false,
+  "error": "ChainMatnSet: output does not match the schema: 1 validation error for ChainMatnSet\n  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='```json\\n[\\n  {\\n    \"ch...نَفْيُ سَنَة', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid",
+  "stages": [],
+  "warnings": [],
+  "extracted_verbatim": 0,
+  "extracted_total": 0,
+  "score": null,
+  "cost_usd": 0,
+  "seconds": 0
+ },
+ {
+  "model": "qwen/qwen3.8-27b",
+  "completed": true,
+  "error": null,
+  "stages": [
+   {
+    "stage": "chain_matns",
+    "cost_usd": 0.05226244,
+    "prompt_tokens": 22061,
+    "completion_tokens": 20552,
+    "seconds": 142.0
+   },
+   {
+    "stage": "icma_synthesis",
+    "cost_usd": 0.06696258,
+    "prompt_tokens": 110752,
+    "completion_tokens": 25013,
+    "seconds": 197.3
+   },
+   {
+    "stage": "matn_inventory",
+    "cost_usd": 0.10993172,
+    "prompt_tokens": 8043,
+    "completion_tokens": 43844,
+    "seconds": 148.1
+   }
+  ],
+  "warnings": [
+   "chain_matns: no extraction for chain 16408",
+   "chain_matns: no extraction for chain 16409",
+   "chain_matns: no extraction for chain 16410",
+   "chain_matns: no extraction for chain 16411",
+   "chain_matns: no extraction for chain 16412",
+   "chain_matns: no extraction for chain 32755",
+   "chain_matns: no extraction for chain 32756",
+   "chain_matns: no extraction for chain 32757",
+   "chain_matns: no extraction for chain 32758",
+   "chain_matns: no extraction for chain 32759",
+   "chain_matns: no extraction for chain 47642",
+   "chain_matns: no extraction for chain 47643",
+   "chain_matns: no extraction for chain 75645",
+   "chain_matns: no extraction for chain 75646",
+   "chain_matns: no extraction for chain 75680",
+   "chain_matns: no extraction for chain 75681",
+   "chain_matns: no extraction for chain 113231",
+   "chain_matns: no extraction for chain 113232",
+   "chain_matns: no extraction for chain 113233",
+   "chain_matns: no extraction for chain 113234",
+   "chain_matns: no extraction for chain 113235",
+   "chain_matns: no extraction for chain 113236",
+   "chain_matns: no extraction for chain 113237",
+   "chain_matns: no extraction for chain 113238",
+   "chain_matns: no extraction for chain 113239",
+   "chain_matns: no extraction for chain 113240",
+   "chain_matns: no extraction for chain 113241",
+   "chain_matns: no extraction for chain 113242",
+   "chain_matns: no extraction for chain 113243",
+   "chain_matns: no extraction for chain 113244",
+   "chain_matns: no extraction for chain 156019",
+   "chain_matns: no extraction for chain 156020",
+   "chain_matns: no extraction for chain 175239",
+   "chain_matns: no extraction for chain 175240",
+   "chain_matns: no extraction for chain 185630",
+   "chain_matns: no extraction for chain 185631",
+   "chain_matns: no extraction for chain 185632",
+   "chain_matns: no extraction for chain 189809",
+   "chain_matns: no extraction for chain 189810",
+   "chain_matns: no extraction for chain 219429",
+   "chain_matns: no extraction for chain 219430",
+   "chain_matns: no extraction for chain 219431",
+   "chain_matns: no extraction for chain 219432",
+   "chain_matns: no extraction for chain 219433",
+   "chain_matns: no extraction for chain 257833",
+   "chain_matns: no extraction for chain 257834",
+   "chain_matns: no extraction for chain 322659",
+   "chain_matns: no extraction for chain 322660",
+   "chain_matns: no extraction for chain 383380",
+   "chain_matns: no extraction for chain 383381",
+   "chain_matns: no extraction for chain 403389",
+   "chain_matns: no extraction for chain 403390",
+   "chain_matns: no extraction for chain 415222",
+   "chain_matns: no extraction for chain 415223",
+   "chain_matns: no extraction for chain 415224",
+   "chain_matns: no extraction for chain 415225",
+   "chain_matns: no extraction for chain 423855",
+   "chain_matns: no extraction for chain 423856",
+   "chain_matns: no extraction for chain 433140",
+   "chain_matns: no extraction for chain 433141",
+   "chain_matns: no extraction for chain 519676",
+   "chain_matns: no extraction for chain 519677",
+   "chain_matns: no extraction for chain 519678",
+   "chain_matns: no extraction for chain 519679",
+   "chain_matns: no extraction for chain 519680",
+   "chain_matns: chain 16406 quote is not in its entry; ignored",
+   "matn_inventory: missing variant V66",
+   "matn_inventory: missing variant V67",
+   "matn_inventory: missing variant V68",
+   "matn_inventory: missing variant V69",
+   "matn_inventory: missing variant V70"
+  ],
+  "extracted_verbatim": 0,
+  "extracted_total": 0,
+  "score": {
+   "cl_recall": 0.0,
+   "cl_precision": 0.0,
+   "false_common_links": [],
+   "missed_common_links": [
+    "n:2119",
+    "n:3795",
+    "n:8062",
+    "n:8160",
+    "n:8271",
+    "n:8488"
+   ],
+   "pcl_recall": 0.0,
+   "false_partial_common_links": [],
+   "convergence_verdict_correct": true
+  },
+  "cost_usd": 0.2292,
+  "seconds": 487.4
+ },
+ {
+  "model": "minimax/minimax-m3",
+  "completed": true,
+  "error": null,
+  "stages": [
+   {
+    "stage": "chain_matns",
+    "cost_usd": 0.00536101,
+    "prompt_tokens": 22019,
+    "completion_tokens": 309,
+    "seconds": 2.4
+   },
+   {
+    "stage": "icma_synthesis",
+    "cost_usd": 0.02452382,
+    "prompt_tokens": 76594,
+    "completion_tokens": 7195,
+    "seconds": 27.1
+   },
+   {
+    "stage": "matn_inventory",
+    "cost_usd": 0.02362678,
+    "prompt_tokens": 9050,
+    "completion_tokens": 22443,
+    "seconds": 54.2
+   }
+  ],
+  "warnings": [
+   "chain_matns: no extraction for chain 16408",
+   "chain_matns: no extraction for chain 16409",
+   "chain_matns: no extraction for chain 16410",
+   "chain_matns: no extraction for chain 16411",
+   "chain_matns: no extraction for chain 16412",
+   "chain_matns: no extraction for chain 32755",
+   "chain_matns: no extraction for chain 32756",
+   "chain_matns: no extraction for chain 32757",
+   "chain_matns: no extraction for chain 32758",
+   "chain_matns: no extraction for chain 32759",
+   "chain_matns: no extraction for chain 47642",
+   "chain_matns: no extraction for chain 47643",
+   "chain_matns: no extraction for chain 75645",
+   "chain_matns: no extraction for chain 75646",
+   "chain_matns: no extraction for chain 75680",
+   "chain_matns: no extraction for chain 75681",
+   "chain_matns: no extraction for chain 113231",
+   "chain_matns: no extraction for chain 113232",
+   "chain_matns: no extraction for chain 113233",
+   "chain_matns: no extraction for chain 113234",
+   "chain_matns: no extraction for chain 113235",
+   "chain_matns: no extraction for chain 113236",
+   "chain_matns: no extraction for chain 113237",
+   "chain_matns: no extraction for chain 113238",
+   "chain_matns: no extraction for chain 113239",
+   "chain_matns: no extraction for chain 113240",
+   "chain_matns: no extraction for chain 113241",
+   "chain_matns: no extraction for chain 113242",
+   "chain_matns: no extraction for chain 113243",
+   "chain_matns: no extraction for chain 113244",
+   "chain_matns: no extraction for chain 156019",
+   "chain_matns: no extraction for chain 156020",
+   "chain_matns: no extraction for chain 175239",
+   "chain_matns: no extraction for chain 175240",
+   "chain_matns: no extraction for chain 185630",
+   "chain_matns: no extraction for chain 185631",
+   "chain_matns: no extraction for chain 185632",
+   "chain_matns: no extraction for chain 189809",
+   "chain_matns: no extraction for chain 189810",
+   "chain_matns: no extraction for chain 219429",
+   "chain_matns: no extraction for chain 219430",
+   "chain_matns: no extraction for chain 219431",
+   "chain_matns: no extraction for chain 219432",
+   "chain_matns: no extraction for chain 219433",
+   "chain_matns: no extraction for chain 257833",
+   "chain_matns: no extraction for chain 257834",
+   "chain_matns: no extraction for chain 322659",
+   "chain_matns: no extraction for chain 322660",
+   "chain_matns: no extraction for chain 383380",
+   "chain_matns: no extraction for chain 383381",
+   "chain_matns: no extraction for chain 403389",
+   "chain_matns: no extraction for chain 403390",
+   "chain_matns: no extraction for chain 415222",
+   "chain_matns: no extraction for chain 415223",
+   "chain_matns: no extraction for chain 415224",
+   "chain_matns: no extraction for chain 415225",
+   "chain_matns: no extraction for chain 423855",
+   "chain_matns: no extraction for chain 423856",
+   "chain_matns: no extraction for chain 433140",
+   "chain_matns: no extraction for chain 433141",
+   "chain_matns: no extraction for chain 519676",
+   "chain_matns: no extraction for chain 519677",
+   "chain_matns: no extraction for chain 519678",
+   "chain_matns: no extraction for chain 519679",
+   "chain_matns: no extraction for chain 519680"
+  ],
+  "extracted_verbatim": 1,
+  "extracted_total": 1,
+  "score": {
+   "cl_recall": 0.5,
+   "cl_precision": 0.3,
+   "false_common_links": [
+    "n:1239",
+    "n:8616"
+   ],
+   "missed_common_links": [
+    "n:8160",
+    "n:8271",
+    "n:8488"
+   ],
+   "pcl_recall": 0.0,
+   "false_partial_common_links": [],
+   "convergence_verdict_correct": false
+  },
+  "cost_usd": 0.0535,
+  "seconds": 83.7
+ },
+ {
+  "model": "xiaomi/mimo-v2.6-pro",
+  "completed": false,
+  "error": "MatnInventory: output hit max_tokens before finishing",
+  "stages": [
+   {
+    "stage": "chain_matns",
+    "cost_usd": 0.053950875,
+    "prompt_tokens": 27459,
+    "completion_tokens": 48283,
+    "seconds": 672.8
+   }
+  ],
+  "warnings": [],
+  "extracted_verbatim": 0,
+  "extracted_total": 0,
+  "score": null,
+  "cost_usd": 0.054,
+  "seconds": 672.8
+ }
+]

@@ -1,0 +1,440 @@
+{
+ "tradition": "round1-a",
+ "selection": {
+  "hadith_ids": [
+   639478,
+   134414,
+   285418,
+   46163,
+   84974,
+   10799,
+   89779,
+   664952,
+   374486,
+   99029,
+   408880,
+   564180,
+   141427,
+   406740,
+   188219,
+   75837,
+   1034,
+   419970,
+   18117,
+   510121,
+   41915,
+   60830,
+   180722,
+   9614,
+   130185,
+   325543,
+   278110
+  ]
+ },
+ "labelled_by": "claude-opus-5-5 (blind), 2026-10-18",
+ "chains": [
+  {
+   "chain": 524535,
+   "basis": "shared",
+   "from": "ذكر معاويه فقال اللهم",
+   "to": "فكانت بيعه معاويه",
+   "note": "Start: 'سمعت رسول الله' is read as the link to the Prophet, so the matn starts at 'ذكر معاويه'. The rules list no 'سمعت رسول الله' link; if it is not one, the matn starts at 'سمعت رسول الله ذكر معاويه'. End: 'وروي عن يونس علي وجه اخر' is read as the collector's comment (passive of رواه)."
+  },
+  {
+   "chain": 524536,
+   "basis": "shared",
+   "from": "ذكر معاويه فقال اللهم",
+   "to": "فكانت بيعه معاويه",
+   "note": "Same start and end question as 524535."
+  },
+  {
+   "chain": 173648,
+   "basis": "shared",
+   "from": "ان رجلا طلق امراته ثلاثا",
+   "to": "كما ذاق الاول"
+  },
+  {
+   "chain": 173649,
+   "basis": "shared",
+   "from": "ان رجلا طلق امراته ثلاثا",
+   "to": "كما ذاق الاول"
+  },
+  {
+   "chain": 288353,
+   "basis": "shared",
+   "from": "نهي عن بيع الحيوان",
+   "to": "بالحيوان نسيئه"
+  },
+  {
+   "chain": 288354,
+   "basis": "shared",
+   "from": "نهي عن بيع الحيوان",
+   "to": "بالحيوان نسيئه"
+  },
+  {
+   "chain": 288355,
+   "basis": "shared",
+   "from": "نهي عن بيع الحيوان",
+   "to": "بالحيوان نسيئه"
+  },
+  {
+   "chain": 288356,
+   "basis": "shared",
+   "from": "نهي عن بيع الحيوان",
+   "to": "بالحيوان نسيئه",
+   "note": "Name check: the text has 'محمد بن النضر الازدي', the dataset 'محمد بن أحمد الأزدي'. Probably the same man (Muhammad b. Ahmad b. al-Nadr) named after his grandfather, but the names differ."
+  },
+  {
+   "chain": 288357,
+   "basis": "shared",
+   "from": "نهي عن بيع الحيوان",
+   "to": "بالحيوان نسيئه"
+  },
+  {
+   "chain": 60861,
+   "basis": "shared",
+   "from": "جدال في القران كفر",
+   "to": "القران كفر"
+  },
+  {
+   "chain": 60862,
+   "basis": "shared",
+   "from": "جدال في القران كفر",
+   "to": "القران كفر"
+  },
+  {
+   "chain": 108132,
+   "basis": "shared",
+   "from": "ان قريشا كانت تصوم عاشوراء",
+   "to": "ومن شاء فليفطر",
+   "note": "Start: 'اخبرته' after عائشه is read as chain wording (like a leading قال), which the rules do not list. Dataset: 'يزيد بن ابي حبيب' in the text is identified as 'يزيد بن قيس الأزدي' in all five chains of this entry; this looks like a wrong identification."
+  },
+  {
+   "chain": 108129,
+   "basis": "shared",
+   "from": "ان قريشا كانت تصوم عاشوراء",
+   "to": "ومن شاء فليفطر",
+   "note": "Same start question and same يزيد identification problem as 108132."
+  },
+  {
+   "chain": 108128,
+   "basis": "same",
+   "refers_to": 108132,
+   "note": "'باسناده مثله' names no narrator, so it points at the shared wording of 108132 and 108129; 108132 picked as the first named. Same يزيد identification problem as 108132."
+  },
+  {
+   "chain": 108130,
+   "basis": "same",
+   "refers_to": 108132,
+   "note": "As 108128."
+  },
+  {
+   "chain": 108131,
+   "basis": "same",
+   "refers_to": 108132,
+   "note": "As 108128."
+  },
+  {
+   "chain": 17921,
+   "basis": "shared",
+   "from": "كنا اذا حضرنا مع النبي طعاما",
+   "to": "ان يده في يدي مع يدها"
+  },
+  {
+   "chain": 17922,
+   "basis": "shared",
+   "from": "كنا اذا حضرنا مع النبي طعاما",
+   "to": "ان يده في يدي مع يدها"
+  },
+  {
+   "chain": 17923,
+   "basis": "partial",
+   "from": "كنا اذا دعينا مع رسول الله",
+   "to": "الي طعام",
+   "refers_to": 17921,
+   "note": "The collector quotes the opening, then 'فذكر بمعني حديث ابي معاويه' (read as a closing formula), then three more quoted differences: 'كانما يطرد', 'كانما تطرد' and the addition 'ثم ذكر اسم الله واكل'. Only the opening is labelled, because a wording must be one unbroken stretch and the collector's own description sits between the pieces. refers_to could equally be 17922 (both run through Abu Mu'awiya)."
+  },
+  {
+   "chain": 17920,
+   "basis": "reference",
+   "refers_to": 17921,
+   "note": "'بهذا الاسناد' plus a claim about the order of the episodes ('وقدم مجيء الجاريه قبل مجيء الاعرابي') with no matn words and no مثله/نحوه/بمعناه. No rule covers an order claim; labelled reference as the closest rule. Points past the partial 17923 to the whole wording of 17921."
+  },
+  {
+   "chain": 117640,
+   "basis": "shared",
+   "from": "ان الله يبعث ريحا من اليمن",
+   "to": "الا قبضته"
+  },
+  {
+   "chain": 117641,
+   "basis": "shared",
+   "from": "ان الله يبعث ريحا من اليمن",
+   "to": "الا قبضته"
+  },
+  {
+   "chain": 548085,
+   "basis": "shared",
+   "from": "راي رسول الله صلي الله عليه وسلم رجلا",
+   "to": "فسكت رسول الله صلي الله عليه وسلم",
+   "note": "Dataset: the narrators between حنبل and عبد الله بن أحمد come from 'بالاسناد المذكور انفا' and are not named in this text. The dataset names the Companion 'قيس بن قهد', the text 'قيس بن عمرو'; scholars differ on whether these are one man. The 'to' anchor is 7 words because every shorter ending repeats earlier."
+  },
+  {
+   "chain": 548086,
+   "basis": "shared",
+   "from": "راي رسول الله صلي الله عليه وسلم رجلا",
+   "to": "فسكت رسول الله صلي الله عليه وسلم",
+   "note": "Same dataset remarks as 548085."
+  },
+  {
+   "chain": 548087,
+   "basis": "shared",
+   "from": "راي رسول الله صلي الله عليه وسلم رجلا",
+   "to": "فسكت رسول الله صلي الله عليه وسلم",
+   "note": "Same dataset remarks as 548085."
+  },
+  {
+   "chain": 375745,
+   "basis": "own",
+   "from": "الحياء من الايمان",
+   "to": "والايمان في الجنه"
+  },
+  {
+   "chain": 375746,
+   "basis": "same",
+   "refers_to": 375745
+  },
+  {
+   "chain": 134105,
+   "basis": "lafz",
+   "from": "كنت رجلا مذاء",
+   "to": "الماء فاغتسل"
+  },
+  {
+   "chain": 134104,
+   "basis": "similar",
+   "refers_to": 134105
+  },
+  {
+   "chain": 403681,
+   "basis": "partial",
+   "from": "خرج رسول الله في ساعه",
+   "to": "ابي الهيثم بن التيهان",
+   "note": "The entry gives only the opening, then 'وذكر الحديث بطوله'. Partial needs a refers_to chain with a whole wording, and no chain here has one, so both chains are labelled shared with the opening. 'وقال فيه فان المستشار مؤتمن' comes after the closing formula and is left out. 'هكذا حدثناه ابو اميه وهو لسياقته' names Abu Umayya, who is in both chains, so it does not make either chain lafz."
+  },
+  {
+   "chain": 403680,
+   "basis": "partial",
+   "from": "خرج رسول الله في ساعه",
+   "to": "ابي الهيثم بن التيهان",
+   "note": "As 403681."
+  },
+  {
+   "chain": 476992,
+   "basis": "own",
+   "from": "فقدت ايه كنت اسمعها",
+   "to": "سوره الاحزاب ايه 23"
+  },
+  {
+   "chain": 476990,
+   "basis": "own",
+   "from": "الذي جعل النبي شهادته",
+   "to": "بشهاده رجلين",
+   "note": "The only words after this chain are a description of Khuzayma ('الذي جعل النبي شهادته بشهاده رجلين'); the hadith this chain carries is cut off. Labelled own because the narrator-note rule covers only notes that end where 'أن رسول الله' begins. If such a description counts as a note on the narrator, the chain has no words and would be reference."
+  },
+  {
+   "chain": 476991,
+   "basis": "partial",
+   "from": "وخزيمه الذي جعل النبي",
+   "to": "شهاده رجلين",
+   "refers_to": 476992,
+   "note": "The words are given inside the collector's comment ('ورواه يونس عن الزهري ... وخزيمه الذي جعل النبي شهادته شهاده رجلين') before the full chain, which then ends 'عن ابن شهاب به'. No rule covers words placed before their chain. Labelled partial: 'رواه يونس عن الزهري' names al-Zuhri, so it points at the al-Zuhri chain 476992, and only a difference is quoted. Dataset: the chain ends at خزيمة بن ثابت, but the text never names Khuzayma as a narrator; his name appears only inside 'عماره بن خزيمه بن ثابت' and in the quoted words."
+  },
+  {
+   "chain": 180608,
+   "basis": "shared",
+   "from": "ان علي بن ابي طالب امره",
+   "to": "وليتوضا وضوءه للصلاه"
+  },
+  {
+   "chain": 180609,
+   "basis": "shared",
+   "from": "ان علي بن ابي طالب امره",
+   "to": "وليتوضا وضوءه للصلاه"
+  },
+  {
+   "chain": 180610,
+   "basis": "shared",
+   "from": "ان علي بن ابي طالب امره",
+   "to": "وليتوضا وضوءه للصلاه"
+  },
+  {
+   "chain": 400802,
+   "basis": "lafz",
+   "from": "لما فتح الله علي رسوله",
+   "to": "واما ان يودي"
+  },
+  {
+   "chain": 400803,
+   "basis": "partial",
+   "from": "قتلت خزاعه رجلا",
+   "to": "من بني ليث",
+   "refers_to": 400802
+  },
+  {
+   "chain": 229712,
+   "basis": "own",
+   "from": "انما بعثت لاتمم",
+   "to": "صالح الاخلاق 7 363",
+   "note": "'7 363' is the editor's volume and page marker ('@ 7: 363 @'). It is kept because the rules keep editors' insertions; the hadith's own words end at 'صالح الاخلاق'."
+  },
+  {
+   "chain": 229713,
+   "basis": "reference",
+   "refers_to": 229712
+  },
+  {
+   "chain": 97626,
+   "basis": "shared",
+   "from": "قدمت عير فابتاع النبي",
+   "to": "ما ليس عندي ثمنه",
+   "note": "End: 'قد احتج البخاري بعكرمه ... ولم يخرجاه' is al-Hakim's comment but is not one of the listed markers. Labelled as a comment, so the wording ends at 'ثمنه'. If it counts as a comment with no marker, the wording would run to 'ولم يخرجاه'."
+  },
+  {
+   "chain": 97627,
+   "basis": "shared",
+   "from": "قدمت عير فابتاع النبي",
+   "to": "ما ليس عندي ثمنه",
+   "note": "Same end question as 97626."
+  },
+  {
+   "chain": 97628,
+   "basis": "shared",
+   "from": "قدمت عير فابتاع النبي",
+   "to": "ما ليس عندي ثمنه",
+   "note": "Same end question as 97626. Possible dataset error: the dataset puts سعيد بن سليمان between محمد بن سعيد الأصبهاني and شريك, but in the text 'قالا حدثنا سعيد بن سليمان' belongs to the second pair (ابن ايوب and الحسين بن بشار); محمد بن سعيد seems to meet the other chains at شريك."
+  },
+  {
+   "chain": 1272,
+   "basis": "own",
+   "from": "رايت رسول الله اذا اعجله السير",
+   "to": "يفعله اذا اعجله السير"
+  },
+  {
+   "chain": 1271,
+   "basis": "partial",
+   "from": "كان ابن عمر رضي الله عنهما يجمع",
+   "to": "يقوم من جوف الليل",
+   "refers_to": 1272,
+   "note": "'وزاد الليث' gives the added words. The text of this chain ends at 'قال سالم'; the Companion ابن عمر appears only inside the story, so the wording starts after سالم, not after the chain's last listed narrator."
+  },
+  {
+   "chain": 417372,
+   "basis": "own",
+   "from": "سئل عن اولاد المشركين",
+   "to": "بما كانوا عاملين"
+  },
+  {
+   "chain": 417373,
+   "basis": "same",
+   "refers_to": 417372
+  },
+  {
+   "chain": 30106,
+   "basis": "shared",
+   "from": "تستامر اليتيمه في نفسها",
+   "to": "فلا جواز عليها",
+   "note": "'المعني' after حماد says the two versions agree in sense, and 'والاخبار في حديث يزيد' is about the transmission terms in the chain, not the words of the matn; neither says whose words these are, so shared. 'والاخبار في حديث يزيد' is not a listed comment marker but is read as the collector's comment, so the wording ends at 'عليها'."
+  },
+  {
+   "chain": 30105,
+   "basis": "shared",
+   "from": "تستامر اليتيمه في نفسها",
+   "to": "فلا جواز عليها",
+   "note": "As 30106."
+  },
+  {
+   "chain": 30104,
+   "basis": "partial",
+   "from": "فان بكت او سكتت",
+   "to": "او سكتت",
+   "refers_to": 30106,
+   "note": "'بهذا الحديث باسناده زاد فيه'. Points at the shared wording of 30106 and 30105; 30106 picked as the first named."
+  },
+  {
+   "chain": 444225,
+   "basis": "shared",
+   "from": "من حسن اسلام المرء",
+   "to": "ما لا يعنيه",
+   "note": "End: 'غريب عن الثوري عن جعفر' is Abu Nu'aym's comment, but the first listed marker is the later 'تفرد به'. Labelled as a comment, so the wording ends at 'يعنيه'."
+  },
+  {
+   "chain": 444226,
+   "basis": "shared",
+   "from": "من حسن اسلام المرء",
+   "to": "ما لا يعنيه",
+   "note": "As 444225."
+  },
+  {
+   "chain": 55914,
+   "basis": "own",
+   "from": "كلكم راع وكلكم مسئول",
+   "to": "زوجها ومسئوله عنه"
+  },
+  {
+   "chain": 78562,
+   "basis": "own",
+   "from": "انها كانت اذا مات الميت",
+   "to": "تذهب ببعض الحزن",
+   "note": "'زوج النبي' after عائشه is read as part of her name and skipped, although the narrator-note rule names only notes that end where 'أن رسول الله' begins."
+  },
+  {
+   "chain": 221426,
+   "basis": "own",
+   "from": "وجدت في قائم سيف",
+   "to": "ليال مع غير محرم"
+  },
+  {
+   "chain": 14732,
+   "basis": "own",
+   "from": "اذا دعي احدكم الي الوليمه",
+   "to": "ينزله علي العرس"
+  },
+  {
+   "chain": 169108,
+   "basis": "own",
+   "from": "نهي عن بيع اللحم",
+   "to": "اللحم بالحيوان"
+  },
+  {
+   "chain": 337471,
+   "basis": "own",
+   "from": "الصوم في الشتاء",
+   "to": "الغنيمه البارده"
+  },
+  {
+   "chain": 280045,
+   "basis": "own",
+   "from": "نهي نبي الله ان يتزعفر",
+   "to": "قال يتخلق"
+  }
+ ],
+ "adjudication": [
+  {
+   "chain": 403681,
+   "rule": "An opening followed only by 'وذكر الحديث' is partial; refers_to is empty when no chain in the entry has the whole wording.",
+   "was": {
+    "basis": "shared",
+    "refers_to": null
+   }
+  },
+  {
+   "chain": 403680,
+   "rule": "An opening followed only by 'وذكر الحديث' is partial; refers_to is empty when no chain in the entry has the whole wording.",
+   "was": {
+    "basis": "shared",
+    "refers_to": null
+   }
+  }
+ ]
+}

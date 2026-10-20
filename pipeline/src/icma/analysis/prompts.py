@@ -8,7 +8,7 @@ from icma.analysis.variants import Variant
 from icma.bundle import PROPHET, Bundle, branch_groups, key_figures, label_of
 from icma.models import GapLink, Link, Tradition
 
-PROMPT_VERSION = "2026-10-11.3"
+PROMPT_VERSION = "2026-10-17.1"
 
 CHAIN_MATN_SYSTEM = """\
 You read hadith entries from classical collections in which the collector cites more than one \
@@ -21,7 +21,9 @@ says only that the route's wording is the same or similar \
 (e.g. بمثله، نحوه، بمعناه، بهذا الإسناد), use reference_only and give \
 same_as_chain_id when the entry makes clear which route is meant. A route mentioned in the \
 collector's own comment without wording is reference_only or not_found. \
-Return exactly one item for each listed chain id and no others."""
+The relation must agree with matn_ar: full_text or partial_text when you quote wording, \
+reference_only or not_found when matn_ar is empty. The first route of an entry usually carries \
+the full text. Return exactly one item for each listed chain id and no others."""
 
 INVENTORY_SYSTEM = """\
 You compare the matn variants of one hadith tradition. Build an inventory of content elements: \

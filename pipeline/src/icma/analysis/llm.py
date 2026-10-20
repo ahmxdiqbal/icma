@@ -26,6 +26,8 @@ class CallResult[R: BaseModel]:
 
 
 class StructuredCaller(Protocol):
+    model: str
+
     def call(self, *, system: str, user: str, schema: type[T]) -> CallResult[T]: ...
 
 
@@ -40,13 +42,13 @@ class AnthropicCaller:
         max_tokens: int = 64000,
     ) -> None:
         self._client = client or anthropic.Anthropic()
-        self._model = model
+        self.model = model
         self._effort: Effort = effort
         self._max_tokens = max_tokens
 
     def call(self, *, system: str, user: str, schema: type[T]) -> CallResult[T]:
         with self._client.beta.messages.stream(
-            model=self._model,
+            model=self.model,
             max_tokens=self._max_tokens,
             betas=["server-side-fallback-2026-07-01"],
             fallbacks="default",

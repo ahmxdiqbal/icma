@@ -23,7 +23,10 @@ class ChainMatn(Strict):
         "words are quoted (e.g. 'bi-ma'nahu, qala: ...'). reference_only: the collector only says "
         "the text is the same or similar, with no wording. not_found: no text for this route."
     )
-    matn_ar: str = Field(description="Verbatim Arabic quoted for this route, or empty string.")
+    matn_ar: str = Field(
+        description="Verbatim Arabic quoted for this route. Must be non-empty for full_text and "
+        "partial_text, and empty for reference_only and not_found."
+    )
     same_as_chain_id: int | None = Field(
         description="Chain whose wording this route is said to share, when the text says so."
     )

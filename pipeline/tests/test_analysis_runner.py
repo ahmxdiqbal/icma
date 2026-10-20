@@ -59,6 +59,8 @@ CHAIN_MATNS: dict[str, object] = {
 
 
 class FakeCaller:
+    model = "fake"
+
     def __init__(self) -> None:
         self.calls: list[str] = []
         self._outputs: dict[type[BaseModel], dict[str, object]] = {
@@ -78,7 +80,7 @@ def run(tmp_path: Path, caller: FakeCaller) -> dict[str, object]:
     tradition, _ = load_corrected(db if db.exists() else build(db), 730, (1,), None)
     bundle = bundle_of(tradition)
     result = analyze("t", tradition, bundle, caller, tmp_path / "out")
-    return analysis_json("t", result)
+    return analysis_json("t", result, "fake")
 
 
 def test_runs_all_three_model_stages_and_validates_references(tmp_path: Path) -> None:

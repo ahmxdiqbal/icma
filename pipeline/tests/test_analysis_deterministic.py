@@ -12,13 +12,14 @@ from icma.analysis.variants import (
     ChainText,
     Variant,
     chain_texts,
+    extraction_warnings,
     group_variants,
     multi_chain_hadith_ids,
 )
 from icma.bundle import BranchGroup
 from icma.models import Chain, Hadith, HadithType, NarratorLink, Span, Tradition
 
-TEXT = "حدثنا فلان عن فلان قال خذوا عني"
+TEXT = "حدثنا فلان عن فلان قال خذوا عني البكر بالبكر"
 
 
 def hadith(hid: int, span: Span | None) -> Hadith:
@@ -45,7 +46,7 @@ def matn(cid: int, relation: str, text: str = "", same: int | None = None) -> Ch
 TRADITION = Tradition(
     books=(),
     narrators=(),
-    hadiths=(hadith(10, Span(23, len(TEXT))), hadith(11, None), hadith(12, Span(0, 5))),
+    hadiths=(hadith(10, Span(23, 31)), hadith(11, None), hadith(12, Span(0, 5))),
     chains=(chain(1, 10), chain(2, 11), chain(3, 12), chain(4, 12), chain(5, 12)),
 )
 
@@ -134,3 +135,28 @@ def test_branches_without_text_are_ignored_for_distinctiveness() -> None:
     a = BranchProfile(("A",), "corroborated", 2, 2, {"E1": 1.0}, {})
     empty = BranchProfile(("B",), "direct", 1, 0, {"E1": 0.0}, {})
     assert distinctive([a, empty], ["E1"]) == []
+
+
+def test_quotes_must_be_verbatim_and_labels_are_advisory() -> None:
+    extracted = [
+        matn(3, "not_found", "البكر بالبكر"),  # mislabelled but verbatim: kept
+        matn(4, "full_text", "نص مختلق"),  # not in the entry: ignored
+        matn(5, "reference_only", same=3),
+    ]
+    texts = {t.chain_id: (t.text_ar, t.source) for t in chain_texts(TRADITION, extracted)}
+    assert texts[3] == ("البكر بالبكر", "extracted")
+    assert texts[4] == (None, "missing")
+    assert texts[5] == ("البكر بالبكر", "inherited")
+    warnings = extraction_warnings(TRADITION, extracted)
+    assert "chain_matns: chain 3 relation 'not_found' contradicts its quote" in warnings
+    assert "chain_matns: chain 4 quote is not in its entry; ignored" in warnings
+    assert len(warnings) == 2
+
+
+def test_verbatim_ignores_spacing_glitches_in_the_source() -> None:
+    entry = Hadith(20, 1, 1, 1, HadithType.MARFU, "", "قال والثيببالثيب جلد", None, ())
+    glitched = Tradition(
+        books=(), narrators=(), hadiths=(entry,), chains=(chain(7, 20), chain(8, 20))
+    )
+    texts = chain_texts(glitched, [matn(7, "full_text", "والثيب بالثيب جلد")])
+    assert texts[0].source == "extracted"

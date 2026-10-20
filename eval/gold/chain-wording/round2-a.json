@@ -1,0 +1,93 @@
+{
+  "tradition": "round2-a",
+  "selection": {"hadith_ids": [614917, 137177, 293838, 42840, 86133, 11311, 90156, 664036, 374285, 103628, 409965, 565978, 145847, 407673, 186127, 81237, 1993, 420289, 17566, 510317, 65983, 298686, 175981, 477748, 267646, 193441, 139218]},
+  "labelled_by": "claude-opus-5-5 (blind), 2026-10-18",
+  "chains": [
+    {"chain": 512128, "basis": "shared", "from": "ان هذه الايه نزلت فيه", "to": "هو ذاك فعليكموه", "note": "Three Companions joined by و (أبو أيوب وجابر وأنس). The epithet الانصاريون is skipped. The leading أن is kept: the start rules skip أن only as part of a link to the Prophet (أن النبي ﷺ) and list أنه قال, not أن followed by another subject. Same choice in 57013, 118778/118779, 176560/176562 and 417745/417746."},
+    {"chain": 512129, "basis": "shared", "from": "ان هذه الايه نزلت فيه", "to": "هو ذاك فعليكموه"},
+    {"chain": 512130, "basis": "shared", "from": "ان هذه الايه نزلت فيه", "to": "هو ذاك فعليكموه"},
+
+    {"chain": 176560, "basis": "shared", "from": "ان قومااغاروا فاصابوا امراه", "to": "واخذ النبي ناقته", "note": "Kept وقالا معا او احدهما في الحديث واخذ النبي ناقته in the shared matn: I read it as al-Shafi'i (a narrator in all four chains) saying that Sufyan and Abd al-Wahhab, or one of them, had this sentence, so it is a narrator's comment the chains pass on. If قالا means al-Bayhaqi's two teachers instead, the sentence may belong to only one of them and the shared matn would end at ابن ادم."},
+    {"chain": 176562, "basis": "shared", "from": "ان قومااغاروا فاصابوا امراه", "to": "واخذ النبي ناقته"},
+    {"chain": 176559, "basis": "partial", "from": "قال الشافعي فقد اخذ النبي ناقته", "to": "علي المشركين", "refers_to": 176562, "note": "زاد ابو سعيد في روايته: Abu Sa'id (Muhammad b. Musa b. Shadhan) is one of the two joined teachers, so his chains are partial with the addition. The addition is al-Shafi'i's own remark; I kept قال الشافعي in the wording, as a narrator's comment inside the chain (like قال الحسن in the rules), although قال الشافعي is also listed as a collector-comment marker. refers_to picks the other teacher's chain through the same teacher of al-Shafi'i (Sufyan); the formula names neither."},
+    {"chain": 176561, "basis": "partial", "from": "قال الشافعي فقد اخذ النبي ناقته", "to": "علي المشركين", "refers_to": 176560},
+
+    {"chain": 297282, "basis": "shared", "from": "كنت ردف النبي فلم يزل", "to": "حتي رمي الجمره"},
+    {"chain": 297283, "basis": "shared", "from": "كنت ردف النبي فلم يزل", "to": "حتي رمي الجمره"},
+
+    {"chain": 57013, "basis": "own", "from": "ان نفرا كانوا جلوسا", "to": "عنه فانتهوا"},
+    {"chain": 57010, "basis": "partial", "from": "خرج علي اصحابه وهم يتنازعون", "to": "وهذا ينزع ايه", "refers_to": 57013},
+    {"chain": 57011, "basis": "partial", "from": "خرج علي اصحابه وهم يتنازعون", "to": "وهذا ينزع ايه", "refers_to": 57013},
+    {"chain": 57012, "basis": "partial", "from": "خرج علي اصحابه وهم يتنازعون", "to": "وهذا ينزع ايه", "refers_to": 57013},
+
+    {"chain": 110396, "basis": "shared", "from": "تزوجت ام يحيي بنت ابي اهاب", "to": "دعها عنك", "note": "Ibn Abi Mulayka's opening remark (قد سمعته من عقبه وحدثنيه صاحب لي عنه وانا لحديث صاحبي احفظ) is about how he received the hadith; I skipped it by the closest rule (a note on the narrator that ends where the matn begins), then قال عقبه. It could instead be read as a narrator's comment that stays in the matn. Same choice for 110393."},
+    {"chain": 110394, "basis": "shared", "from": "تزوجت ام يحيي بنت ابي اهاب", "to": "دعها عنك"},
+    {"chain": 110393, "basis": "partial", "from": "تزوجت امراه", "to": "تزوجت امراه", "refers_to": 110394},
+    {"chain": 110395, "basis": "same", "refers_to": 110394, "note": "بمثل حديث ابن عليه names Ibn 'Ulayya's chain (110393), which is partial, so refers_to follows it back to the whole wording (the Hammad b. Zayd matn). Ibn 'Ulayya's route has a different narrator (عبيد بن ابي مريم) from the chain whose words are given, so this pointer is weak."},
+
+    {"chain": 19378, "basis": "shared", "from": "كان رسول الله احسن", "to": "الناس خلقا"},
+    {"chain": 19379, "basis": "shared", "from": "كان رسول الله احسن", "to": "الناس خلقا"},
+
+    {"chain": 118778, "basis": "lafz", "from": "ان وفد ثقيف سالوا النبي", "to": "علي راسي ثلاثا", "note": "لفظهما سواء (their wording is the same) is not in the lafz list; I read it as a lafz statement for both chains, which gives the same words as shared would. Dataset: 118779 names أحمد بن شهدل الحنظلي where the text has أحمد بن المفضل الحنظلي; possibly misidentified."},
+    {"chain": 118779, "basis": "lafz", "from": "ان وفد ثقيف سالوا النبي", "to": "علي راسي ثلاثا"},
+
+    {"chain": 545989, "basis": "shared", "from": "ان اعظم الامانه عند الله", "to": "ثم يفشي سرها"},
+    {"chain": 545990, "basis": "shared", "from": "ان اعظم الامانه عند الله", "to": "ثم يفشي سرها"},
+
+    {"chain": 375560, "basis": "shared", "from": "عليك بالطاعه", "to": "عليك بالطاعه", "note": "Two unclear points. After the link قال قال رسول الله there is a second قال before عليك; I skipped it, though the rules only skip a single leading قال when no link is present. And once al-Ahwazi's chain is split off, this is the only chain left on the shared matn; I kept basis shared because the matn follows a ح join."},
+    {"chain": 375559, "basis": "partial", "from": "عليك بالسمع والطاعه في", "to": "واثره عليك", "refers_to": 375560, "note": "وفي روايه الاهوازي: al-Ahwazi is taken to be علي بن احمد بن عبدان (or his teacher Ibn Mahmawayh al-'Askari); both are only in this chain, so the words are this chain's."},
+
+    {"chain": 139430, "basis": "shared", "from": "كان لعائشه غلام وجاريه", "to": "بالغلام قبل الجاريه"},
+    {"chain": 139431, "basis": "partial", "from": "فقال النبي ان اعتقتهما", "to": "بالرجل قبل المراه", "refers_to": 139430},
+
+    {"chain": 405193, "basis": "shared", "from": "وضع يده علي ناصيه ابي محذوره", "to": "سره ابي محذوره", "note": "في حديث الاذان (a note that these words come from the call-to-prayer hadith) is skipped by the closest rule, a note that ends where أن رسول الله begins; then the link ان رسول الله."},
+    {"chain": 405194, "basis": "shared", "from": "وضع يده علي ناصيه ابي محذوره", "to": "سره ابي محذوره"},
+    {"chain": 405195, "basis": "same", "refers_to": 405193},
+
+    {"chain": 478924, "basis": "lafz", "from": "بينما رسول الله في اصحابه", "to": "نهيت عن قتلهم", "note": "Dataset: names محمد بن أحمد المقرئ where the text has محمد بن محمد; possibly misidentified."},
+    {"chain": 478923, "basis": "similar", "refers_to": 478924},
+    {"chain": 478925, "basis": "similar", "refers_to": 478924},
+
+    {"chain": 185867, "basis": "shared", "from": "اطلع رجل من حجر", "to": "من اجل البصر", "note": "سمعت سهل بن سعد يقول: the leading يقول is skipped like a single leading قال (not listed in the rules). Same for 545989/545990 and 269273."},
+    {"chain": 185868, "basis": "shared", "from": "اطلع رجل من حجر", "to": "من اجل البصر"},
+    {"chain": 185869, "basis": "shared", "from": "اطلع رجل من حجر", "to": "من اجل البصر"},
+
+    {"chain": 401950, "basis": "shared", "from": "نهي عن اكل لحوم الضحايا", "to": "وتزودوا وادخروا"},
+    {"chain": 401949, "basis": "partial", "from": "فتزودنا منها الي المدينه", "to": "الي المدينه", "refers_to": 401950, "note": "فقال عمرو: a bare قال فلان where فلان is one of the joined teachers, so 'Amr's chain is partial with what he adds. The repeated chain قال ابو الزبير قال جابر is left out of the wording."},
+
+    {"chain": 227076, "basis": "shared", "from": "لا رضاع بعد فصال ولا", "to": "عتق كانت عليه حجه ان استطاع اليه سبيلا"},
+    {"chain": 227077, "basis": "shared", "from": "لا رضاع بعد فصال ولا", "to": "عتق كانت عليه حجه ان استطاع اليه سبيلا"},
+
+    {"chain": 101740, "basis": "shared", "from": "من تطبب ولم يعرف منه", "to": "فهو ضامن"},
+    {"chain": 101741, "basis": "shared", "from": "من تطبب ولم يعرف منه", "to": "فهو ضامن"},
+    {"chain": 101742, "basis": "shared", "from": "من تطبب ولم يعرف منه", "to": "فهو ضامن"},
+    {"chain": 101743, "basis": "shared", "from": "من تطبب ولم يعرف منه", "to": "فهو ضامن", "note": "Dataset: names عبد الله بن أحمد الحاجى where the text has عبد الله بن سعد الحافظ; possibly misidentified."},
+
+    {"chain": 2497, "basis": "own", "from": "توفي عبد الله بن عمرو بن حرام", "to": "لم ينقص منه شيء"},
+    {"chain": 2495, "basis": "partial", "from": "فما زال يكيل لهم حتي اداه", "to": "حتي اداه", "refers_to": 2497, "note": "A suspended chain (وقال فراس) after the matn that gives one phrase and no formula. The partial-wording cases do not list this; labelled partial by the definition (only some words given). Same for 2496."},
+    {"chain": 2496, "basis": "partial", "from": "جذ له فاوف له", "to": "فاوف له", "refers_to": 2497},
+
+    {"chain": 417745, "basis": "shared", "from": "انه كان جالسا مع نفر", "to": "وقعد علي مقعدته", "note": "The last narrator (Abu Humayd) is named inside the story of Muhammad b. 'Amr b. 'Ata', so the matn starts where his story starts; أنه is kept (only أنه قال is listed). The later chains of Ibn Wahb, Ibn Lahi'a, Fulayh and 'Isa b. 'Abd Allah have no dataset rows, so their words are labelled for no chain."},
+    {"chain": 417746, "basis": "shared", "from": "انه كان جالسا مع نفر", "to": "وقعد علي مقعدته", "note": "Dataset: names يزيد بن قيس الأزدي where the text has يزيد بن أبي حبيب; possibly misidentified."},
+
+    {"chain": 29325, "basis": "shared", "from": "الذي يقرا القران وهو ماهر", "to": "فله اجران"},
+    {"chain": 29326, "basis": "shared", "from": "الذي يقرا القران وهو ماهر", "to": "فله اجران"},
+
+    {"chain": 444332, "basis": "shared", "from": "من كان له عاملا", "to": "فليكتسب مسكنا"},
+    {"chain": 444333, "basis": "shared", "from": "من كان له عاملا", "to": "فليكتسب مسكنا"},
+
+    {"chain": 86216, "basis": "own", "from": "لولا حدثان قومك بالكفر", "to": "الحجر في البيت", "note": "Dataset: the text reaches هشام بن عروه عن ابيه عن عائشه through a statement of بحر بن نصر (قال لنا بحر بن نصر في عقب حديثه ...), a second teacher of Ibn Khuzayma; the dataset has no chain through Bahr b. Nasr. If it should exist, this matn would be shared."},
+
+    {"chain": 303746, "basis": "own", "from": "من بني لله مسجدا", "to": "بيتا في الجنه"},
+
+    {"chain": 216600, "basis": "own", "from": "اتموا صلاتكم ولا تصلوا", "to": "صلاه ام حبين"},
+
+    {"chain": 430519, "basis": "own", "from": "اذا اراد الله عز وجل", "to": "لا يعلمها الا هو", "note": "Dataset: the text opens ذكر عن مكي بن ابراهيم (Ibn Abi Hatim did not hear it from Makki), but the chain shows no <taliq> gap."},
+
+    {"chain": 269273, "basis": "own", "from": "ان ابن مسعود طلع شجره", "to": "وقد اغتبته"},
+
+    {"chain": 236087, "basis": "own", "from": "كان رسول الله اذا بلغه", "to": "حيث تظنون"},
+
+    {"chain": 178876, "basis": "own", "from": "لا تعضيه علي اهل الميراث", "to": "لا يبعض علي الوارث", "note": "يقول لا يبعض علي الوارث is an explanatory gloss with no marker; kept in the matn per the known limit on unmarked comments."}
+  ]
+}

@@ -1,0 +1,478 @@
+{
+ "tradition": "round1-b",
+ "selection": {
+  "hadith_ids": [
+   642597,
+   137036,
+   297904,
+   40823,
+   83673,
+   11795,
+   91800,
+   665385,
+   369441,
+   110110,
+   408852,
+   564618,
+   144221,
+   407803,
+   185737,
+   79618,
+   5116,
+   421097,
+   18611,
+   505817,
+   411485,
+   279856,
+   273551,
+   573863,
+   126111,
+   268604,
+   292951
+  ]
+ },
+ "labelled_by": "claude-opus-5-5 (blind), 2026-10-18",
+ "chains": [
+  {
+   "chain": 525506,
+   "basis": "shared",
+   "from": "من كذب علي متعمدا",
+   "to": "مقعده من النار",
+   "note": "Two teachers of the collector lead to one matn ('ثم حدثني ... عنه'). The text names this teacher 'ابو الحسن بن احمد'; the dataset's 'أحمد بن عبد الواحد السلمي' is not confirmed by the text."
+  },
+  {
+   "chain": 525507,
+   "basis": "shared",
+   "from": "من كذب علي متعمدا",
+   "to": "مقعده من النار",
+   "note": "Possible dataset error: 'حدثني ابو مسعود ... عنه' reads as Abu Mas'ud narrating from Abu al-Hasan b. Ahmad, so this chain may be missing that narrator between Abd al-Rahim and Abu Nu'aym. Placement is unaffected."
+  },
+  {
+   "chain": 176381,
+   "basis": "shared",
+   "from": "وجدت امراه مقتوله في بعض",
+   "to": "قتل النساء والصبيان"
+  },
+  {
+   "chain": 176382,
+   "basis": "shared",
+   "from": "وجدت امراه مقتوله في بعض",
+   "to": "قتل النساء والصبيان"
+  },
+  {
+   "chain": 302757,
+   "basis": "shared",
+   "from": "توضئوا مما مست النار",
+   "to": "مست النار",
+   "note": "Dataset name mismatch: the text has 'عبد الله بن عبد الله بن ابي اميه', the dataset 'عبد الله بن عبد الله بن أبي ثور'. Placement unaffected."
+  },
+  {
+   "chain": 302758,
+   "basis": "shared",
+   "from": "توضئوا مما مست النار",
+   "to": "مست النار",
+   "note": "Dataset name mismatch: the text has 'عبد الله بن عبد الله بن ابي اميه', the dataset 'عبد الله بن عبد الله بن أبي ثور'. Placement unaffected."
+  },
+  {
+   "chain": 54678,
+   "basis": "shared",
+   "from": "ان في ثقيف مبيرا وكذابا",
+   "to": "مبيرا وكذابا"
+  },
+  {
+   "chain": 54679,
+   "basis": "shared",
+   "from": "ان في ثقيف مبيرا وكذابا",
+   "to": "مبيرا وكذابا",
+   "note": "Isra'il's chain is named only in a remark on the narrator's name inside the chain ('وقال اسرائيل ابن عصمه قال وكيع هو ابن عصم'). No rule covers this; labelled shared because the one matn follows both chains. It could also be read as reference."
+  },
+  {
+   "chain": 105514,
+   "basis": "partial",
+   "from": "كان رسول الله يسوي الصف",
+   "to": "حتي يجعله كالقدح",
+   "note": "The collector gives the start of the matn, then 'وذكر الحديث', then the closing words 'او ليخالفن الله بين وجوهكم'. That is partial by the rules, but no chain in this entry has a whole wording to refer to, so labelled shared with the wording ending at the closing formula. The closing words are left out."
+  },
+  {
+   "chain": 105511,
+   "basis": "partial",
+   "from": "كان رسول الله يسوي الصف",
+   "to": "حتي يجعله كالقدح",
+   "note": "Same case as 105514: abbreviated with 'وذكر الحديث' and no whole wording in the entry to refer to; closing words 'او ليخالفن الله بين وجوهكم' left out."
+  },
+  {
+   "chain": 105515,
+   "basis": "partial",
+   "from": "كان رسول الله يسوي الصف",
+   "to": "حتي يجعله كالقدح",
+   "note": "Same case as 105514: abbreviated with 'وذكر الحديث' and no whole wording in the entry to refer to; closing words 'او ليخالفن الله بين وجوهكم' left out."
+  },
+  {
+   "chain": 105513,
+   "basis": "partial",
+   "from": "كان رسول الله يسوي الصف",
+   "to": "حتي يجعله كالقدح",
+   "note": "Same case as 105514: abbreviated with 'وذكر الحديث' and no whole wording in the entry to refer to; closing words 'او ليخالفن الله بين وجوهكم' left out."
+  },
+  {
+   "chain": 105512,
+   "basis": "partial",
+   "from": "كان رسول الله يسوي الصف",
+   "to": "حتي يجعله كالقدح",
+   "note": "Same case as 105514: abbreviated with 'وذكر الحديث' and no whole wording in the entry to refer to; closing words 'او ليخالفن الله بين وجوهكم' left out."
+  },
+  {
+   "chain": 20654,
+   "basis": "lafz",
+   "from": "يا ابا ذر اذا طبخت",
+   "to": "وتعاهد جيرانك"
+  },
+  {
+   "chain": 20655,
+   "basis": "similar",
+   "refers_to": 20654
+  },
+  {
+   "chain": 123321,
+   "basis": "shared",
+   "from": "ان رجلا جاء الي النبي",
+   "to": "واعلمكم بما اتقي"
+  },
+  {
+   "chain": 123320,
+   "basis": "shared",
+   "from": "ان رجلا جاء الي النبي",
+   "to": "واعلمكم بما اتقي"
+  },
+  {
+   "chain": 548838,
+   "basis": "shared",
+   "from": "لا قود في المامومه",
+   "to": "ولا المنقله",
+   "note": "Possible dataset error: the text has 'عن ابن جهمان' (a son of Juhman); the dataset gives 'جمهان الأسلمي'. Placement unaffected."
+  },
+  {
+   "chain": 548836,
+   "basis": "shared",
+   "from": "لا قود في المامومه",
+   "to": "ولا المنقله",
+   "note": "Possible dataset error: the text has 'عن ابن جهمان'; the dataset gives 'جمهان الأسلمي'. Placement unaffected."
+  },
+  {
+   "chain": 548839,
+   "basis": "shared",
+   "from": "لا قود في المامومه",
+   "to": "ولا المنقله",
+   "note": "Possible dataset error: the text has 'عن ابن جهمان'; the dataset gives 'جمهان الأسلمي'. Placement unaffected."
+  },
+  {
+   "chain": 548835,
+   "basis": "shared",
+   "from": "لا قود في المامومه",
+   "to": "ولا المنقله",
+   "note": "Possible dataset error: the text has 'عن ابن جهمان'; the dataset gives 'جمهان الأسلمي'. Placement unaffected."
+  },
+  {
+   "chain": 548837,
+   "basis": "shared",
+   "from": "لا قود في المامومه",
+   "to": "ولا المنقله",
+   "note": "Possible dataset error: the text has 'عن ابن جهمان'; the dataset gives 'جمهان الأسلمي'. Placement unaffected."
+  },
+  {
+   "chain": 371123,
+   "basis": "shared",
+   "from": "ام القران هي السبع المثاني",
+   "to": "والقران العظيم",
+   "note": "Dataset name mismatch: text 'عبد الرحمن بن عبد الله بن الفضل', dataset 'عبد الرحمن بن عبد الرحمن الهاشمي'. Placement unaffected."
+  },
+  {
+   "chain": 371124,
+   "basis": "shared",
+   "from": "ام القران هي السبع المثاني",
+   "to": "والقران العظيم",
+   "note": "Dataset name mismatch: text 'عبد الرحمن بن عبد الله بن الفضل', dataset 'عبد الرحمن بن عبد الرحمن الهاشمي'. Placement unaffected."
+  },
+  {
+   "chain": 146719,
+   "basis": "own",
+   "from": "قل امنت بالله ثم استقم",
+   "to": "ثم استقم"
+  },
+  {
+   "chain": 146718,
+   "basis": "similar",
+   "refers_to": 146719,
+   "note": "Dataset name mismatches: the text has 'عن ابن داود' where the dataset has 'أبو داود الطيالسي', and 'محمد بن عبد الرحمن بن ماعز' where the dataset has 'عبد الرحمن بن ماعز'. Placement unaffected."
+  },
+  {
+   "chain": 146717,
+   "basis": "reference",
+   "refers_to": 146719,
+   "note": "'عن ابراهيم بن سعد به' names Ibrahim b. Sa'd, whose chain (146718) is similar and has no whole wording. The rules say to follow back only from same or partial; followed back to 146719 because refers_to must have a whole wording."
+  },
+  {
+   "chain": 403639,
+   "basis": "own",
+   "from": "ان ماعز بن مالك زني",
+   "to": "سترته ويحك يا هزال الا سترته"
+  },
+  {
+   "chain": 403640,
+   "basis": "partial",
+   "from": "انه لينغمس في انهار",
+   "to": "انهار الجنه",
+   "refers_to": 403639
+  },
+  {
+   "chain": 477550,
+   "basis": "shared",
+   "from": "ان ابا طلحه قرا هذه الايه",
+   "to": "فيها ولم يتغير",
+   "note": "The dataset ends the chain with Abu Talha, but he is the subject of Anas's story ('عن انس ان ابا طلحه قرا ...'). The matn is taken to start at 'ان ابا طلحه', by analogy with the rule that a story mentioning the Prophet stays."
+  },
+  {
+   "chain": 477548,
+   "basis": "shared",
+   "from": "ان ابا طلحه قرا هذه الايه",
+   "to": "فيها ولم يتغير",
+   "note": "As 477550: Abu Talha is the subject of Anas's story, so the matn starts at 'ان ابا طلحه'."
+  },
+  {
+   "chain": 477549,
+   "basis": "shared",
+   "from": "ان ابا طلحه قرا هذه الايه",
+   "to": "فيها ولم يتغير",
+   "note": "As 477550: Abu Talha is the subject of Anas's story, so the matn starts at 'ان ابا طلحه'."
+  },
+  {
+   "chain": 184357,
+   "basis": "shared",
+   "from": "من ابتاع طعاما فلا يبعه",
+   "to": "حتي يقبضه"
+  },
+  {
+   "chain": 184358,
+   "basis": "shared",
+   "from": "من ابتاع طعاما فلا يبعه",
+   "to": "حتي يقبضه"
+  },
+  {
+   "chain": 184356,
+   "basis": "shared",
+   "from": "من ابتاع طعاما فلا يبعه",
+   "to": "حتي يقبضه"
+  },
+  {
+   "chain": 402146,
+   "basis": "own",
+   "from": "شهدت رسول الله اتي بشراب",
+   "to": "فاكسروا متونها بالماء"
+  },
+  {
+   "chain": 402148,
+   "basis": "same",
+   "refers_to": 402146
+  },
+  {
+   "chain": 402147,
+   "basis": "partial",
+   "from": "سالت ابن عمر فقلت",
+   "to": "بقدح من نبيذ",
+   "refers_to": 402146,
+   "note": "Two unclear points. (1) Ibn Umar, the chain's last narrator, is named inside Abd al-Malik's account ('قال سالت ابن عمر فقلت ...'); the wording starts at 'سالت ابن عمر' rather than after his name. (2) The collector quotes this chain's start, then 'ثم ذكر مثل حديث ابي اميه', then a difference 'فاكسروها بالماء'. One span cannot hold both pieces; the span ends at the closing formula and leaves out 'فاكسروها بالماء'."
+  },
+  {
+   "chain": 226616,
+   "basis": "own",
+   "from": "ان رجلا كان عند النبي",
+   "to": "من حرم وصيته"
+  },
+  {
+   "chain": 226615,
+   "basis": "partial",
+   "from": "كنا عند رسول الله فجاء رجل",
+   "to": "مات فلان",
+   "refers_to": 226616
+  },
+  {
+   "chain": 226614,
+   "basis": "reference",
+   "refers_to": 226616
+  },
+  {
+   "chain": 100526,
+   "basis": "shared",
+   "from": "نزل رسول الله صلي الله عليه",
+   "to": "انه ياتيني الملك",
+   "note": "The one matn carries remarks splitting the two versions ('قال شعبه في حديثه ...', 'وقال حماد في حديثه ...'). Only Abu Dawud al-Tayalisi heard both, so these are a narrator's remarks inside the chain and stay in the shared wording. Each chain's own ending therefore sits in both wordings."
+  },
+  {
+   "chain": 100527,
+   "basis": "shared",
+   "from": "نزل رسول الله صلي الله عليه",
+   "to": "انه ياتيني الملك",
+   "note": "As 100526: the per-version remarks by Abu Dawud al-Tayalisi stay in the shared wording."
+  },
+  {
+   "chain": 6274,
+   "basis": "own",
+   "from": "كنت عند ابن عمر فمروا",
+   "to": "لعن من فعل هذا",
+   "note": "The dataset ends the chain with Ibn Umar, but he appears inside Sa'id b. Jubayr's story ('كنت عند ابن عمر ...'). The wording starts at 'كنت عند ابن عمر', by analogy with the rule that a story mentioning the Prophet stays. It ends at 'تابعه', taken as the start of al-Bukhari's comment."
+  },
+  {
+   "chain": 6272,
+   "basis": "own",
+   "from": "لعن النبي من مثل",
+   "to": "مثل بالحيوان",
+   "note": "First named in al-Bukhari's comment after 'تابعه' (a marker the rules do not list), but the collector gives words for it, so it is not reference."
+  },
+  {
+   "chain": 6273,
+   "basis": "reference",
+   "refers_to": 6272,
+   "note": "Cited in the comment with no words ('وقال عدي عن سعيد عن ابن عباس عن النبي'). refers_to follows the nearest-earlier-whole-wording rule; the collector may mean the main matn (6274)."
+  },
+  {
+   "chain": 418772,
+   "basis": "shared",
+   "from": "احتجم وهو محرم",
+   "to": "وهو محرم",
+   "note": "The link reads 'عن النبي انه احتجم'. The rules list 'عن النبي قال' and 'ان النبي' but not 'عن النبي انه'; 'انه' was skipped as part of the link."
+  },
+  {
+   "chain": 418773,
+   "basis": "shared",
+   "from": "احتجم وهو محرم",
+   "to": "وهو محرم",
+   "note": "As 418772: 'انه' after 'عن النبي' skipped as part of the link."
+  },
+  {
+   "chain": 30737,
+   "basis": "shared",
+   "from": "من الغيره ما يحب الله",
+   "to": "فاختياله في البغي",
+   "note": "The collector says 'المعني واحد' (the two teachers agree in sense), so no wording is claimed for either; labelled shared. 'كان يقول' after 'ان نبي الله' is treated as the speech verb of the link and skipped. The collector's closing remark 'قال موسي والفخر' ends the wording."
+  },
+  {
+   "chain": 30738,
+   "basis": "partial",
+   "from": "والفخر",
+   "to": "والفخر",
+   "note": "Musa's extra word 'والفخر' is given by the collector after the matn ('قال موسي والفخر'). A shared wording must be the same for both chains, so it is left out.",
+   "after": "قال موسي",
+   "refers_to": 30737
+  },
+  {
+   "chain": 442036,
+   "basis": "shared",
+   "from": "ان الله لن يعجزني",
+   "to": "خمس مائه عام",
+   "note": "al-Walid's addition ('وقال الوليد في حديثه فسالت راشدا ... خمس مائه سنه') belongs to this chain only. Only the collector has both chains, so it is his comment and ends the shared wording."
+  },
+  {
+   "chain": 442037,
+   "basis": "shared",
+   "from": "ان الله لن يعجزني",
+   "to": "خمس مائه عام",
+   "note": "Dataset error: the chain puts al-Walid b. Muslim between al-Hakam b. Nafi' (Abu al-Yaman) and Abu Bakr b. Abi Maryam. The text has Abu al-Yaman and al-Walid both narrating from Abu Bakr ('قالا ثنا ابو بكر بن ابي مريم')."
+  },
+  {
+   "chain": 407274,
+   "basis": "own",
+   "from": "رايت النبي يوم النحر",
+   "to": "بعد حجتي هذه",
+   "note": "Dataset name mismatch: the text has 'عثمان بن الهيثم', the dataset 'عثمان بن عمر العبدي'. Placement unaffected."
+  },
+  {
+   "chain": 281685,
+   "basis": "own",
+   "from": "اتينا النبي وهو يصلي",
+   "to": "بيده ان اجلسوا"
+  },
+  {
+   "chain": 275359,
+   "basis": "own",
+   "from": "كان ياتي قباء راكبا",
+   "to": "راكبا وماشيا"
+  },
+  {
+   "chain": 487920,
+   "basis": "own",
+   "from": "توضات انا ورسول الله",
+   "to": "الهره قبل ذلك"
+  },
+  {
+   "chain": 163946,
+   "basis": "own",
+   "from": "كان رسول الله يقرا في العيدين",
+   "to": "هل اتاك حديث الغاشيه"
+  },
+  {
+   "chain": 270241,
+   "basis": "own",
+   "from": "احفوا الشوارب واعفوا اللحي",
+   "to": "واعفوا اللحي"
+  },
+  {
+   "chain": 296059,
+   "basis": "own",
+   "from": "لا تكرهوا مرضاكم علي الطعام",
+   "to": "يطعمهم ويسقيهم"
+  }
+ ],
+ "adjudication": [
+  {
+   "chain": 105514,
+   "rule": "An opening followed only by 'وذكر الحديث' is partial; refers_to is empty when no chain in the entry has the whole wording.",
+   "was": {
+    "basis": "shared",
+    "refers_to": null
+   }
+  },
+  {
+   "chain": 105511,
+   "rule": "An opening followed only by 'وذكر الحديث' is partial; refers_to is empty when no chain in the entry has the whole wording.",
+   "was": {
+    "basis": "shared",
+    "refers_to": null
+   }
+  },
+  {
+   "chain": 105515,
+   "rule": "An opening followed only by 'وذكر الحديث' is partial; refers_to is empty when no chain in the entry has the whole wording.",
+   "was": {
+    "basis": "shared",
+    "refers_to": null
+   }
+  },
+  {
+   "chain": 105513,
+   "rule": "An opening followed only by 'وذكر الحديث' is partial; refers_to is empty when no chain in the entry has the whole wording.",
+   "was": {
+    "basis": "shared",
+    "refers_to": null
+   }
+  },
+  {
+   "chain": 105512,
+   "rule": "An opening followed only by 'وذكر الحديث' is partial; refers_to is empty when no chain in the entry has the whole wording.",
+   "was": {
+    "basis": "shared",
+    "refers_to": null
+   }
+  },
+  {
+   "chain": 30738,
+   "rule": "Words the collector gives for one of several joined teachers ('قال موسى: والفخر') make that teacher's chain partial.",
+   "was": {
+    "basis": "shared",
+    "from": "من الغيره ما يحب الله",
+    "to": "فاختياله في البغي",
+    "after": null,
+    "refers_to": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+  "tradition": "round2-b",
+  "selection": {"hadith_ids": [583203, 128478, 298583, 46389, 82686, 10251, 90041, 662364, 375420, 109222, 408682, 569097, 142577, 406196, 189529, 74152, 5363, 418259, 20302, 503550, 49493, 25340, 421488, 207506, 183741, 316631, 168997]},
+  "labelled_by": "claude-opus-5-5 (blind), 2026-10-18",
+  "chains": [
+    {"chain": 496424, "basis": "shared", "from": "سمعت امي ام سليم كلام", "to": "الثالثه في الاخره", "note": "The closing 'كذا قال الصواب ابو عثمان' (the collector correcting al-Ja'd's kunya) is not in the listed comment markers; ended the matn before it under the collector's-comment rule. Same for 496425."},
+    {"chain": 496425, "basis": "shared", "from": "سمعت امي ام سليم كلام", "to": "الثالثه في الاخره"},
+
+    {"chain": 166900, "basis": "shared", "from": "اقبلنا مع رسول الله مهلين", "to": "وذلك ليله الحصبه"},
+    {"chain": 166899, "basis": "shared", "from": "اقبلنا مع رسول الله مهلين", "to": "وذلك ليله الحصبه"},
+
+    {"chain": 303617, "basis": "shared", "from": "انهم قدموا مع رسول الله", "to": "رسول الله مكه", "note": "Leading 'انهم' kept: the start rules skip 'أنه قال' but say nothing about a bare أن before the story. Same for 303618."},
+    {"chain": 303618, "basis": "shared", "from": "انهم قدموا مع رسول الله", "to": "رسول الله مكه"},
+
+    {"chain": 61144, "basis": "shared", "from": "لا يقولن احدكم عبدي", "to": "ولكن ليقل سيدي"},
+    {"chain": 61145, "basis": "shared", "from": "لا يقولن احدكم عبدي", "to": "ولكن ليقل سيدي"},
+
+    {"chain": 103424, "basis": "own", "from": "ثلاثه لا يكلمهم الله يوم", "to": "الكاذب او الفاجر"},
+    {"chain": 103421, "basis": "partial", "from": "المنان الذي لا يعطي شيئا", "to": "سلعته بالحلف الكاذب", "refers_to": 103424},
+    {"chain": 103422, "basis": "partial", "from": "المنان الذي لا يعطي شيئا", "to": "سلعته بالحلف الكاذب", "refers_to": 103424},
+    {"chain": 103423, "basis": "partial", "from": "المنان الذي لا يعطي شيئا", "to": "سلعته بالحلف الكاذب", "refers_to": 103424},
+
+    {"chain": 16464, "basis": "lafz", "from": "سالت عبد الله بن ابي اوفي", "after": "علي بن مسهر", "to": "قال لا ادري"},
+    {"chain": 16465, "basis": "similar", "refers_to": 16464},
+
+    {"chain": 118456, "basis": "shared", "from": "رقيت علي بيت اختي حفصه", "to": "مستدبر القبله", "note": "Dataset error (minor): the text names the teacher 'عبيد بن غنام'; the dataset has 'عبد الله بن غنام النخعي'."},
+    {"chain": 118457, "basis": "shared", "from": "رقيت علي بيت اختي حفصه", "to": "مستدبر القبله"},
+
+    {"chain": 542310, "basis": "shared", "from": "كان رسول الله صلي الله", "to": "تقلدتها ان تعلقتها"},
+    {"chain": 542311, "basis": "shared", "from": "كان رسول الله صلي الله", "to": "تقلدتها ان تعلقتها"},
+
+    {"chain": 376546, "basis": "shared", "from": "افتحوا علي صبيانكم اول كلمه", "to": "عن ذنب واحد", "note": "The closing 'متن غريب لم يكتبه الا بهذا الاسناد' is not exactly a listed marker (closest: 'هذا غريب', 'غريب من'); ended the matn before it as the collector's comment. Same for 376547."},
+    {"chain": 376547, "basis": "shared", "from": "افتحوا علي صبيانكم اول كلمه", "to": "عن ذنب واحد"},
+
+    {"chain": 145819, "basis": "own", "from": "كان رسول الله يكثر ان يدعو", "to": "وقنا عذاب النار", "note": "Shu'ba's closing remark 'قال شعبه فذكرت ذلك لقتاده...' is a narrator's comment, which the rules keep in the matn, but it also introduces the dataset chain 145820. Ended this matn before it under 'the next chain, including the words that introduce it'."},
+    {"chain": 145820, "basis": "partial", "from": "كان انس يدعو بهذا", "to": "انس يدعو بهذا", "refers_to": 145819, "note": "Qatada's words 'كان انس يدعو بهذا' report Anas's practice and point at the prayer with 'بهذا'. No rule covers a chain inside a narrator's remark that gives some words plus a pointer; labelled partial by analogy with 'start of the matn followed by a closing formula'. Own would be the alternative."},
+
+    {"chain": 403387, "basis": "own", "from": "اتي حبر من الاحبار", "to": "معها ثم شئت"},
+    {"chain": 403388, "basis": "same", "refers_to": 403387},
+
+    {"chain": 482324, "basis": "lafz", "from": "اذا اتت احداكن المسجد صلاه", "to": "فلا تمس طيبا"},
+    {"chain": 482319, "basis": "similar", "refers_to": 482324, "note": "Possible dataset error: the text has 'جعفر بن سليمان النفيلي'; the dataset has 'جعفر بن سليمان البرمكي'."},
+    {"chain": 482320, "basis": "partial", "from": "العشاء الاخره", "to": "العشاء الاخره", "refers_to": 482324, "note": "The words given for Muhammad b. 'Abd Allah b. 'Amr and Ibn Jurayj are 'زينب الثقفيه امراه عبد الله بن مسعود' (an epithet of the Companion, which the start rules treat as outside the matn) and, after 'وقالا', 'العشاء الاخره'. Took only the matn words. Same for 482321."},
+    {"chain": 482321, "basis": "partial", "from": "العشاء الاخره", "to": "العشاء الاخره", "refers_to": 482324},
+    {"chain": 482323, "basis": "partial", "from": "ايتكن خرجت الي المسجد", "to": "خرجت الي المسجد", "refers_to": 482324},
+    {"chain": 482322, "basis": "partial", "from": "اذا شهدت احداكن العشاء", "to": "تطيب تلك الليله", "refers_to": 482324, "note": "Possible dataset error: the text names Abu Nu'aym's teacher 'محمد بن علي'; the dataset has 'محمد بن إبراهيم الأصبهاني'."},
+
+    {"chain": 182220, "basis": "shared", "from": "صليت انا ويتيم لنا", "to": "وام سليم خلفنا"},
+    {"chain": 182221, "basis": "shared", "from": "صليت انا ويتيم لنا", "to": "وام سليم خلفنا"},
+    {"chain": 182222, "basis": "shared", "from": "صليت انا ويتيم لنا", "to": "وام سليم خلفنا"},
+
+    {"chain": 400068, "basis": "own", "from": "من عرج او كسر فقد", "to": "وعليه حجه اخري", "note": "Ended before 'قال فحدثت بذلك ابن عباس وابا هريره ... فقالا صدق': a narrator's remark, but it introduces the dataset chains 400071 and 400073. This also fits 400074, whose 'مثله غير انه لم يذكر' drops exactly that remark."},
+    {"chain": 400074, "basis": "same", "refers_to": 400068, "note": "'مثله غير انه لم يذكر ذكر عكرمه ذلك ...' names only an omission, which lies outside 400068's wording, so no words are quoted for this chain."},
+    {"chain": 400071, "basis": "reference", "refers_to": 400068, "note": "Abu Hurayra's only words are 'صدق', a confirmation of the hadith, with no wording of it. No rule covers this; labelled reference as a chain cited without words. Same reasoning for 400073, 400069 and 400070."},
+    {"chain": 400073, "basis": "reference", "refers_to": 400068},
+    {"chain": 400072, "basis": "partial", "from": "انا سالت الحجاج بن عمرو", "to": "فقال قال رسول الله", "refers_to": 400068},
+    {"chain": 400069, "basis": "reference", "refers_to": 400068, "note": "Possible dataset error: in the third account the dataset puts 'عبد الله بن رافع' between 'عكرمه' and Abu Hurayra. 'فحدثت بذلك' could be Ikrima speaking, as in the first account. Same for 400070."},
+    {"chain": 400070, "basis": "reference", "refers_to": 400068},
+
+    {"chain": 231295, "basis": "own", "from": "كان رسول الله من اشد الناس", "to": "الذي ينزعها منه"},
+    {"chain": 231296, "basis": "reference", "refers_to": 231295, "note": "The text stops at 'ثنا ثابت فذكره' and does not name Anas; the dataset adds Anas to the chain."},
+
+    {"chain": 95413, "basis": "shared", "from": "قال رسول الله في مرضه الذي", "to": "فعلتن ثم خرج", "note": "The link 'قالت قال رسول الله' is followed by 'في مرضه الذي مات فيه' before the speech, not by a colon. Kept 'قال رسول الله في مرضه ...' by analogy with 'قال لمعاوية'; the alternative is to start at 'في مرضه'. Same for 95414."},
+    {"chain": 95414, "basis": "shared", "from": "قال رسول الله في مرضه الذي", "to": "فعلتن ثم خرج"},
+
+    {"chain": 6610, "basis": "shared", "from": "لا ينظر الله الي من", "to": "جر ثوبه خيلاء"},
+    {"chain": 6611, "basis": "shared", "from": "لا ينظر الله الي من", "to": "جر ثوبه خيلاء"},
+    {"chain": 6612, "basis": "shared", "from": "لا ينظر الله الي من", "to": "جر ثوبه خيلاء"},
+
+    {"chain": 415129, "basis": "lafz", "from": "خرجنا مع رسول الله مهلين", "to": "من اصحابه والتارك", "note": "The collector says 'وهذا لفظ حديث حاتم' but adds 'وبعض حديثهما دخل في بعض' (the two accounts are merged). Labelled by the explicit lafz claim."},
+    {"chain": 415130, "basis": "similar", "refers_to": 415129},
+
+    {"chain": 32994, "basis": "shared", "from": "النار جبار", "to": "النار جبار"},
+    {"chain": 32995, "basis": "shared", "from": "النار جبار", "to": "النار جبار", "note": "Dataset error: the chain puts 'عبد الملك بن محمد البرسمي' between 'عبد الرزاق' and 'معمر'. The text has 'عبد الرزاق ... كلاهما عن معمر', so 'عبد الملك' belongs only to chain 32994."},
+
+    {"chain": 441100, "basis": "shared", "from": "اذا اصبح ابن ادم فان", "to": "وان اعوججت اعوججنا", "note": "Treated 'يرفعه الي النبي قال' as the link to the Prophet (not in the list; closest is 'عن النبي ﷺ قال'). Same for the other three chains."},
+    {"chain": 441099, "basis": "shared", "from": "اذا اصبح ابن ادم فان", "to": "وان اعوججت اعوججنا"},
+    {"chain": 441101, "basis": "shared", "from": "اذا اصبح ابن ادم فان", "to": "وان اعوججت اعوججنا"},
+    {"chain": 441102, "basis": "shared", "from": "اذا اصبح ابن ادم فان", "to": "وان اعوججت اعوججنا", "note": "Possible dataset error: the text names 'سهل بن محمود'; the dataset has 'سهل بن حليمة الخزاعي'."},
+
+    {"chain": 64820, "basis": "own", "from": "كان يكثر ان يقول اللهم", "to": "وقنا عذاب النار", "note": "Skipped 'ان رسول الله' as the link 'أن النبي ﷺ' and kept 'كان يكثر ان يقول', because 'يكثر' adds content that the listed link 'كان يقول' does not."},
+
+    {"chain": 39046, "basis": "own", "from": "كل بيعين لا بيع", "to": "الا بيع الخيار"},
+
+    {"chain": 419318, "basis": "own", "from": "لا تنبذوا الزهو والرطب", "to": "منهما علي حدته", "note": "Name mismatch: the text has 'عبد الرحمن بن الحارث السلمي'; the dataset has 'عبد الرحمن بن الحباب الأنصاري'. This is probably an error in the text, not in the dataset."},
+
+    {"chain": 251949, "basis": "own", "from": "ان امراه دخلت علي عائشه", "to": "دخلت بذلك الجنه", "note": "Leading 'ان' kept: no start rule covers a bare أن before the story (compare 303617)."},
+
+    {"chain": 224443, "basis": "own", "from": "من ضمن لي ستا", "to": "فرجه وكف يده"},
+
+    {"chain": 326767, "basis": "own", "from": "قال لرجل انت", "to": "مع من احببت"},
+
+    {"chain": 209170, "basis": "own", "from": "ما سمعت رسول الله يقول", "to": "لعبد الله بن سلام"}
+  ]
+}

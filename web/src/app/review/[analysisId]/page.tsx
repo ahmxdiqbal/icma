@@ -77,7 +77,7 @@ async function AnalysisReview({ params }: { params: PageProps<"/review/[analysis
     <>
       <h1 className="mt-1 text-[30px] font-bold leading-tight">{title}</h1>
       <p className="mt-1 text-[15px] text-ink-muted">
-        Analysis {analysis.summary.id} · prompt {analysis.summary.promptVersion} · {reviewed} of {total} reviewed ({percent(reviewed, total)}%)
+        Analysis {analysis.summary.id} · {analysis.summary.model} · prompt {analysis.summary.promptVersion} · {reviewed} of {total} reviewed ({percent(reviewed, total)}%)
       </p>
       {sectionsOf(analysis.judgements).map((section) => (
         <section key={section.title} className="mt-10">

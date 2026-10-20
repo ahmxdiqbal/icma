@@ -1,0 +1,98 @@
+{
+  "tradition": "ubada-khudhu-anni",
+  "selection": {"group": 730, "anchors": [4153, 3495, 1239], "corrections": "corrections/hadith-kg.json"},
+  "labelled_by": "claude-opus-5-5, blind to extractor output, 2026-10-18",
+  "note": "Anchors are normalized words (icma.arabic.normalize). The wording runs from the first occurrence of `from` (searched after `after` when given) to the end of the first `to` after it.",
+  "chains": [
+    {"chain": 16406, "basis": "own", "from": "خذوا عني خذوا عني قد جعل", "to": "جلد مائه والرجم"},
+    {"chain": 16407, "basis": "same", "refers_to": 16406},
+
+    {"chain": 16409, "basis": "shared", "from": "كان نبي الله اذا انزل عليه", "to": "ثم نفي سنه"},
+    {"chain": 16410, "basis": "shared", "from": "كان نبي الله اذا انزل عليه", "to": "ثم نفي سنه"},
+    {"chain": 16408, "basis": "partial", "from": "البكر يجلد", "to": "والثيب يجلد ويرجم", "refers_to": 16409},
+    {"chain": 16411, "basis": "partial", "from": "البكر يجلد", "to": "والثيب يجلد ويرجم", "refers_to": 16409},
+    {"chain": 16412, "basis": "partial", "from": "البكر يجلد", "to": "والثيب يجلد ويرجم", "refers_to": 16409},
+
+    {"chain": 32756, "basis": "own", "from": "خذوا عني خذوا عني", "to": "ونفي سنه"},
+    {"chain": 32757, "basis": "partial", "from": "جلد مائه والرجم", "to": "جلد مائه والرجم", "after": "ومعناه", "refers_to": 32756},
+    {"chain": 32758, "basis": "partial", "from": "جلد مائه والرجم", "to": "جلد مائه والرجم", "after": "ومعناه", "refers_to": 32756},
+    {"chain": 32759, "basis": "partial", "from": "فقال ناس لسعد", "to": "السكران والغيران", "refers_to": 32756},
+    {"chain": 32755, "basis": "reference", "refers_to": 32756},
+
+    {"chain": 47642, "basis": "own", "from": "خذوا عني خذوا عني", "to": "جلد مائه والرجم"},
+    {"chain": 47643, "basis": "similar", "refers_to": 47642},
+
+    {"chain": 75645, "basis": "shared", "from": "كان اذا نزل عليه الوحي كرب له", "to": "ونفي سنه"},
+    {"chain": 75646, "basis": "shared", "from": "كان اذا نزل عليه الوحي كرب له", "to": "ونفي سنه"},
+
+    {"chain": 75680, "basis": "own", "from": "خذوا عني قد جعل", "to": "والبكر يجلد وينفي"},
+    {"chain": 75681, "basis": "same", "refers_to": 75680},
+
+    {"chain": 113231, "basis": "shared", "from": "خذوا عني قد جعل", "to": "ثم الرجم"},
+    {"chain": 113232, "basis": "shared", "from": "خذوا عني قد جعل", "to": "ثم الرجم"},
+
+    {"chain": 113234, "basis": "shared", "from": "كان رسول الله اذا نزل عليه كرب لذلك", "to": "ثم نفي سنه"},
+    {"chain": 113235, "basis": "shared", "from": "كان رسول الله اذا نزل عليه كرب لذلك", "to": "ثم نفي سنه"},
+    {"chain": 113233, "basis": "same", "refers_to": 113234},
+
+    {"chain": 113236, "basis": "shared", "from": "خذوا عني قد جعل", "to": "جلد مائه والرجم"},
+    {"chain": 113238, "basis": "shared", "from": "خذوا عني قد جعل", "to": "جلد مائه والرجم"},
+    {"chain": 113239, "basis": "shared", "from": "خذوا عني قد جعل", "to": "جلد مائه والرجم"},
+    {"chain": 113240, "basis": "shared", "from": "خذوا عني قد جعل", "to": "جلد مائه والرجم"},
+    {"chain": 113237, "basis": "same", "refers_to": 113240},
+
+    {"chain": 113244, "basis": "own", "from": "انزل عليه ذات يوم", "to": "ثم ينفي"},
+    {"chain": 113241, "basis": "similar", "refers_to": 113244},
+    {"chain": 113242, "basis": "similar", "refers_to": 113244},
+    {"chain": 113243, "basis": "similar", "refers_to": 113244},
+
+    {"chain": 156019, "basis": "shared", "from": "كان اذا نزل عليه الوحي كرب لذلك", "to": "ثم نفي سنه"},
+    {"chain": 156020, "basis": "shared", "from": "كان اذا نزل عليه الوحي كرب لذلك", "to": "ثم نفي سنه"},
+
+    {"chain": 175239, "basis": "lafz", "from": "خذوا عني قد جعل", "to": "جلد مائه والرجم"},
+    {"chain": 175240, "basis": "partial", "from": "وتغريب عام", "to": "وتغريب عام", "refers_to": 175239},
+
+    {"chain": 185630, "basis": "shared", "from": "خذوا عني خذوا عني قد جعل", "to": "جلد مائه والرجم"},
+    {"chain": 185631, "basis": "shared", "from": "خذوا عني خذوا عني قد جعل", "to": "جلد مائه والرجم"},
+    {"chain": 185632, "basis": "shared", "from": "خذوا عني خذوا عني قد جعل", "to": "جلد مائه والرجم"},
+
+    {"chain": 189809, "basis": "shared", "from": "كان اذا نزل عليه الوحي عرف ذلك فيه", "to": "ورجم بالحجاره"},
+    {"chain": 189810, "basis": "shared", "from": "كان اذا نزل عليه الوحي عرف ذلك فيه", "to": "ورجم بالحجاره"},
+
+    {"chain": 219429, "basis": "shared", "from": "كان رسول الله صلي الله عليه وعلي اله وسلم اذا نزل الوحي", "to": "ثم نفي سنه"},
+    {"chain": 219431, "basis": "shared", "from": "كان رسول الله صلي الله عليه وعلي اله وسلم اذا نزل الوحي", "to": "ثم نفي سنه"},
+    {"chain": 219430, "basis": "similar", "refers_to": 219429},
+
+    {"chain": 219433, "basis": "own", "from": "خذوا عني خذوا عني قد جعل", "to": "مائه ونفي سنه"},
+    {"chain": 219432, "basis": "partial", "from": "كان رسول الله صلي الله عليه وعلي اله وسلم اذا نزل عليه الوحي عرفنا", "to": "خذوهن اقبلوهن البكر بالبكر", "refers_to": 219433},
+
+    {"chain": 257833, "basis": "own", "from": "كان رسول الله اذا نزل عليه تربد", "to": "ثم نفي سنه"},
+    {"chain": 257834, "basis": "same", "refers_to": 257833},
+
+    {"chain": 322659, "basis": "shared", "from": "كان اذا نزل عليه الوحي كرب له", "to": "ونفي سنه"},
+    {"chain": 322660, "basis": "shared", "from": "كان اذا نزل عليه الوحي كرب له", "to": "ونفي سنه"},
+
+    {"chain": 383381, "basis": "own", "from": "في هذه الايه حتي يتوفاهن", "to": "جلد مائه والرجم"},
+    {"chain": 383380, "basis": "same", "refers_to": 383381},
+
+    {"chain": 403389, "basis": "own", "from": "خذوا عني قد جعل", "to": "والثيب يجلد ويرجم"},
+    {"chain": 403390, "basis": "same", "refers_to": 403389},
+
+    {"chain": 415222, "basis": "shared", "from": "خذوا عني خذوا عني قد جعل", "to": "ثم نفي سنه"},
+    {"chain": 415223, "basis": "shared", "from": "خذوا عني خذوا عني قد جعل", "to": "ثم نفي سنه"},
+    {"chain": 415224, "basis": "shared", "from": "خذوا عني خذوا عني قد جعل", "to": "ثم نفي سنه"},
+    {"chain": 415225, "basis": "shared", "from": "خذوا عني خذوا عني قد جعل", "to": "ثم نفي سنه"},
+
+    {"chain": 423855, "basis": "shared", "from": "خذوا عني قد جعل", "to": "ثم نفي سنه"},
+    {"chain": 423856, "basis": "shared", "from": "خذوا عني قد جعل", "to": "ثم نفي سنه"},
+
+    {"chain": 433140, "basis": "shared", "from": "كان اذا نزل عليه الوحي كرب له", "to": "ونفي سنه"},
+    {"chain": 433141, "basis": "shared", "from": "كان اذا نزل عليه الوحي كرب له", "to": "ونفي سنه"},
+
+    {"chain": 519678, "basis": "lafz", "from": "للبكر جلد مائه", "to": "وتغريب عام"},
+    {"chain": 519680, "basis": "lafz", "from": "للبكر جلد مائه", "to": "وتغريب عام"},
+    {"chain": 519676, "basis": "similar", "refers_to": 519678},
+    {"chain": 519677, "basis": "similar", "refers_to": 519678},
+    {"chain": 519679, "basis": "similar", "refers_to": 519678}
+  ]
+}

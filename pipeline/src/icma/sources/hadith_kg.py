@@ -91,6 +91,21 @@ class HadithKgReader:
                 ORDER BY s.id""",
             [group_id, *anchors],
         )
+        return self._tradition(chain_rows)
+
+    def load_entries(self, hadith_ids: Iterable[int]) -> Tradition:
+        """Load the given hadith entries with all of their chains."""
+        ids = sorted(set(hadith_ids))
+        if not ids:
+            raise ValueError("at least one hadith id is required")
+        chain_rows = self._rows(
+            f"SELECT id, hadith_id, hukum FROM sanads WHERE hadith_id IN ({_marks(len(ids))}) "
+            "ORDER BY id",
+            ids,
+        )
+        return self._tradition(chain_rows)
+
+    def _tradition(self, chain_rows: list[Row]) -> Tradition:
         chains = self._load_chains(chain_rows)
         hadiths = self._load_hadiths(sorted({c.hadith_id for c in chains}))
         narrator_ids = {

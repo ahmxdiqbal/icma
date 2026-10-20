@@ -101,9 +101,15 @@ def publish(conn: psycopg.Connection, payload: dict[str, object]) -> tuple[int, 
     judgements = judgements_of(payload)
     with conn.transaction():
         row = conn.execute(
-            "INSERT INTO analyses (package_id, prompt_version, content_sha256, payload) "
-            "VALUES (%s, %s, %s, %s) RETURNING id",
-            (payload["package_id"], payload["prompt_version"], digest, Jsonb(payload)),
+            "INSERT INTO analyses (package_id, prompt_version, model, content_sha256, payload) "
+            "VALUES (%s, %s, %s, %s, %s) RETURNING id",
+            (
+                payload["package_id"],
+                payload["prompt_version"],
+                str(payload.get("model", "unknown")),
+                digest,
+                Jsonb(payload),
+            ),
         ).fetchone()
         if row is None:
             raise RuntimeError("insert into analyses returned no id")

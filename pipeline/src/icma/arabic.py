@@ -25,3 +25,31 @@ def normalize(text: str) -> str:
     folded = stripped.translate(_LETTER_MAP)
     letters_only = _NON_LETTERS.sub(" ", folded)
     return _SPACES.sub(" ", letters_only).strip()
+
+
+def normalize_with_offsets(text: str) -> tuple[str, tuple[int, ...]]:
+    """`normalize(text)` plus, for each of its characters, the index of the source character.
+
+    A collapsed run of spaces and punctuation maps to the run's first source character."""
+    chars: list[str] = []
+    offsets: list[int] = []
+    gap_at: int | None = None
+    for i, ch in enumerate(text):
+        if ch == _TATWEEL or _DIACRITICS.match(ch):
+            continue
+        folded = ch.translate(_LETTER_MAP)
+        if folded.isspace() or _NON_LETTERS.match(folded):
+            if chars and gap_at is None:
+                gap_at = i
+            continue
+        if gap_at is not None:
+            chars.append(" ")
+            offsets.append(gap_at)
+            gap_at = None
+        chars.append(folded)
+        offsets.append(i)
+    return "".join(chars), tuple(offsets)
+
+
+def is_diacritic(ch: str) -> bool:
+    return ch == _TATWEEL or bool(_DIACRITICS.match(ch))

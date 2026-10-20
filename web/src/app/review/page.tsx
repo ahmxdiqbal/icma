@@ -23,7 +23,7 @@ async function AnalysisList(): Promise<ReactElement> {
             <span>
               <span className="block text-[21px] font-bold group-hover:text-lapis">{titles.get(a.packageId) ?? a.packageId}</span>
               <span className="block text-[15px] text-ink-muted">
-                Analysis {a.id} · prompt {a.promptVersion} · imported {a.importedAt.slice(0, 10)}
+                Analysis {a.id} · {a.model} · prompt {a.promptVersion} · imported {a.importedAt.slice(0, 10)}
               </span>
             </span>
             <span className="self-center text-[15px] tabular-nums">

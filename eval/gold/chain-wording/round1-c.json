@@ -1,0 +1,499 @@
+{
+ "tradition": "round1-c",
+ "selection": {
+  "hadith_ids": [
+   639465,
+   125317,
+   296480,
+   57603,
+   83273,
+   11401,
+   92088,
+   664804,
+   374233,
+   105701,
+   408685,
+   568333,
+   143236,
+   405003,
+   189369,
+   73714,
+   3140,
+   417643,
+   17920,
+   498220,
+   711797,
+   60733,
+   39878,
+   205,
+   30178,
+   643994,
+   43079
+  ]
+ },
+ "labelled_by": "claude-opus-5-5 (blind), 2026-10-18",
+ "chains": [
+  {
+   "chain": 524510,
+   "basis": "shared",
+   "from": "قال لمعاويه اللهم علمه",
+   "to": "وقه العذاب",
+   "note": "Rule 3 lists 'ان النبي' and 'ان رسول الله قال' as links. Here the text is 'ان النبي قال لمعاويه'; I skipped only 'ان النبي' and kept 'قال لمعاويه' because the addressee is part of the story. If 'قال' counts as part of the link, the wording starts at 'لمعاويه'."
+  },
+  {
+   "chain": 524511,
+   "basis": "shared",
+   "from": "قال لمعاويه اللهم علمه",
+   "to": "وقه العذاب"
+  },
+  {
+   "chain": 524512,
+   "basis": "shared",
+   "from": "قال لمعاويه اللهم علمه",
+   "to": "وقه العذاب"
+  },
+  {
+   "chain": 162981,
+   "basis": "shared",
+   "from": "اذا ام الرجل القوم",
+   "to": "اذنهم فان فعل فقد خانهم"
+  },
+  {
+   "chain": 162982,
+   "basis": "shared",
+   "from": "اذا ام الرجل القوم",
+   "to": "اذنهم فان فعل فقد خانهم"
+  },
+  {
+   "chain": 300977,
+   "basis": "own",
+   "from": "من راني فقد راني",
+   "to": "ان يتشبه بي"
+  },
+  {
+   "chain": 300976,
+   "basis": "same",
+   "refers_to": 300977
+  },
+  {
+   "chain": 74828,
+   "basis": "own",
+   "from": "بعثني رسول الله علي قري",
+   "to": "ان اخذ حظ الارض"
+  },
+  {
+   "chain": 74827,
+   "basis": "reference",
+   "refers_to": 74828
+  },
+  {
+   "chain": 104684,
+   "basis": "shared",
+   "from": "كان رسول الله يامر احدانا",
+   "to": "ثوبا ثم يباشرها"
+  },
+  {
+   "chain": 104685,
+   "basis": "shared",
+   "from": "كان رسول الله يامر احدانا",
+   "to": "ثوبا ثم يباشرها",
+   "note": "Dataset error: the chain goes منصور ← الأسود, but the text joins both chains at منصور and continues عن ابراهيم عن الاسود; ابراهيم النخعي is missing from this chain."
+  },
+  {
+   "chain": 19615,
+   "basis": "own",
+   "from": "ما من مولود يولد",
+   "to": "سوره ال عمران ايه 36"
+  },
+  {
+   "chain": 19614,
+   "basis": "partial",
+   "from": "يمسه حين يولد فيستهل",
+   "to": "من مسه الشيطان اياه",
+   "refers_to": 19615
+  },
+  {
+   "chain": 19613,
+   "basis": "partial",
+   "from": "يمسه حين يولد فيستهل",
+   "to": "حديث شعيب من مس الشيطان",
+   "refers_to": 19615,
+   "note": "Shu'ayb's chain gets two quoted pieces: the words both chains share after 'وقالا' and the extra 'من مس الشيطان' after 'وفي حديث شعيب'. One span cannot skip the collector's words 'وفي حديث شعيب' between them, so they are inside the span."
+  },
+  {
+   "chain": 124229,
+   "basis": "shared",
+   "from": "افرد بالحج",
+   "to": "افرد بالحج"
+  },
+  {
+   "chain": 124230,
+   "basis": "shared",
+   "from": "افرد بالحج",
+   "to": "افرد بالحج"
+  },
+  {
+   "chain": 124231,
+   "basis": "shared",
+   "from": "افرد بالحج",
+   "to": "افرد بالحج",
+   "note": "The whole matn after the link 'ان النبي' is two words, so the 'from' anchor has only two words."
+  },
+  {
+   "chain": 124232,
+   "basis": "shared",
+   "from": "افرد بالحج",
+   "to": "افرد بالحج"
+  },
+  {
+   "chain": 124233,
+   "basis": "shared",
+   "from": "افرد بالحج",
+   "to": "افرد بالحج"
+  },
+  {
+   "chain": 547740,
+   "basis": "shared",
+   "from": "سالت انسا اكان",
+   "to": "النعلين قال نعم",
+   "note": "The chain's last narrator, Anas, is named inside the student's question 'سالت انسا'. Following 'the matn starts after the chain's last narrator', the wording starts at the question that follows his name. If the student's 'سالت انسا' should count as matn, the start moves back two words."
+  },
+  {
+   "chain": 547741,
+   "basis": "shared",
+   "from": "سالت انسا اكان",
+   "to": "النعلين قال نعم"
+  },
+  {
+   "chain": 547742,
+   "basis": "shared",
+   "from": "سالت انسا اكان",
+   "to": "النعلين قال نعم"
+  },
+  {
+   "chain": 547743,
+   "basis": "shared",
+   "from": "سالت انسا اكان",
+   "to": "النعلين قال نعم"
+  },
+  {
+   "chain": 547744,
+   "basis": "shared",
+   "from": "سالت انسا اكان",
+   "to": "النعلين قال نعم"
+  },
+  {
+   "chain": 547745,
+   "basis": "shared",
+   "from": "سالت انسا اكان",
+   "to": "النعلين قال نعم"
+  },
+  {
+   "chain": 375508,
+   "basis": "lafz",
+   "from": "الخلق عيال الله واحب عباد",
+   "to": "انفعهم لعياله",
+   "note": "Dataset error in all three chains: in the text al-Ma'mun says 'حدثنيه يوسف بن عطيه', so the chain runs احمد بن ابراهيم الموصلي ← المامون ← يوسف بن عطيه; the chains leave out al-Ma'mun. The wording is the matn after this chain's last narrator, Anas; the earlier quotation by the unnamed man in the story is not this chain's matn."
+  },
+  {
+   "chain": 375509,
+   "basis": "similar",
+   "refers_to": 375508
+  },
+  {
+   "chain": 375510,
+   "basis": "similar",
+   "refers_to": 375508
+  },
+  {
+   "chain": 141853,
+   "basis": "shared",
+   "from": "ثلاثه لا ينظر الله اليهم",
+   "to": "والعائل المختال",
+   "note": "Both chains lead to one matn ('shared'), then 'وقال محمد بن العلاء في حديثه' gives Ibn al-Ala's differing words, which implies the main wording is Ibn Sallam's. The rules have no basis for an implied attribution, so I kept 'shared' rather than 'lafz'; it is the only chain left with the whole wording."
+  },
+  {
+   "chain": 141854,
+   "basis": "partial",
+   "from": "شيخ زان وملك كذاب",
+   "to": "وعائل مستكبر",
+   "refers_to": 141853,
+   "note": "Labelled 'partial' (the 'وفي رواية فلان' case) even though this chain is also one of the two chains joined before the shared matn."
+  },
+  {
+   "chain": 403392,
+   "basis": "own",
+   "from": "كنا عند النبي عليه السلام",
+   "to": "من اوزارهم شيء"
+  },
+  {
+   "chain": 403393,
+   "basis": "partial",
+   "from": "كنت جالسا عند رسول الله",
+   "to": "لبلال عجل الصلاه",
+   "refers_to": 403392,
+   "note": "Two pieces are quoted for this chain: the opening 'كنت جالسا عند رسول الله عليه السلام' before 'ثم ذكر مثله', and the difference 'ثم قال لبلال عجل الصلاه' after 'الا انه قال فيه'. One span covers both, so the formula words between them are inside it."
+  },
+  {
+   "chain": 481446,
+   "basis": "lafz",
+   "from": "وكان رجلا بطالا مررت",
+   "to": "قال فنعم اذا",
+   "note": "The text has no 'قال' after Abu Shahm: 'عن ابي شهم وكان رجلا بطالا مررت ...'. Rule 2 only skips a note on the narrator that ends where 'ان رسول الله' begins, so the note 'وكان رجلا بطالا' is kept in the wording. If any note on the last narrator should be skipped, the wording starts at 'مررت علي جاريه'."
+  },
+  {
+   "chain": 481443,
+   "basis": "similar",
+   "refers_to": 481446
+  },
+  {
+   "chain": 481444,
+   "basis": "similar",
+   "refers_to": 481446
+  },
+  {
+   "chain": 481447,
+   "basis": "similar",
+   "refers_to": 481446
+  },
+  {
+   "chain": 481445,
+   "basis": "partial",
+   "from": "كنت بالمدينه فمرت امراه",
+   "to": "فمرت امراه",
+   "refers_to": 481446,
+   "note": "Huraym's chain is first named in the collector's comment 'وقد روي هريم بن سفيان عن بيان مثله وقال فمد يده فبايعني', which also quotes 'فمد يده فبايعني' for it; I placed the chain at its full listing, where the opening 'كنت بالمدينه فمرت امراه' is followed by 'فذكر نحوه' (opening plus a 'similar' formula, closest to the 'partial' rule). Dataset error: the text has two teachers joined by و ('ثنا ابي و عمي ابو بكر قالا ثنا الاسود'), but the chain puts عثمان بن أبي شيبة and ابن أبي شيبة in a row, as if one taught the other."
+  },
+  {
+   "chain": 183184,
+   "basis": "shared",
+   "from": "هاتوا ربع العشر",
+   "to": "فعلي حساب ذلك",
+   "note": "The matn is first given with a chain lacking its later part ('وفيما روينا عن زهير ... كلاهما عن علي'), then the later part 'اخبرنا ابو علي الروذباري ... حدثنا زهير فذكره' follows it. The dataset joins the two parts. 'فذكره' alone would be 'reference', but there is no other chain with a whole wording to point at, so both chains are 'shared' at the 'كلاهما' split. I also skipped 'فيما يحسب زهير انه قال' (Zuhayr's doubt about whether the hadith goes back to the Prophet) as part of the link after 'عن النبي'; the rules do not cover a hedge inside the link."
+  },
+  {
+   "chain": 183185,
+   "basis": "shared",
+   "from": "هاتوا ربع العشر",
+   "to": "فعلي حساب ذلك"
+  },
+  {
+   "chain": 398430,
+   "basis": "own",
+   "from": "اغمي علينا هلال شوال",
+   "to": "من الغد الي مصلاهم"
+  },
+  {
+   "chain": 398431,
+   "basis": "same",
+   "refers_to": 398430
+  },
+  {
+   "chain": 231063,
+   "basis": "own",
+   "from": "ما استجار عبد من النار",
+   "to": "فادخله الجنه",
+   "note": "The wording ends at 'قلت', where al-Busiri's own comment starts. 'قلت' is not in the doc's list of comment markers; I treated it as one."
+  },
+  {
+   "chain": 231064,
+   "basis": "reference",
+   "refers_to": 231063
+  },
+  {
+   "chain": 94709,
+   "basis": "shared",
+   "from": "خطبنا رسول الله صلي الله",
+   "to": "وافضلهما اجرا",
+   "note": "The wording ends at 'قد خرجا جميعا', where al-Hakim's own comment starts. That phrase is not in the doc's list of comment markers; I treated it as one. Al-A'mash's chain, given later in the comment with 'اتقوا الظلم فذكر الحديث بطوله', has no row in the dataset."
+  },
+  {
+   "chain": 94710,
+   "basis": "shared",
+   "from": "خطبنا رسول الله صلي الله",
+   "to": "وافضلهما اجرا"
+  },
+  {
+   "chain": 3967,
+   "basis": "own",
+   "from": "الم تري ان قومك",
+   "to": "لم يتمم علي قواعد ابراهيم",
+   "note": "The text has one nested chain: Salim reports that Ibn Abi Bakr told Ibn Umar from Aisha, then Ibn Umar adds his own remark. The dataset splits it into a chain to Aisha (this one) and a chain ending at Ibn Umar (3966). Ibn Umar's remark is not cut off, because no end rule applies and Ibn Umar is a narrator in the actual transmission."
+  },
+  {
+   "chain": 3966,
+   "basis": "own",
+   "from": "لئن كانت عائشه سمعت",
+   "to": "لم يتمم علي قواعد ابراهيم",
+   "note": "This chain ends at Ibn Umar, so its wording is his remark after 'فقال عبد الله بن عمر'. Ibn Umar is also named earlier ('اخبر عبد الله بن عمر عن عائشه'), but what follows there is Aisha's hadith, not his. The rules do not cover a chain to the man who received a hadith and then commented on it."
+  },
+  {
+   "chain": 3965,
+   "basis": "reference",
+   "refers_to": 3967
+  },
+  {
+   "chain": 3964,
+   "basis": "reference",
+   "refers_to": 3966,
+   "note": "Both Isma'il chains are only mentioned in al-Bukhari's comment 'وقال اسماعيل عبد الله بن محمد بن ابي بكر'. The comment names Ibn Abi Bakr, which by the naming rule points at 3967; for this chain, which ends at Ibn Umar, I pointed at the matching Abd Allah b. Yusuf chain 3966 instead."
+  },
+  {
+   "chain": 414282,
+   "basis": "shared",
+   "from": "سالت ابا الدرداء عن قول",
+   "to": "يراها المسلم او تري له",
+   "note": "The chain's last narrator, Abu al-Darda, is named inside the questioner's 'سالت ابا الدرداء', so the wording starts after his name with 'عن قول الله'. Sufyan's 'ثم لقيت فلانا فحدثنيه' chains have no words and no formula, so they are 'reference'; each points at the shared wording through the same teacher of Ibn Abd al-Barr."
+  },
+  {
+   "chain": 414285,
+   "basis": "shared",
+   "from": "سالت ابا الدرداء عن قول",
+   "to": "يراها المسلم او تري له"
+  },
+  {
+   "chain": 414284,
+   "basis": "reference",
+   "refers_to": 414282
+  },
+  {
+   "chain": 414286,
+   "basis": "reference",
+   "refers_to": 414285
+  },
+  {
+   "chain": 414281,
+   "basis": "reference",
+   "refers_to": 414282
+  },
+  {
+   "chain": 414283,
+   "basis": "reference",
+   "refers_to": 414285
+  },
+  {
+   "chain": 29843,
+   "basis": "shared",
+   "from": "اقبل رسول الله فدخل مكه",
+   "to": "و الانصار تحته",
+   "note": "Same situation as 141853: the two teachers are joined, then 'قال هاشم' gives Hashim's differing words, which implies the main wording is Bahz's. I kept 'shared'."
+  },
+  {
+   "chain": 29842,
+   "basis": "partial",
+   "from": "فدعا وحمد الله",
+   "to": "بما شاء ان يدعو",
+   "refers_to": 29843
+  },
+  {
+   "chain": 439112,
+   "basis": "none",
+   "note": "Dataset error: the entry's text starts in the middle of a matn ('قلت يا رسول الله زدني'). None of this chain's narrators is named in it. The chain was probably in the previous entry. The only full chain in the text, Ibn Jurayj ← Ata ← Ubayd b. Umayr ← Abu Dharr ('ثم ذكر مثله وزاد'), has no row in the dataset."
+  },
+  {
+   "chain": 439113,
+   "basis": "none",
+   "note": "Same as 439112: no narrator of this chain is named in the entry's text."
+  },
+  {
+   "chain": 573939,
+   "basis": "own",
+   "from": "ان امراه كان في عقلها",
+   "to": "حتي قضي حاجتها"
+  },
+  {
+   "chain": 78453,
+   "basis": "own",
+   "from": "كان يصلي الضحي اربعا",
+   "to": "ويزيد ما شاء الله"
+  },
+  {
+   "chain": 53541,
+   "basis": "own",
+   "from": "اذنك علي ان تكشف",
+   "to": "تكشف الستر"
+  },
+  {
+   "chain": 260,
+   "basis": "own",
+   "from": "اكل عندها كتفا",
+   "to": "ولم يتوضا"
+  },
+  {
+   "chain": 45074,
+   "basis": "own",
+   "from": "لم يكن ثوب احب",
+   "to": "رسول الله من القميص"
+  },
+  {
+   "chain": 526143,
+   "basis": "own",
+   "from": "ان رجلا قال يا رسول الله",
+   "to": "يبارك لكم"
+  },
+  {
+   "chain": 57286,
+   "basis": "own",
+   "from": "ما ابالي ما اتيت",
+   "to": "من قبل نفسي"
+  }
+ ],
+ "adjudication": [
+  {
+   "chain": 547740,
+   "rule": "When the last narrator is named inside the previous narrator's story, the wording starts where the story starts.",
+   "was": {
+    "from": "اكان رسول الله صلي الله عليه وسلم"
+   }
+  },
+  {
+   "chain": 547741,
+   "rule": "When the last narrator is named inside the previous narrator's story, the wording starts where the story starts.",
+   "was": {
+    "from": "اكان رسول الله صلي الله عليه وسلم"
+   }
+  },
+  {
+   "chain": 547742,
+   "rule": "When the last narrator is named inside the previous narrator's story, the wording starts where the story starts.",
+   "was": {
+    "from": "اكان رسول الله صلي الله عليه وسلم"
+   }
+  },
+  {
+   "chain": 547743,
+   "rule": "When the last narrator is named inside the previous narrator's story, the wording starts where the story starts.",
+   "was": {
+    "from": "اكان رسول الله صلي الله عليه وسلم"
+   }
+  },
+  {
+   "chain": 547744,
+   "rule": "When the last narrator is named inside the previous narrator's story, the wording starts where the story starts.",
+   "was": {
+    "from": "اكان رسول الله صلي الله عليه وسلم"
+   }
+  },
+  {
+   "chain": 547745,
+   "rule": "When the last narrator is named inside the previous narrator's story, the wording starts where the story starts.",
+   "was": {
+    "from": "اكان رسول الله صلي الله عليه وسلم"
+   }
+  },
+  {
+   "chain": 414282,
+   "rule": "When the last narrator is named inside the previous narrator's story, the wording starts where the story starts.",
+   "was": {
+    "from": "عن قول الله عز وجل"
+   }
+  },
+  {
+   "chain": 414285,
+   "rule": "When the last narrator is named inside the previous narrator's story, the wording starts where the story starts.",
+   "was": {
+    "from": "عن قول الله عز وجل"
+   }
+  }
+ ]
+}

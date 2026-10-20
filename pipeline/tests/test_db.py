@@ -28,6 +28,7 @@ PAYLOAD: dict[str, object] = {
     "schema_version": 1,
     "package_id": "t",
     "prompt_version": "p1",
+    "model": "test/model",
     "status": "unreviewed",
     "chain_texts": [
         {"chain_id": 1000, "hadith_id": 100, "text_ar": "خذوا عني", "source": "span"},
@@ -60,7 +61,12 @@ def conn() -> Iterator[psycopg.Connection]:
 def test_migrate_is_idempotent(conn: psycopg.Connection) -> None:
     assert migrate(conn) == []
     names = [r[0] for r in conn.execute("SELECT name FROM schema_migrations")]
-    assert names == ["0001_review.sql", "0002_reviewers.sql", "0003_passcodes.sql"]
+    assert names == [
+        "0001_review.sql",
+        "0002_reviewers.sql",
+        "0003_passcodes.sql",
+        "0004_analysis_model.sql",
+    ]
 
 
 def test_publish_stores_every_judgement_once(conn: psycopg.Connection) -> None:
@@ -74,6 +80,7 @@ def test_publish_stores_every_judgement_once(conn: psycopg.Connection) -> None:
     assert rows == expected
     assert ("chain_matn", "1001") in rows
     assert ("chain_matn", "1000") not in rows  # dataset spans are not model output
+    assert conn.execute("SELECT model FROM analyses").fetchone() == ("test/model",)
 
 
 def test_publish_is_idempotent_by_content(conn: psycopg.Connection) -> None:

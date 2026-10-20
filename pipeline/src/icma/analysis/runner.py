@@ -6,6 +6,8 @@ Stages: chain_matns (model, multi-chain entries only) -> variants (code) -> matn
 
 import hashlib
 import json
+import time
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -16,12 +18,19 @@ from icma.analysis import prompts
 from icma.analysis.correlation import NodeCorrelation, correlate
 from icma.analysis.llm import StructuredCaller
 from icma.analysis.schemas import ChainMatn, ChainMatnSet, IcmaAnalysis, MatnInventory
-from icma.analysis.variants import ChainText, Variant, chain_texts, group_variants
+from icma.analysis.variants import (
+    ChainText,
+    Variant,
+    chain_texts,
+    extraction_warnings,
+    group_variants,
+)
 from icma.analysis.variants import multi_chain_hadith_ids as multi_ids
 from icma.bundle import Bundle, branch_groups, key_figures
 from icma.models import Tradition
 
 ANALYSIS_SCHEMA_VERSION = 1
+EXTRACTION_WORKERS = 8
 
 
 @dataclass(frozen=True, slots=True)
@@ -43,7 +52,9 @@ def run_stage[M: BaseModel](
     path = out_dir / f"{stage.name}-{input_sha[:16]}.json"
     if path.exists():
         return schema.model_validate(json.loads(path.read_text(encoding="utf-8"))["output"])
+    started = time.monotonic()
     result = caller.call(system=stage.system, user=stage.user, schema=schema)
+    elapsed = round(time.monotonic() - started, 1)
     record = {
         "stage": stage.name,
         "prompt_version": prompts.PROMPT_VERSION,
@@ -53,6 +64,7 @@ def run_stage[M: BaseModel](
         "message_id": result.message_id,
         "stop_reason": result.stop_reason,
         "usage": result.usage,
+        "elapsed_seconds": elapsed,
         "created_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "system": stage.system,
         "user": stage.user,
@@ -138,12 +150,18 @@ def _extract_chain_matns(
     multi = multi_ids(tradition)
     if not multi:
         return [], []
-    stage = Stage(
-        "chain_matns", prompts.CHAIN_MATN_SYSTEM, prompts.chain_matn_input(tradition, multi)
-    )
-    found = run_stage(stage, ChainMatnSet, caller, out_dir).chains
+
+    def extract(hadith_id: int) -> list[ChainMatn]:
+        user = prompts.chain_matn_input(tradition, {hadith_id})
+        stage = Stage("chain_matns", prompts.CHAIN_MATN_SYSTEM, user)
+        return run_stage(stage, ChainMatnSet, caller, out_dir).chains
+
+    # One small request per entry: long multi-entry requests made several models skip routes.
+    with ThreadPoolExecutor(max_workers=EXTRACTION_WORKERS) as pool:
+        found = [m for batch in pool.map(extract, sorted(multi)) for m in batch]
     expected = {c.id for c in tradition.chains if c.hadith_id in multi}
-    return check_chain_matns(found, expected)
+    kept, warnings = check_chain_matns(found, expected)
+    return kept, warnings + extraction_warnings(tradition, kept)
 
 
 def analyze(
@@ -170,10 +188,11 @@ def analyze(
     return AnalysisResult(texts, variants, inventory, correlations, synthesis, warnings)
 
 
-def analysis_json(package_id: str, result: AnalysisResult) -> dict[str, object]:
+def analysis_json(package_id: str, result: AnalysisResult, model: str) -> dict[str, object]:
     return {
         "schema_version": ANALYSIS_SCHEMA_VERSION,
         "package_id": package_id,
+        "model": model,
         "prompt_version": prompts.PROMPT_VERSION,
         "status": "unreviewed",
         "chain_texts": [asdict(t) for t in result.chain_texts],
